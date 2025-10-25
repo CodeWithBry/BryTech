@@ -2,16 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: min(300px, 200px);
     width: 100vw;
     overflow: hidden;
     position: relative;
+    background-image: url('./Shop/sysunitBanner.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.banner > img {
-    width: 100vw;
-    filter: brightness(.3);
-}
 
 .banner > h1 {
     font-family: var(--font-title);
@@ -26,6 +25,7 @@
     width: 100%;
     display: flex;
     gap: var(--gap-large);
+    text-align: center;
 }
 
 .banner > h1 > span {

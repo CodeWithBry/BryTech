@@ -10,7 +10,7 @@
     font-size: var(--h1-larger);
     width: 100vw;
     text-align: center;
-    margin: 5rem 0;
+    margin: var(--gap-large) 0;
     border: none;
     background-color: transparent;
     position: relative;
@@ -81,6 +81,7 @@
     margin: auto;
     border-radius: 1rem;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .products .itemCon .item:nth-child(even) {
@@ -93,6 +94,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: min(450px, 300px);
+    flex-shrink: 0;
 }
 
 .products .itemCon .item .left > img {
@@ -104,8 +107,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    width: 40%;
+    width: min(450px, 300px);
+    flex-shrink: 0;
     height: 100%;
+    margin: auto;
 }
 
 .products .itemCon .item .right > h1 {

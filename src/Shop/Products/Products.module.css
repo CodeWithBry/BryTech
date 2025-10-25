@@ -7,7 +7,7 @@
     font-family: var(--font-title);
     font-size: var(--h1-larger);
     color: var(--l-text-color1);
-    margin: -2rem 3rem 2rem 3rem;
+    margin: 0 3rem 2rem 3rem;
 }
 
 .products .wrapItems {

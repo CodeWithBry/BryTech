@@ -7,7 +7,6 @@ function Banner() {
 
   return (
     <div className={s.banner}>
-        <img src={selectedProduct?.banner} />
         <h1><span>Build Smarter</span>Upgrade Faster</h1>
     </div>
   )

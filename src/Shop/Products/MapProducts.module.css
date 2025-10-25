@@ -1,28 +1,34 @@
 .skeletonLoader {
+    width: min(355px, 80%);
     height: 355px;
+    min-height: 200px;
+    border-radius: 1rem;
     box-shadow: var(--l-box-shadow);
-    animation: skeleton .5s ease-out forwards;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
 }
 
-@keyframes skeleton{
-    0% {
-        background: linearGradient(to right, #c6c6c6, #fff, #fff);
+.skeletonLoader .shadow {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9, white);
+    animation: animation 1s linear infinite;
+}
+
+@keyframes animation{
+    from {
+        top: -100%;
     }
-    25% {
-        background: linearGradient(to right, #c6c6c6, #c6c6c6, #fff);
-    }
-    50% {
-        background: linearGradient(to right, #fff, #c6c6c6, #c6c6c6);
-    }
-    75% {
-        background: linearGradient(to right, #fff, #fff, #c6c6c6);
-    }
-    100% {
-        background: linearGradient(to right, #fff, #fff, #fff);
+    to {
+        top: 100%;
     }
 }
 
-.card, .skeletonLoader {
+.card {
     display: flex;
     flex-direction: column;
     width: 300px;

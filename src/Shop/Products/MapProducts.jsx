@@ -31,7 +31,7 @@ function MapProducts({ items, category }) {
             </>
         )
     } else {
-        <MapSkeleton />
+        return <MapSkeleton />
     }
 }
 

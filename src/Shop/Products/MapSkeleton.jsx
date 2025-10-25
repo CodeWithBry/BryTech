@@ -6,7 +6,7 @@ function MapSkeleton() {
         {
             Array.from({length: 6}).map((_, i)=>{
                 return <div className={s.skeletonLoader} key={Math.random() * i}>
-
+                  <div className={s.shadow}></div>
                 </div>
             }) 
         }
