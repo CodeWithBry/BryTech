@@ -1,0 +1,617 @@
+[
+  {
+    "category": "CPUs",
+    "items": [
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Core i7-14700K",
+        "gen": "14th Gen",
+        "specs": "20 cores / 28 threads, up to 5.6 GHz, LGA 1700 socket",
+        "price_php": "18, 495",
+        "image": "cpu1.jpg",
+        "paragraph": "The Intel Core i7-14700K delivers outstanding performance with its 20 cores and 28 threads, capable of speeds up to 5.6GHz. It’s ideal for gamers, streamers, and creators who demand fast multitasking and high-end computing power."
+      },
+      {
+        "category": "CPU",
+        "brand": "AMD",
+        "name": "AMD Ryzen 7 7800X3D",
+        "gen": "7000 Series",
+        "specs": "8 cores / 16 threads, 5.0 GHz boost, AM5 socket",
+        "price_php": "18, 895",
+        "image": "cpu2.jpg",
+        "paragraph": "The Ryzen 7 7800X3D features advanced 3D V-Cache technology, providing exceptional gaming performance and efficiency. With 8 cores and 16 threads, it’s one of the best CPUs for smooth gameplay and creative workloads."
+      },
+      {
+        "category": "CPU",
+        "brand": "AMD",
+        "name": "AMD Ryzen 5 7600",
+        "gen": "7000 Series",
+        "specs": "6 cores / 12 threads, 5.1 GHz boost, AM5 socket",
+        "price_php": "11, 034",
+        "image": "cpu3.jpg",
+        "paragraph": "Designed for solid all-around performance, the Ryzen 5 7600 delivers fast processing speeds with 6 cores and 12 threads. It’s perfect for gamers and content creators seeking a great balance between power and affordability."
+      },
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Core i5-14600K",
+        "gen": "14th Gen",
+        "specs": "14 cores / 20 threads, up to 5.3 GHz, LGA 1700 socket",
+        "price_php": "14, 270",
+        "image": "cpu4.jpg",
+        "paragraph": "This CPU combines strong multi-core performance and energy efficiency, running up to 5.3GHz. Great for gaming and productivity, it’s a dependable choice for performance-focused PC builds."
+      },
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Xeon W7-2495X",
+        "gen": "Sapphire Rapids",
+        "specs": "24 cores / 48 threads, up to 4.8 GHz, LGA 4677 socket",
+        "price_php": "318, 000",
+        "image": "cpu5.jpg",
+        "paragraph": "The Xeon W7-2495X is a workstation-grade CPU with 24 cores and 48 threads built for rendering, AI, and data-heavy applications. It ensures reliability and performance for professional computing environments."
+      },
+      {
+        "category": "CPU",
+        "brand": "AMD",
+        "name": "AMD EPYC 9754",
+        "gen": "9004 Series",
+        "specs": "128 cores / 256 threads, 3.1 GHz, SP5 socket",
+        "price_php": "765, 000",
+        "image": "cpu6.avif",
+        "paragraph": "With a massive 128 cores and 256 threads, the AMD EPYC 9754 is a powerhouse for servers and enterprise workloads. It’s engineered for high scalability, virtualization, and data center efficiency."
+      },
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Celeron G5905",
+        "gen": "10th Gen",
+        "specs": "2 cores / 2 threads, 3.5 GHz, LGA 1200 socket",
+        "price_php": "2, 550",
+        "image": "cpu7.jpg",
+        "paragraph": "The Celeron G5905 offers reliable performance for basic computing tasks. Its 2 cores and 3.5GHz speed make it great for office use, browsing, and lightweight applications."
+      },
+      {
+        "category": "CPU",
+        "brand": "AMD",
+        "name": "AMD Athlon 3000G",
+        "gen": "Athlon Series",
+        "specs": "2 cores / 4 threads, 3.5 GHz, AM4 socket",
+        "price_php": "2, 300",
+        "image": "cpu8.jpg",
+        "paragraph": "A budget-friendly dual-core processor that delivers solid everyday performance. With integrated Radeon graphics, it’s ideal for home and entry-level gaming PCs."
+      },
+      {
+        "category": "CPU",
+        "brand": "Qualcomm",
+        "name": "Snapdragon X Elite",
+        "gen": "X Series",
+        "specs": "12 cores, up to 4.3 GHz, integrated Adreno GPU",
+        "price_php": "42, 000",
+        "image": "cpu9.jpg",
+        "paragraph": "Built for mobility and efficiency, the Snapdragon X Elite features 12 cores and an integrated Adreno GPU. It provides exceptional performance for AI-driven tasks, laptops, and lightweight devices."
+      },
+      {
+        "category": "CPU",
+        "brand": "Apple",
+        "name": "Apple M3 Max",
+        "gen": "M3 Series",
+        "specs": "16-core CPU, 40-core GPU, 3nm process",
+        "price_php": "93, 000",
+        "image": "cpu10.jpg",
+        "paragraph": "Apple’s M3 Max chip brings powerful performance with its 16-core CPU and 40-core GPU. Optimized for creative professionals, it offers blazing-fast speeds for design, video editing, and development."
+      },
+      {
+        "category": "CPU",
+        "brand": "MediaTek",
+        "name": "MediaTek Dimensity 9300",
+        "gen": "Dimensity Series",
+        "specs": "8 cores, 3.25 GHz max, TSMC 4nm process",
+        "price_php": "18, 000",
+        "image": "cpu11.jpg",
+        "paragraph": "The Dimensity 9300 combines performance and efficiency using TSMC’s 4nm process. It’s made for flagship smartphones, offering lightning-fast speeds and great battery management."
+      },
+      {
+        "category": "CPU",
+        "brand": "Samsung",
+        "name": "Samsung Exynos 2400",
+        "gen": "Exynos Series",
+        "specs": "10-core CPU, 3.2 GHz max, Xclipse 940 GPU",
+        "price_php": "21, 000",
+        "image": "cpu12.webp",
+        "paragraph": "Samsung’s Exynos 2400 features a 10-core CPU and advanced Xclipse GPU for next-gen mobile gaming and photography. It delivers smooth multitasking and impressive energy efficiency."
+      },
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Pentium Gold G7400",
+        "gen": "12th Gen",
+        "specs": "2 cores / 4 threads, 3.7 GHz, LGA 1700 socket",
+        "price_php": "4, 400",
+        "image": "cpu13.jpg",
+        "paragraph": "A dependable dual-core processor with speeds up to 3.7GHz. The Pentium Gold G7400 is a solid choice for budget desktops and office setups."
+      },
+      {
+        "category": "CPU",
+        "brand": "AMD",
+        "name": "AMD FX-8350",
+        "gen": "FX Series",
+        "specs": "8 cores / 8 threads, 4.2 GHz, AM3+ socket",
+        "price_php": "5, 200",
+        "image": "cpu14.jpg",
+        "paragraph": "The AMD FX-8350 remains a classic choice for budget builders, featuring 8 cores and high clock speeds. It’s well-suited for multitasking, older games, and productivity use."
+      },
+      {
+        "category": "CPU",
+        "brand": "IBM",
+        "name": "IBM Power10",
+        "gen": "Power Series",
+        "specs": "15 cores / 30 threads, up to 4.0 GHz, enterprise socket",
+        "price_php": "120, 000",
+        "image": "cpu15.webp",
+        "paragraph": "The IBM Power10 is an enterprise-level CPU built for maximum reliability and scalability. It’s designed to handle complex workloads in data centers and cloud environments."
+      },
+      {
+        "category": "CPU",
+        "brand": "VIA",
+        "name": "VIA Nano X2",
+        "gen": "Nano Series",
+        "specs": "2 cores, 1.6 GHz, 65nm process",
+        "price_php": "2, 200",
+        "image": "cpu16.jpg",
+        "paragraph": "Compact and energy-efficient, the VIA Nano X2 offers dual-core performance for embedded and small computing systems. It’s a practical option for low-power applications."
+      },
+      {
+        "category": "CPU",
+        "brand": "ARM",
+        "name": "ARM Neoverse N1",
+        "gen": "Neoverse Series",
+        "specs": "64 cores, 3.1 GHz max, 7nm process",
+        "price_php": "145, 000",
+        "image": "cpu17.jpg",
+        "paragraph": "The ARM Neoverse N1 delivers cloud-grade performance with 64 cores and 7nm efficiency. It’s perfect for servers and edge computing solutions requiring low latency and scalability."
+      },
+      {
+        "category": "CPU",
+        "brand": "Fujitsu",
+        "name": "Fujitsu SPARC64 XII",
+        "gen": "SPARC Series",
+        "specs": "12 cores, 4.25 GHz, 16nm process",
+        "price_php": "138, 000",
+        "image": "cpu18.jpg",
+        "paragraph": "Engineered for mission-critical operations, the SPARC64 XII offers 12 high-speed cores with enterprise reliability. It’s tailored for demanding business and industrial applications."
+      },
+      {
+        "category": "CPU",
+        "brand": "Intel",
+        "name": "Intel Itanium 9700",
+        "gen": "Itanium Series",
+        "specs": "8 cores, 2.66 GHz, 32MB cache, enterprise socket",
+        "price_php": "112, 000",
+        "image": "cpu19.jpg",
+        "paragraph": "A high-end enterprise processor designed for stability and legacy systems. With 8 cores and 32MB cache, it excels in secure and data-intensive operations."
+      },
+      {
+        "category": "CPU",
+        "brand": "MIPS",
+        "name": "MIPS R4700",
+        "gen": "R4000 Series",
+        "specs": "1 core, 200 MHz, 64-bit architecture",
+        "price_php": "8, 500",
+        "image": "cpu20.jpg",
+        "paragraph": "A classic 64-bit CPU known for its efficiency and simplicity. The MIPS R4700 is often used in embedded devices, research projects, and educational environments."
+      }
+    ]
+  },
+  {
+    "category": "RAMs",
+    "items": [
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Vengeance LPX 16GB (2×8) DDR4-3200",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, 1.35V, aluminum low-profile heatsink",
+        "price_php": "3, 200",
+        "image": "ram1.avif",
+        "paragraph": "Built for high performance, the Vengeance LPX DDR4 delivers fast and stable speeds for gaming and multitasking. Its low-profile aluminum heatspreader ensures cool and reliable operation even under heavy loads."
+      },
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Dominator Platinum RGB DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL36, 1.25V, RGB aluminum heatspreader",
+        "price_php": "11, 800",
+        "image": "ram2.avif",
+        "paragraph": "This premium DDR5 memory combines cutting-edge performance with vibrant RGB lighting. It’s designed for enthusiasts who want both top-tier speed and a striking look inside their PC."
+      },
+      {
+        "category": "RAM",
+        "brand": "G.SKILL",
+        "name": "Trident Z RGB 32GB (2×16)",
+        "type": "DDR4",
+        "specs": "3600 MT/s, CL18, 1.35V, RGB lightbar",
+        "price_php": "9, 500",
+        "image": "ram3.webp",
+        "paragraph": "Known for its bold RGB design and high-speed performance, the Trident Z RGB DDR4 offers smooth multitasking and gaming. It’s ideal for users who want both beauty and power in one kit."
+      },
+      {
+        "category": "RAM",
+        "brand": "G.SKILL",
+        "name": "Trident Z5 RGB 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL32/36, XMP3.0, aluminum heatsink",
+        "price_php": "11, 500",
+        "image": "ram4.webp",
+        "paragraph": "Featuring lightning-fast DDR5 technology and sleek aesthetics, the Trident Z5 RGB ensures ultra-responsive performance. It’s built for next-gen systems that demand maximum speed and efficiency."
+      },
+      {
+        "category": "RAM",
+        "brand": "Kingston",
+        "name": "FURY Beast DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, low-profile, lifetime warranty",
+        "price_php": "3, 100",
+        "image": "ram5.jpg",
+        "paragraph": "The FURY Beast DDR4 offers a great balance of performance and price. With reliable speeds and easy plug-and-play setup, it’s perfect for gaming or everyday computing upgrades."
+      },
+      {
+        "category": "RAM",
+        "brand": "Kingston",
+        "name": "FURY Renegade DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL32, RGB, XMP3.0 support",
+        "price_php": "10, 800",
+        "image": "ram6.jpg",
+        "paragraph": "Designed for high-end gaming PCs, the FURY Renegade DDR5 delivers blazing-fast 6000 MT/s speeds. It also features dynamic RGB lighting and full XMP 3.0 support for optimal tuning."
+      },
+      {
+        "category": "RAM",
+        "brand": "Crucial",
+        "name": "DDR5-5200 UDIMM (CT32G52C42U5)",
+        "type": "DDR5",
+        "specs": "5200 MT/s, CL42, 1.1V, non-RGB, stable performance",
+        "price_php": "9, 800",
+        "image": "ram7.png",
+        "paragraph": "Crucial’s DDR5 memory offers improved bandwidth and efficiency for modern CPUs. It’s non-RGB, making it a reliable and straightforward choice for professional and workstation builds."
+      },
+      {
+        "category": "RAM",
+        "brand": "TEAMGROUP",
+        "name": "T-FORCE Delta RGB DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, RGB lightbar, aluminum heatspreader",
+        "price_php": "3, 400",
+        "image": "ram8.jpg",
+        "paragraph": "The T-FORCE Delta RGB stands out with its striking lightbar design and dependable DDR4 speed. Perfect for gamers who want style without compromising stability."
+      },
+      {
+        "category": "RAM",
+        "brand": "TEAMGROUP",
+        "name": "T-FORCE XTREEM ARGB DDR4 32GB (2×16)",
+        "type": "DDR4",
+        "specs": "3600/4000 MT/s, CL14-18, ARGB, low latency",
+        "price_php": "9, 800",
+        "image": "ram9.jpg",
+        "paragraph": "Built for serious performance, this memory kit provides low latency and bright ARGB effects. It’s a premium choice for overclockers and performance enthusiasts."
+      },
+      {
+        "category": "RAM",
+        "brand": "Samsung",
+        "name": "OEM DDR5 32GB Module",
+        "type": "DDR5",
+        "specs": "4800–5600 MT/s, 1.1V, JEDEC standard",
+        "price_php": "9, 400",
+        "image": "ram10.png",
+        "paragraph": "This OEM-grade DDR5 module delivers consistent and efficient performance. It’s ideal for system builders and professionals who need JEDEC-standard reliability."
+      },
+      {
+        "category": "RAM",
+        "brand": "ADATA",
+        "name": "XPG SPECTRIX D60G DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16-18, RGB lightbar",
+        "price_php": "3, 300",
+        "image": "ram11.webp",
+        "paragraph": "The SPECTRIX D60G offers unique RGB coverage and solid DDR4 speed for gaming PCs. It’s both stylish and reliable, designed for users who like bold aesthetics."
+      },
+      {
+        "category": "RAM",
+        "brand": "PNY",
+        "name": "XLR8 Gaming DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, gaming style design",
+        "price_php": "3, 100",
+        "image": "ram12.png",
+        "paragraph": "PNY’s XLR8 Gaming memory provides stable 3200 MT/s performance and a gamer-inspired design. It’s a cost-effective upgrade for gaming desktops."
+      },
+      {
+        "category": "RAM",
+        "brand": "Patriot",
+        "name": "Viper Steel DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, aluminum heatsink",
+        "price_php": "3, 200",
+        "image": "ram13.jpg",
+        "paragraph": "This kit offers high performance with durable aluminum heatspreaders. The Viper Steel is built for gamers who value strength, speed, and reliability."
+      },
+      {
+        "category": "RAM",
+        "brand": "Lexar",
+        "name": "Hades RGB DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL18, RGB design",
+        "price_php": "3, 000",
+        "image": "ram14.webp",
+        "paragraph": "With sleek RGB lighting and dependable speed, the Hades RGB is a great pick for style-conscious gamers. It balances aesthetics with consistent performance."
+      },
+      {
+        "category": "RAM",
+        "brand": "Crucial",
+        "name": "DDR4-3200 (CT16G4DFD832A)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL22, non-RGB JEDEC standard",
+        "price_php": "2, 900",
+        "image": "ram15.webp",
+        "paragraph": "A simple and stable DDR4 module that provides dependable speed for office or home PCs. Perfect for users who prefer non-RGB, plug-and-play upgrades."
+      },
+      {
+        "category": "RAM",
+        "brand": "GeIL",
+        "name": "EVO X II DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, RGB option",
+        "price_php": "3, 300",
+        "image": "ram16.webp",
+        "paragraph": "The EVO X II brings together RGB customization and solid 3200 MT/s performance. It’s a reliable choice for gamers seeking visual flair and speed."
+      },
+      {
+        "category": "RAM",
+        "brand": "HyperX",
+        "name": "FURY DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, XMP support",
+        "price_php": "3, 200",
+        "image": "ram17.jpg",
+        "paragraph": "Offering excellent performance with XMP support, the HyperX FURY DDR4 is built for smooth gaming and multitasking. Its plug-and-play design makes upgrading effortless."
+      },
+      {
+        "category": "RAM",
+        "brand": "Patriot",
+        "name": "Viper Venom DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL30, RGB/non-RGB, XMP3.0",
+        "price_php": "10, 900",
+        "image": "ram18.webp",
+        "paragraph": "This DDR5 kit combines high speed and low latency with stunning RGB effects. It’s perfect for high-performance gaming and creative workflows."
+      },
+      {
+        "category": "RAM",
+        "brand": "XPG",
+        "name": "LANCER RGB DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "5200 MT/s, CL38, RGB lightbar",
+        "price_php": "10, 200",
+        "image": "ram19.jpg",
+        "paragraph": "The XPG LANCER RGB delivers exceptional speed and visual appeal. It’s optimized for DDR5 platforms, ensuring top performance in demanding tasks."
+      },
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Vengeance DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "5600/6000 MT,/s, CL36-40, non-RGB",
+        "price_php": "10, 800",
+        "image": "ram20.avif",
+        "paragraph": "The Corsair Vengeance DDR5 offers fast and stable performance with a clean, minimalist design. It’s a reliable choice for builders looking for power without the RGB."
+      }
+    ]
+  },
+  {
+    "category": "Keyboards",
+    "items": [
+      {
+        "category": "Keyboard",
+        "brand": "Logitech",
+        "name": "MX Keys / MX Keys S",
+        "type": "Wireless productivity keyboard",
+        "specs": "Full-size or Mini layout, Bluetooth/Logi Bolt wireless, smart backlit, rechargeable Li-Po battery",
+        "price_php": "7, 573",
+        "image": "key1.webp",
+        "paragraph": "A premium wireless productivity keyboard designed for comfort and efficiency. Its smart backlighting, solid build, and multi-device connectivity make typing smooth and effortless for work or home setups."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Logitech G",
+        "name": "G915 TKL",
+        "type": "Wireless mechanical gaming keyboard (low-profile GL switches)",
+        "specs": "Tenkeyless layout, LIGHTSPEED wireless + Bluetooth, per-key RGB, aircraft-grade aluminium",
+        "price_php": "12, 940",
+        "image": "key2.webp",
+        "paragraph": "This low-profile wireless mechanical keyboard offers ultra-fast LIGHTSPEED connectivity and per-key RGB lighting. Built with aircraft-grade aluminum, it delivers both precision and durability for competitive gaming."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Logitech G",
+        "name": "Pro X / PRO X TKL",
+        "type": "Mechanical gaming keyboard (hot-swap switches)",
+        "specs": "TKL/full layout, hot-swappable GX switches (clicky/linear/tactile), Esports-oriented",
+        "price_php": "8, 700",
+        "image": "key3.webp",
+        "paragraph": "Engineered for esports, the Pro X keyboard features hot-swappable GX switches for personalized feel and performance. Its compact design and durable build make it a favorite among pro gamers."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Razer",
+        "name": "Huntsman V3 Pro",
+        "type": "Wireless analog optical mechanical gaming keyboard",
+        "specs": "Gen-2 Analog Optical switches, adjustable actuation, rapid trigger, wireless",
+        "price_php": "14, 588",
+        "image": "key4.jpg",
+        "paragraph": "The Huntsman V3 Pro offers next-generation analog optical switches for precise actuation and rapid response. Designed for serious gamers, it combines comfort, customization, and cutting-edge technology."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Razer",
+        "name": "BlackWidow V3",
+        "type": "Mechanical gaming keyboard",
+        "specs": "Full/TKL layout options, Razer Mechanical switches (Green/Yellow/Orange), Chroma RGB, aluminium top plate",
+        "price_php": "7, 570",
+        "image": "key5.jpg",
+        "paragraph": "A classic mechanical keyboard with Razer’s signature Green and Yellow switches for tactile or linear typing. It offers bright RGB lighting and a durable aluminum frame perfect for everyday gaming."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Corsair",
+        "name": "K95 RGB PLATINUM",
+        "type": "Mechanical gaming keyboard",
+        "specs": "Full-size, Cherry MX (Speed/other) switches, aluminium frame, per-key RGB, dedicated macro/media keys",
+        "price_php": "12, 840",
+        "image": "key6.avif",
+        "paragraph": "This flagship mechanical keyboard features per-key RGB, dedicated macro keys, and premium Cherry MX switches. Its robust aluminum frame ensures lasting performance for gamers and professionals."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Corsair",
+        "name": "K70 RGB MK.2",
+        "type": "Mechanical gaming keyboard",
+        "specs": "Cherry MX (Red/Brown/Speed) switches, full-size, per-key RGB, braided cable, media controls",
+        "price_php": "9, 920",
+        "image": "key7.avif",
+        "paragraph": "The K70 MK.2 combines style and speed with its full RGB lighting and Cherry MX switches. It’s designed for competitive play with dedicated media keys and a detachable wrist rest for comfort."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "SteelSeries",
+        "name": "Apex Pro",
+        "type": "Mechanical gaming keyboard (adjustable magnetic switches)",
+        "specs": "OmniPoint adjustable actuation switches, advanced customization, OLED/Smart Display on some models",
+        "price_php": "13, 990",
+        "image": "key8.jpg",
+        "paragraph": "The Apex Pro stands out with OmniPoint adjustable magnetic switches, letting users customize actuation for each key. Its OLED smart display adds real-time information right at your fingertips."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "HyperX",
+        "name": "Alloy Origins",
+        "type": "Mechanical gaming keyboard",
+        "specs": "HyperX mechanical switches (Aqua/Red), full aluminium body, per-key RGB, N-key rollover",
+        "price_php": "5, 800",
+        "image": "key9.avif",
+        "paragraph": "Crafted from aircraft-grade aluminum, the Alloy Origins features HyperX mechanical switches for reliable performance. It’s compact, durable, and perfect for gamers who value quality and simplicity."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Keychron",
+        "name": "K2",
+        "type": "Wireless mechanical keyboard (75%)",
+        "specs": "75% compact layout, Bluetooth/Wired USB-C, Mac/Windows keycaps, hot-swappable options",
+        "price_php": "4, 640",
+        "image": "key10.webp",
+        "paragraph": "A versatile 75% wireless keyboard that blends functionality and portability. It supports both Mac and Windows layouts and offers a satisfying typing experience with mechanical switches."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Keychron",
+        "name": "K6",
+        "type": "Wireless mechanical keyboard (65%)",
+        "specs": "65% layout, Bluetooth 5.1 / Wired USB-C, hot-swappable variants, compact footprint",
+        "price_php": "4, 050",
+        "image": "key11.webp",
+        "paragraph": "Compact and stylish, the K6 is a 65% wireless mechanical keyboard perfect for minimal setups. It supports Bluetooth and wired modes, offering flexibility for work and play."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Ducky",
+        "name": "One 2 Mini",
+        "type": "Mechanical gaming keyboard (60%)",
+        "specs": "60% layout, PBT double-shot keycaps, detachable USB-C cable, hardware macros",
+        "price_php": "7, 545",
+        "image": "key12.webp",
+        "paragraph": "This 60% mechanical keyboard is a favorite among enthusiasts for its build quality and PBT double-shot keycaps. Its small form factor and reliable switches make it ideal for compact desk spaces."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "ObinsLab (Anne Pro)",
+        "name": "Anne Pro 2",
+        "type": "Wireless mechanical keyboard (60%)",
+        "specs": "60% layout, Bluetooth 5.0 / Wired USB-C, ~1900 mAh battery, PBT keycaps, NKRO",
+        "price_php": "5, 800",
+        "image": "key13.webp",
+        "paragraph": "The Anne Pro 2 offers wireless and wired modes with customizable RGB lighting. Its compact 60% layout and long battery life make it a go-to choice for gamers on the go."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Varmilo",
+        "name": "VA87M (VA Series)",
+        "type": "Mechanical keyboard (TKL)",
+        "specs": "87-key TKL layout, Cherry MX switch options, PBT keycaps, premium build, typist focus",
+        "price_php": "9, 860",
+        "image": "key14.webp",
+        "paragraph": "A premium TKL keyboard with high-quality PBT keycaps and Cherry MX switches. It’s built for typists who appreciate comfort, craftsmanship, and a refined typing feel."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Leopold",
+        "name": "FC750R",
+        "type": "Mechanical keyboard (TKL)",
+        "specs": "87-key TKL layout, Cherry MX options, PBT double-shot keycaps, sound-dampening pads, high-quality stabilizers",
+        "price_php": "9, 280",
+        "image": "key15.jpg",
+        "paragraph": "Renowned for its solid build and excellent sound dampening, the FC750R delivers a quiet and satisfying typing experience. Its PBT keycaps and high-quality stabilizers make it a favorite among professionals."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Akko",
+        "name": "3068B",
+        "type": "Wireless/Hybrid mechanical keyboard (65% / 68%)",
+        "specs": "65%/68% layout, Bluetooth 5.0 / 2.4G / Wired options, hot-swappable variants, RGB or white LED, Akko switches",
+        "price_php": "6, 670",
+        "image": "key16.jpg",
+        "paragraph": "A wireless 65% mechanical keyboard offering multiple connection modes including Bluetooth and 2.4GHz. With stylish keycap designs and hot-swappable switches, it blends functionality and fun."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Das Keyboard",
+        "name": "Model 4 Professional",
+        "type": "Mechanical keyboard (Full-size)",
+        "specs": "Full-size layout, Cherry MX variants (gold-plated contacts), oversized volume knob, USB hub, anodized aluminium top panel",
+        "price_php": "11, 670",
+        "image": "key17.jpg",
+        "paragraph": "A full-size keyboard built for serious productivity, featuring Cherry MX switches and a premium aluminum top. It includes a large volume knob and USB hub, perfect for professional workspaces."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Redragon",
+        "name": "K552 Kumara",
+        "type": "Mechanical gaming keyboard (TKL budget)",
+        "specs": "87-key compact/ TKL layout, Outemu Blue switches (or variant), LED/RGB backlight, metal + ABS build, budget friendly",
+        "price_php": "2, 030",
+        "image": "key18.webp",
+        "paragraph": "A budget-friendly TKL mechanical keyboard with durable metal construction and vibrant LED or RGB lighting. It’s an excellent entry-level choice for gamers seeking quality on a budget."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "Cooler Master",
+        "name": "SK650",
+        "type": "Low-profile mechanical keyboard (TKL/full)",
+        "specs": "Low-profile mechanical switches, compact form, RGB lighting, USB-C wired",
+        "price_php": "9, 860",
+        "image": "key19.webp",
+        "paragraph": "The SK650 offers a slim, low-profile design with responsive mechanical switches. Its RGB backlighting and USB-C connectivity make it a sleek addition to modern setups."
+      },
+      {
+        "category": "Keyboard",
+        "brand": "ROCCAT",
+        "name": "Vulcan 120 AIMO",
+        "type": "Mechanical gaming keyboard (Full-size)",
+        "specs": "Full-size layout, Titan mechanical switches (tactile), anodized aluminium top plate, per-key AIMO RGB, detachable palm rest",
+        "price_php": "9, 860",
+        "image": "key20.png",
+        "paragraph": "This mechanical keyboard features Titan switches for fast, tactile feedback and stunning AIMO RGB lighting. With a sturdy aluminum plate and detachable wrist rest, it’s built for comfort and endurance."
+      }
+    ]
+  }
+]

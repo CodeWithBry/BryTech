@@ -1,0 +1,182 @@
+[
+  {
+    "category": "GPU",
+    "brand": "Gigabyte",
+    "name": "Gigabyte Radeon RX 7600 Gaming OC 8GB",
+    "gen": "RX 7600 Series",
+    "specs": "8 GB GDDR6, 128-bit, Boost ~2.7 GHz",
+    "price_php": 17495,
+    "image": "https://ph-test-11.slatic.net/p/3871616848.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "ASUS",
+    "name": "ASUS Dual Radeon RX 6500 XT OC 4GB",
+    "gen": "RX 6500 XT Series",
+    "specs": "4 GB GDDR6, 64-bit, Boost ~2.8 GHz",
+    "price_php": 11599,
+    "image": "https://ph-test-11.slatic.net/p/2859777144.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "MSI",
+    "name": "MSI GeForce RTX 3060 Ventus 2X OC 12GB",
+    "gen": "RTX 3060 Series",
+    "specs": "12 GB GDDR6, 192-bit, Boost ~1.8 GHz",
+    "price_php": 16995,
+    "image": "https://easypc.com.ph/assets/images/products/3060ventus2x.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "ZOTAC",
+    "name": "ZOTAC GAMING GeForce RTX 4060 Twin Edge OC 8GB",
+    "gen": "RTX 4060 Series",
+    "specs": "8 GB GDDR6, 128-bit, Boost ~2.47 GHz",
+    "price_php": 14590,
+    "image": "https://netcodex.ph/images/products/zt-d40600h-10m.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Sapphire",
+    "name": "Sapphire Pulse Radeon RX 7600 8GB",
+    "gen": "RX 7600 Series",
+    "specs": "8 GB GDDR6, 128-bit, Boost ~2.7 GHz",
+    "price_php": 16450,
+    "image": "https://datablitz.com.ph/images/products/sapphire-pulse-rx7600.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "PowerColor",
+    "name": "PowerColor Hellhound Radeon RX 7900 XT 20GB",
+    "gen": "RX 7900 XT Series",
+    "specs": "20 GB GDDR6, 320-bit, Boost up to ~2.5 GHz",
+    "price_php": 61995,
+    "image": "https://datablitz.com.ph/images/products/powercolor-hellhound-rx7900xt.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "XFX",
+    "name": "XFX Speedster MERC 310 Radeon RX 7900 XT 20GB",
+    "gen": "RX 7900 XT Series",
+    "specs": "20 GB GDDR6, 320-bit, RDNA3",
+    "price_php": 59500,
+    "image": "https://bermorzone.com.ph/images/products/xfx-merc310-rx7900xt.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Palit",
+    "name": "Palit GeForce RTX 3050 StormX 8GB",
+    "gen": "RTX 3050 Series",
+    "specs": "8 GB GDDR6, 96-bit, Boost ~1.8 GHz",
+    "price_php": 10250,
+    "image": "https://datablitz.com.ph/images/products/palit-rtx3050.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "ASRock",
+    "name": "ASRock Radeon RX 6600 Challenger D 8GB",
+    "gen": "RX 6600 Series",
+    "specs": "8 GB GDDR6, 128-bit, 1792 stream processors",
+    "price_php": 12489,
+    "image": "https://netcodex.ph/images/products/asrock-rx6600.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Gigabyte",
+    "name": "Gigabyte GeForce RTX 3060 Ti Gaming OC 8GB",
+    "gen": "RTX 3060 Ti Series",
+    "specs": "8 GB GDDR6, 256-bit, Ampere architecture",
+    "price_php": 16200,
+    "image": "https://www.gigabyte.com/ph/Graphics-Card/GV-R636TGAMING-OC-8GD-rev-1-0/images/product.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Sapphire",
+    "name": "Sapphire NITRO+ Radeon RX 7900 XTX 24GB",
+    "gen": "RX 7900 XTX Series",
+    "specs": "24 GB GDDR6, 384-bit, RDNA3",
+    "price_php": 68995,
+    "image": "https://gameone.ph/images/products/sapphire-nitro-rx7900xtx.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "PNY",
+    "name": "PNY GeForce RTX 3060 Verto 8GB",
+    "gen": "RTX 3060 Series",
+    "specs": "8 GB GDDR6, 192-bit",
+    "price_php": 17450,
+    "image": "https://datablitz.com.ph/images/products/pny-rtx3060-verto.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "INNO3D",
+    "name": "INNO3D GeForce RTX 4060 Twin X2 8GB",
+    "gen": "RTX 4060 Series",
+    "specs": "8 GB GDDR6, 128-bit",
+    "price_php": 17950,
+    "image": "https://pcx.com.ph/images/products/inno3d-rtx4060.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "GALAX",
+    "name": "GALAX GeForce RTX 3050 EX 6GB",
+    "gen": "RTX 3050 Series",
+    "specs": "6 GB GDDR6, 96-bit",
+    "price_php": 12700,
+    "image": "https://pcx.com.ph/images/products/galax-rtx3050.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Colorful",
+    "name": "Colorful iGame GeForce RTX 4060 NB EX 8GB",
+    "gen": "RTX 4060 Series",
+    "specs": "8 GB GDDR6, 128-bit",
+    "price_php": 17295,
+    "image": "https://datablitz.com.ph/images/products/colorful-rtx4060.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "ZOTAC",
+    "name": "ZOTAC GeForce GTX 1060 6GB (used)",
+    "gen": "GTX 10 Series",
+    "specs": "6 GB GDDR5, 192-bit",
+    "price_php": 7231,
+    "image": "https://www.lazada.com.ph/images/products/gtx1060-6gb-used.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "PowerColor",
+    "name": "PowerColor Reaper RX 9060 XT 8GB",
+    "gen": "RX 9060 XT Series",
+    "specs": "8 GB GDDR6, 128-bit",
+    "price_php": 22590,
+    "image": "https://www.lazada.com.ph/images/products/powercolor-rx9060.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "MSI",
+    "name": "MSI GeForce RTX 2070 Armor 8G",
+    "gen": "RTX 20 Series",
+    "specs": "8 GB GDDR6, 256-bit",
+    "price_php": 58522,
+    "image": "https://www.ubuy.ph/images/products/msi-rtx2070-armor.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Various",
+    "name": "Used GTX 1050 / 1050 Ti 4GB",
+    "gen": "GTX 10 Series",
+    "specs": "2–4 GB GDDR5, 64–128-bit",
+    "price_php": 1849,
+    "image": "https://www.lazada.com.ph/images/products/gtx1050-used.jpg"
+  },
+  {
+    "category": "GPU",
+    "brand": "Sapphire",
+    "name": "Sapphire Pulse RX 7900 XT 16GB",
+    "gen": "RX 7900 XT Series",
+    "specs": "16 GB GDDR6, 320-bit",
+    "price_php": 59500,
+    "image": "https://datablitz.com.ph/images/products/sapphire-pulse-rx7900xt.jpg"
+  }
+]

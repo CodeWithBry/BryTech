@@ -1,0 +1,182 @@
+[
+  {
+    "category": "Keyboard",
+    "brand": "Logitech",
+    "name": "MX Keys / MX Keys S",
+    "type": "Wireless productivity keyboard",
+    "specs": "Full-size or Mini layout, Bluetooth/Logi Bolt wireless, smart backlit, rechargeable Li-Po battery",
+    "price_php": "7, 573",
+    "image": "key1.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Logitech G",
+    "name": "G915 TKL",
+    "type": "Wireless mechanical gaming keyboard (low-profile GL switches)",
+    "specs": "Tenkeyless layout, LIGHTSPEED wireless + Bluetooth, per-key RGB, aircraft-grade aluminium",
+    "price_php": "12, 940",
+    "image": "key2.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Logitech G",
+    "name": "Pro X / PRO X TKL",
+    "type": "Mechanical gaming keyboard (hot-swap switches)",
+    "specs": "TKL/full layout, hot-swappable GX switches (clicky/linear/tactile), Esports-oriented",
+    "price_php": "8, 700",
+    "image": "key3.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Razer",
+    "name": "Huntsman V3 Pro",
+    "type": "Wireless analog optical mechanical gaming keyboard",
+    "specs": "Gen-2 Analog Optical switches, adjustable actuation, rapid trigger, wireless",
+    "price_php": "14, 588",
+    "image": "key4.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Razer",
+    "name": "BlackWidow V3",
+    "type": "Mechanical gaming keyboard",
+    "specs": "Full/TKL layout options, Razer Mechanical switches (Green/Yellow/Orange), Chroma RGB, aluminium top plate",
+    "price_php": "7, 570",
+    "image": "key5.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Corsair",
+    "name": "K95 RGB PLATINUM",
+    "type": "Mechanical gaming keyboard",
+    "specs": "Full-size, Cherry MX (Speed/other) switches, aluminium frame, per-key RGB, dedicated macro/media keys",
+    "price_php": "12, 840",
+    "image": "key6.avif"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Corsair",
+    "name": "K70 RGB MK.2",
+    "type": "Mechanical gaming keyboard",
+    "specs": "Cherry MX (Red/Brown/Speed) switches, full-size, per-key RGB, braided cable, media controls",
+    "price_php": "9, 920",
+    "image": "key7.avif"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "SteelSeries",
+    "name": "Apex Pro",
+    "type": "Mechanical gaming keyboard (adjustable magnetic switches)",
+    "specs": "OmniPoint adjustable actuation switches, advanced customization, OLED/Smart Display on some models",
+    "price_php": "13, 990",
+    "image": "key8.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "HyperX",
+    "name": "Alloy Origins",
+    "type": "Mechanical gaming keyboard",
+    "specs": "HyperX mechanical switches (Aqua/Red), full aluminium body, per-key RGB, N-key rollover",
+    "price_php": "5, 800",
+    "image": "key9.avif"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Keychron",
+    "name": "K2",
+    "type": "Wireless mechanical keyboard (75%)",
+    "specs": "75% compact layout, Bluetooth/Wired USB-C, Mac/Windows keycaps, hot-swappable options",
+    "price_php": "4, 640",
+    "image": "key10.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Keychron",
+    "name": "K6",
+    "type": "Wireless mechanical keyboard (65%)",
+    "specs": "65% layout, Bluetooth 5.1 / Wired USB-C, hot-swappable variants, compact footprint",
+    "price_php": "4, 050",
+    "image": "key11.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Ducky",
+    "name": "One 2 Mini",
+    "type": "Mechanical gaming keyboard (60%)",
+    "specs": "60% layout, PBT double-shot keycaps, detachable USB-C cable, hardware macros",
+    "price_php": "7, 545",
+    "image": "key12.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "ObinsLab (Anne Pro)",
+    "name": "Anne Pro 2",
+    "type": "Wireless mechanical keyboard (60%)",
+    "specs": "60% layout, Bluetooth 5.0 / Wired USB-C, ~1900 mAh battery, PBT keycaps, NKRO",
+    "price_php": "5, 800",
+    "image": "key13.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Varmilo",
+    "name": "VA87M (VA Series)",
+    "type": "Mechanical keyboard (TKL)",
+    "specs": "87-key TKL layout, Cherry MX switch options, PBT keycaps, premium build, typist focus",
+    "price_php": "9, 860",
+    "image": "key14.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Leopold",
+    "name": "FC750R",
+    "type": "Mechanical keyboard (TKL)",
+    "specs": "87-key TKL layout, Cherry MX options, PBT double-shot keycaps, sound-dampening pads, high-quality stabilizers",
+    "price_php": "9, 280",
+    "image": "key15.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Akko",
+    "name": "3068B",
+    "type": "Wireless/Hybrid mechanical keyboard (65% / 68%)",
+    "specs": "65%/68% layout, Bluetooth 5.0 / 2.4G / Wired options, hot-swappable variants, RGB or white LED, Akko switches",
+    "price_php": "6, 670",
+    "image": "key16.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Das Keyboard",
+    "name": "Model 4 Professional",
+    "type": "Mechanical keyboard (Full-size)",
+    "specs": "Full-size layout, Cherry MX variants (gold-plated contacts), oversized volume knob, USB hub, anodized aluminium top panel",
+    "price_php": "11, 670",
+    "image": "key17.jpg"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Redragon",
+    "name": "K552 Kumara",
+    "type": "Mechanical gaming keyboard (TKL budget)",
+    "specs": "87-key compact/ TKL layout, Outemu Blue switches (or variant), LED/RGB backlight, metal + ABS build, budget friendly",
+    "price_php": "2, 030",
+    "image": "key18.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "Cooler Master",
+    "name": "SK650",
+    "type": "Low-profile mechanical keyboard (TKL/full)",
+    "specs": "Low-profile mechanical switches, compact form, RGB lighting, USB-C wired",
+    "price_php": "9, 860",
+    "image": "key19.webp"
+  },
+  {
+    "category": "Keyboard",
+    "brand": "ROCCAT",
+    "name": "Vulcan 120 AIMO",
+    "type": "Mechanical gaming keyboard (Full-size)",
+    "specs": "Full-size layout, Titan mechanical switches (tactile), anodized aluminium top plate, per-key AIMO RGB, detachable palm rest",
+    "price_php": "9, 860",
+    "image": "key20.png"
+  }
+]
