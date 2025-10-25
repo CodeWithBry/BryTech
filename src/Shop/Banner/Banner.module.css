@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: min(300px, 200px);
+    height: min(300px, 150px);
     width: 100vw;
     overflow: hidden;
     position: relative;
-    background-image: url('./Shop/sysunitBanner.jpg');
+    background-image: url('/Shop/sysunitBanner.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -20,7 +20,7 @@
     translate: -50% -50%;
     color: white;
     text-shadow: 0 0 10px var(--l-text-color1);
-    font-size: var(--h1-normal);
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
     justify-content: center;
     width: 100%;
     display: flex;

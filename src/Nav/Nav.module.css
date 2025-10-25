@@ -90,7 +90,7 @@
     margin-right: 2rem;
 }
 
-.nav .right .tabs .themePreference >p>img {
+.nav .right .tabs .themePreference>p>img {
     width: 1.5rem;
 }
 
@@ -160,7 +160,7 @@
         gap: 0;
         z-index: -1;
         background-color: white;
-        box-shadow: 0  10px 10px -10px black;
+        box-shadow: 0 10px 10px -10px black;
         animation: drop .5s ease-out forwards;
     }
 
@@ -180,6 +180,8 @@
         color: var(--l-text-highlight);
     }
 
+
+
     .nav .dropDown .tab>a {
         color: inherit;
     }
@@ -194,6 +196,14 @@
         width: 95vw;
         background-color: rgb(194, 194, 194);
         border: 0;
+    }
+
+    .nav .dropDown .selected {
+        color: var(--l-text-color1);
+    }
+
+    .nav .dropDown .selected:hover {
+        color: var(--l-text-color1);
     }
 
     .nav .dropDown .themePreference>p {

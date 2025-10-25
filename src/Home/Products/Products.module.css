@@ -7,10 +7,11 @@
 
 .products > button {
     font-family: var(--font-title);
-    font-size: var(--h1-larger);
-    width: 100vw;
+    font-size: clamp(2rem, 5vw, 4.75rem);
+    width: fit-content;
+    text-wrap: nowrap;
     text-align: center;
-    margin: var(--gap-large) 0;
+    margin: var(--gap-large) auto;
     border: none;
     background-color: transparent;
     position: relative;
@@ -94,8 +95,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: min(450px, 300px);
+    width: min(500px, 100vw);
     flex-shrink: 0;
+    margin: auto;
 }
 
 .products .itemCon .item .left > img {
@@ -107,7 +109,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    width: min(450px, 300px);
+    width: fit-content;
     flex-shrink: 0;
     height: 100%;
     margin: auto;
