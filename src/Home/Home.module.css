@@ -1,0 +1,7 @@
+.home{
+    z-index: 0;
+}
+
+.darkHome {
+    background-color: var(--d-bg-color);
+}

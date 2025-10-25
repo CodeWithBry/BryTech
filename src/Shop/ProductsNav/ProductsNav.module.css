@@ -1,0 +1,31 @@
+.productsNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 2rem 0;
+    gap: var(--gap-normal);
+    flex-wrap: wrap;
+}
+
+.productsNav .link {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: var(--l-text-unhighlight);
+    font-weight: 600;
+    font-family: var(--font-normal);
+    font-size: var(--p-medium);
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    flex-shrink: 75px;
+}
+
+.productsNav .highlight {
+    background-color: var(--l-bg-highlight);
+    color: white;
+    padding: var(--pad-y-s) var(--pad-x-m);
+    border-radius: 2rem;
+}

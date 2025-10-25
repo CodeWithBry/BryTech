@@ -1,0 +1,159 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.products > button {
+    font-family: var(--font-title);
+    font-size: var(--h1-larger);
+    width: 100vw;
+    text-align: center;
+    margin: 5rem 0;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.products > button:hover > span {
+    color: var(--l-text-unhighlight);
+}
+
+.products > button > span{
+    color: var(--l-text-color1);
+    transition: .3s ease;
+}
+
+.products .hide {
+    display: none;
+}
+
+.products .dropDown {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    max-height: 300px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--l-box-shadow);
+    border-radius: 1rem;
+    background-color: white;
+    padding: var(--pad-y-m) var(--pad-x-l);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.products .dropDown .highlight {
+    color: var(--l-text-color1);
+    transition: .3s ease;
+}
+
+.products .dropDown .unhighlight {
+    color: var(--l-text-unhighlight);
+    transition: .3s ease;
+}
+
+.products .dropDown .unhighlight:hover {
+    color: var(--l-text-highlight);
+}
+
+/* <div className={s.item}>
+        
+    </div> */
+
+.products .itemCon {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 90vw;
+    height: fit-content;
+    margin: auto;
+}
+
+.products .itemCon .item {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 1rem;
+    gap: 2rem;
+}
+
+.products .itemCon .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.products .itemCon .item .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .itemCon .item .left > img {
+    width: 80%;
+}
+
+.products .itemCon .item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 40%;
+    height: 100%;
+}
+
+.products .itemCon .item .right > h1 {
+    font-family: var(--font-title);
+    font-size: var(--h1-larger);
+}
+
+.products .itemCon .item .right > p {
+    font-family: var(--font-normal);
+    font-size: var(--p-medium);
+    color: var(--l-text-unhighlight);
+    margin-left: .5rem;
+    text-indent: 1rem;
+    width: 90%;
+}
+
+.products .itemCon .item .right > a {
+    font-family: var(--font-normal);
+    font-size: var(--p-medium);
+    padding: var(--pad-y-m) var(--pad-x-l);
+    border-radius: 5rem;
+    color:var(--l-bg-highlight);
+    border: 3px solid var(--l-bg-highlight);
+    width: fit-content;
+    margin-top: 1.5rem;
+    position: relative;
+    display: flex;
+    gap: var(--gap-small);
+}
+
+.products .itemCon .item .right > a:hover {
+    background-color: var(--l-bg-highlight);
+    color: var(--l-bg-color);
+}
+
+
+.darkProducts > h1 {
+    color: white;
+}
+
+.products .itemCon .item .left > img {
+    border-radius: 3rem;
+}
+
+.darkProducts .itemCon .item .right > a {
+    background-color: var(--l-bg-color);
+}
+
+.darkProducts .itemCon .item .right > h1 {
+    color: white;
+}

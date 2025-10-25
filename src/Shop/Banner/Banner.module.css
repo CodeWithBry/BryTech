@@ -1,0 +1,33 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner > img {
+    width: 100vw;
+    filter: brightness(.3);
+}
+
+.banner > h1 {
+    font-family: var(--font-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: white;
+    text-shadow: 0 0 10px var(--l-text-color1);
+    font-size: var(--h1-normal);
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: var(--gap-large);
+}
+
+.banner > h1 > span {
+    color: var(--l-text-color1);
+}

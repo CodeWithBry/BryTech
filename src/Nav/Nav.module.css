@@ -1,0 +1,242 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 4rem;
+    box-shadow: 1px 1px 15px -10px black;
+    background-color: var(--l-bg-color);
+    z-index: 1;
+}
+
+.nav .left,
+.nav .right {
+    display: flex;
+    align-items: center;
+}
+
+.nav .left {
+    margin-left: 2rem;
+    display: flex;
+    gap: var(--gap-small);
+}
+
+.nav .left .icon {
+    width: auto;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.nav .left .title {
+    font-family: var(--font-title);
+    color: var(--l-text-color1);
+}
+
+.nav .left .title>span {
+    color: var(--l-text-unhighlight);
+}
+
+.nav .right {
+    margin-right: 2rem;
+}
+
+.nav .right .tabs {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-normal);
+    font-family: var(--font-normal);
+}
+
+.nav .right .tabs .tab {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: var(--l-text-unhighlight);
+    font-weight: 600;
+    font-size: var(--p-small);
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.nav .right .tabs .selected {
+    background-color: var(--l-bg-highlight);
+    color: white;
+    padding: var(--pad-y-s) var(--pad-x-m);
+    border-radius: 2rem;
+}
+
+.nav .right .tabs .tab>a {
+    color: inherit;
+}
+
+.nav .right .tabs .tab>hr {
+    display: none;
+}
+
+.nav .right .tabs .tab:hover {
+    color: var(--l-text-highlight);
+}
+
+.nav .right .tabs .selected:hover {
+    background-color: var(--l-bg-highlight);
+    color: white;
+}
+
+.nav .right .tabs .themePreference {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 2rem;
+}
+
+.nav .right .tabs .themePreference >p>img {
+    width: 1.5rem;
+}
+
+.nav .right .tabs .themePreference>p>span {
+    display: none;
+}
+
+.nav .right .tabs .themePreference>hr {
+    display: none;
+}
+
+.nav .hamburger {
+    display: none;
+}
+
+.darkNav {
+    background-color: var(--d-bg-color);
+}
+
+.darkNav .right .tabs .tab {
+    color: var(--d-text-unhighlight);
+}
+
+.darkNav .right .tabs .tab:hover {
+    color: var(--d-text-highlight);
+}
+
+.darkNav .right .tabs .selected {
+    background-color: var(--l-bg-highlight);
+    color: white;
+}
+
+
+@media (max-width: 900px) and (max-height: 900px) {
+    .nav {
+        position: sticky;
+        z-index: 1;
+    }
+
+    .nav .right .tabs {
+        display: none;
+    }
+
+    .nav .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        font-size: var(--p-large);
+        margin-right: 2rem;
+    }
+
+    .nav .dropDown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-normal);
+        font-family: var(--font-normal);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        height: fit-content;
+        max-height: 70vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        opacity: 0;
+        gap: 0;
+        z-index: -1;
+        background-color: white;
+        box-shadow: 0  10px 10px -10px black;
+        animation: drop .5s ease-out forwards;
+    }
+
+    .nav .dropDown .tab,
+    .nav .dropDown .themePreference {
+        width: 100%;
+        height: fit-content;
+        color: var(--l-text-unhighlight);
+        background-color: transparent;
+        padding: var(--pad-y-l) 0;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    .nav .dropDown .tab:hover,
+    .nav .dropDown .themePreference:hover {
+        color: var(--l-text-highlight);
+    }
+
+    .nav .dropDown .tab>a {
+        color: inherit;
+    }
+
+    .nav .dropDown .tab>i {
+        margin: 1rem;
+    }
+
+    .nav .dropDown .tab>hr {
+        height: .1rem;
+        margin: auto;
+        width: 95vw;
+        background-color: rgb(194, 194, 194);
+        border: 0;
+    }
+
+    .nav .dropDown .themePreference>p {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav .right .tabs .themePreference>p>span {
+        display: block;
+    }
+
+    .nav .dropDown .themePreference>p>img {
+        width: 1.5rem;
+        margin: 1rem;
+    }
+
+    .nav .dropDown .themePreference>hr {
+        height: .1rem;
+        margin: auto;
+        width: 95vw;
+        background-color: rgb(194, 194, 194);
+        border: 0;
+    }
+
+
+    .darkNav .dropDown {
+        background-color: var(--d-bg-color-light);
+    }
+
+    .darkNav .dropDown .tab:hover,
+    .darkNav .dropDown .themePreference:hover,
+    .darkNav .hamburger:hover {
+        color: var(--d-text-highlight);
+    }
+
+    .darkNav .hamburger {
+        color: var(--d-text-color1);
+    }
+}
+
+@keyframes drop {
+    to {
+        display: flex;
+        opacity: 1;
+    }
+}

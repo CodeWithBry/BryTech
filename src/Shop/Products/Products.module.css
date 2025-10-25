@@ -1,0 +1,18 @@
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+.products h1 {
+    font-family: var(--font-title);
+    font-size: var(--h1-larger);
+    color: var(--l-text-color1);
+    margin: -2rem 3rem 2rem 3rem;
+}
+
+.products .wrapItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-large);
+    justify-content: center;
+}
