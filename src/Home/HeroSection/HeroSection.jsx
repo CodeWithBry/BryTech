@@ -13,14 +13,14 @@ function HeroSection() {
                     Welcome to BryTech, your one-stop shop for the latest PC hardware. Whether you’re upgrading your setup or building from scratch, discover quality components, trusted brands, and unbeatable performance — all in one place.
                 </p>
                 <div className={s.actions}>
-                    <button className={s.developer}>Developer <i className="fa fa-info"></i></button>
-                    <button className={s.toSho}>Shop Now <i className="fa fa-shopping-cart"></i></button>
+                    <Link className={`${s.link} ${s.developer}`} to={"/About"}>Developer <i className="fa fa-info"></i></Link>
+                    <Link className={`${s.link} ${s.toShop}`} to={"/Shop"}>Shop Now <i className="fa fa-shopping-cart"></i></Link>
                 </div>
             </div>
             <div className={s.photos}>
                 <div className={s.card}>
                     <img src="./Home/Keyboard.png" alt="Keyboard" />
-                    <Link to={"/Shop"}>Shop Now</Link>
+                    <Link to={"/Shop/Keyboards"}>Shop Now</Link>
                 </div>
                 <div className={s.card}>
                     <img src="./Home/PC.png" alt="System Unit" />

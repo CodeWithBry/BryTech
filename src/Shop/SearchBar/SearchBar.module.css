@@ -1,0 +1,73 @@
+.searchBar  {
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    margin: 2rem 0;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.searchBar > h1 {
+    font-family: var(--font-title);
+    color: var(--l-text-color1);
+    display: none;
+}
+
+.searchBar .searchWrapper {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+}
+
+.searchBar .searchWrapper .searchInput {
+    width: 100%;
+    display: flex;
+    gap: var(--gap-small);
+    position: relative;
+    align-items: center;
+    box-shadow: var(--l-box-shadow);
+    border-radius: 1rem;
+}
+
+.searchBar .searchWrapper .searchInput > input {
+    width: 100%;
+    height: fit-content;
+    padding: var(--pad-y-s) 0;
+    border: 0;
+    font-family: var(--font-title);
+    outline: none;
+    background-color: transparent;
+}   
+
+.searchBar .searchWrapper .searchInput .searchIcon {
+    padding: var(--pad-y-l) var(--pad-x-m);
+}
+
+.searchBar .searchWrapper .searchInput .clear {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    translate: -50% -50%;
+}
+
+.searchBar .searchWrapper .searchInput .hide {
+    display: none;
+}
+
+.searchBar .searchWrapper > button {
+    border: 0;
+    border-radius: 1rem;
+    font-size: var(--p-small);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: var(--pad-y-s) var(--pad-x-l);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    box-shadow: var(--l-box-shadow);
+    background-color: var(--l-text-unhighlight);
+    border: 3px solid var(--l-text-unhighlight);
+}

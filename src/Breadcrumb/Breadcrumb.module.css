@@ -1,0 +1,13 @@
+.breadCrumb {
+    display: flex;
+    gap: .5rem;
+    margin: 1rem;
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--l-text-color1);
+}
+
+.breadCrumb > span {
+    display: flex;
+    gap: .5rem;
+}

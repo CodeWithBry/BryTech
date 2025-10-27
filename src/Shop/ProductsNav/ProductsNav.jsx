@@ -3,16 +3,16 @@ import { shopContext } from '../Shop'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 function ProductsNav() {
-    const {lightMode, productLists, setSelectedProduct} = useContext(shopContext)
+    const {lightMode, categoryLists, setSelectedCategory} = useContext(shopContext)
     return (
         <div className={lightMode ? s.productsNav : `${s.productsNav} ${s.darkProductsNav}`}>
-            {productLists.map((product)=> {
+            {categoryLists.map((product)=> {
                 return <Link 
                     to={`/Shop/${product.name}`}
                     className={product.isSelected ? `${s.link} ${s.highlight}` : s.link}
                     key={product.endPoint}
                     onClick={()=>{
-                        setSelectedProduct(product)
+                        setSelectedCategory(product)
                     }}>
                     {product.name}
                 </Link>

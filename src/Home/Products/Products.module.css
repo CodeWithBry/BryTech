@@ -7,7 +7,7 @@
 
 .products > button {
     font-family: var(--font-title);
-    font-size: clamp(2rem, 5vw, 4.75rem);
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
     width: fit-content;
     text-wrap: nowrap;
     text-align: center;
@@ -46,6 +46,10 @@
     padding: var(--pad-y-m) var(--pad-x-l);
     overflow: hidden;
     overflow-y: auto;
+}
+
+.products .dropDown > p {
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
 }
 
 .products .dropDown .highlight {
@@ -118,6 +122,7 @@
 .products .itemCon .item .right > h1 {
     font-family: var(--font-title);
     font-size: var(--h1-larger);
+    width: min(750px, 300px);
 }
 
 .products .itemCon .item .right > p {

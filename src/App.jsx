@@ -1,7 +1,7 @@
 import s from './App.module.css'
-import { createContext, useRef } from 'react'
+import { createContext, useEffect, useRef } from 'react'
 import { useState } from 'react';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 
 // TABS
 
@@ -19,6 +19,7 @@ import Footer from './Footer/Footer';
 export const context = createContext();
 
 function App() {
+    const location = useLocation()
     // REFS
     const wrapperRef = useRef(null)
 
@@ -26,40 +27,63 @@ function App() {
     const [lightMode, setLightMode] = useState(true);
 
     // STRING
+    const [path, setPath] = useState("")
 
     // NUMBERS
 
     // ARRAY AND OBJECTS
     const [tabs, setTabs] = useState([
-        { name: "Home", element: Home , path: `/`, icon: "fa fa-home", isSelected: true },
-        { name: "Shop", element: Shop , path: `/Shop`, icon: "fa fa-shopping-bag", isSelected: false },
-        { name: "Cart", element: Cart , path: `/Cart`, icon: "fa fa-shopping-cart", isSelected: false },
-        { name: "BotBry", element: BotBry , path: `/BotBry`, icon: "fa fa-commenting", isSelected: false },
-        { name: "About", element: About , path: `/About`, icon: "fa fa-info", isSelected: false },
-        { name: "Docs", element: Docs , path: `/Docs`, icon: "fa fa fa-code", isSelected: false },
+        { name: "Home", element: Home, path: `/`, icon: "fa fa-home", isSelected: true },
+        { name: "Shop", element: Shop, path: `/Shop`, icon: "fa fa-shopping-bag", isSelected: false },
+        { name: "Cart", element: Cart, path: `/Cart`, icon: "fa fa-shopping-cart", isSelected: false },
+        { name: "BotBry", element: BotBry, path: `/BotBry`, icon: "fas fa-robot", isSelected: false },
+        { name: "About", element: About, path: `/About`, icon: "fa fa-info", isSelected: false },
+        { name: "Docs", element: Docs, path: `/Docs`, icon: "fa fa fa-code", isSelected: false },
     ])
+    const [prevTabs, setPrevTabs] = useState([])
 
     // FUNCTIONS
     function defineTab(path) {
         setTabs(prev => prev.map((tab) => {
-            return tab.path == path ?
-                { ...tab, isSelected: true } :
-                { ...tab, isSelected: false }
+
+            if (tab.path == path) {
+                setPath(tab.path)
+                return { ...tab, isSelected: true }
+            } else {
+                return { ...tab, isSelected: false }
+            }
+
         }))
+
+    }
+
+    function scrollUp() {
+        wrapperRef.current.scrollTo({ top: 0, behavior: "smooth" })
     }
 
     // EFFECTS
+    useEffect(() => {
+        function getPath() {
+            const url = window.location.href
+            const pathURL = url.slice(url.lastIndexOf("/#/") + 2)
+            setPath(pathURL)
+        }
+        return () => getPath()
+    }, [location])
 
     const variables = {
         //boolean
         lightMode, setLightMode,
         // strings
+        path, setPath,
+        location,
         // numbers
         // arrays & objects
         tabs, setTabs,
+        prevTabs, setPrevTabs,
 
         // functions
-        defineTab
+        defineTab, scrollUp
     };
 
     return (
@@ -69,10 +93,11 @@ function App() {
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
-                        
-                        return <Route path={tab.path} element={<><Component /> <Footer TopElement={wrapperRef}/></>} />
+                        return <Route path={tab.path} element={<><Component /> <Footer TopElement={wrapperRef} /></>} />
                     })}
-                    <Route path='/Shop/:productCategory' element={<><Shop /> <Footer TopElement={wrapperRef}/></>}/>
+                    <Route path='/Shop/:productCategory' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/:productCategory/:productName' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/Search/:searchDescription' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
                 </Routes>
             </div>
         </context.Provider>

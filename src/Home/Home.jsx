@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react"
 import HeroSection from "./HeroSection/HeroSection";
 import ChatInfo from "./ChatInfo/ChatInfo";
 import Products from "./Products/Products";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
 
 function Home() {
   const {defineTab, lightMode} = useContext(context);
@@ -16,6 +17,7 @@ function Home() {
 
   return (
     <div className={lightMode ? s.home : `${s.home} ${s.darkHome}`}>
+      <Breadcrumb />
       <HeroSection />
       <ChatInfo />
       <Products />

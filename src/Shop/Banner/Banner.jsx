@@ -3,10 +3,10 @@ import s from './Banner.module.css'
 import { shopContext } from '../Shop'
 
 function Banner() {
-  const {selectedProduct} = useContext(shopContext)
+  const {selectedCategory} = useContext(shopContext)
 
   return (
-    <div className={s.banner}>
+    <div className={s.banner} style={{backgroundImage: `url(${selectedCategory?.banner})`}}>
         <h1><span>Build Smarter</span>Upgrade Faster</h1>
     </div>
   )

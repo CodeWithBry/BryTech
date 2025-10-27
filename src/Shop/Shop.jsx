@@ -4,20 +4,27 @@ import { createContext, useContext, useEffect, useState } from "react";
 import Banner from "./Banner/Banner";
 import ProductsNav from "./ProductsNav/ProductsNav";
 import Products from "./Products/Products";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import SearchBar from "./SearchBar/SearchBar";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
+import ProductDetails from "./ProductDetails/ProductDetails";
 
 export const shopContext = createContext()
 
 function Shop() {
   const { defineTab, lightMode } = useContext(context);
-  const { productCategory }  = useParams();
+  const { productCategory, searchDescription, productName } = useParams();
+  const navigation = useNavigate()
   const params = productCategory;
 
   const [skeletonLoading, setSkeletonLoading] = useState(false)
+  const [prevSearch, setPrevSearch] = useState(searchDescription)
 
-  const [selectedProduct, setSelectedProduct] = useState(null)
-
-  const [productLists, setProductLists] = useState([
+  const [selectedItem, setSelectedItem] = useState(null)
+  const [allProducts, setAllProducts] = useState(null)
+  const [resultedData, setResultedData] = useState()
+  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [categoryLists, setCategoryLists] = useState([
     { name: "All", endPoint: `/BryTech/products/All/all.json`, banner: "./Shop/sysunitBanner.jpg", isSelected: true },
     { name: "CPUs", endPoint: `/BryTech/products/CPUs/cpu.json`, banner: "./Shop/cpuBanner.jpg", isSelected: false },
     { name: "RAMs", endPoint: `/BryTech/products/RAMs/ram.json`, banner: "./Shop/ramBanner.jpg", isSelected: false },
@@ -28,20 +35,51 @@ function Shop() {
   ])
   const [itemLists, setItemLists] = useState(null)
 
+  async function fetchData() {
+    try {
+      const req = await fetch("/BryTech/products/All/all.json")
+      return req.json()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async function handleSearch(key, input) {
+    if (input.length != 0 && key == "Enter" || key == null) {
+      if (!window.location.href.includes("Search") && searchDescription != null) return
+      navigation(`/Shop/Search/${input}`)
+      setSkeletonLoading(true)
+      const req = await fetchData()
+      const resultedData = []
+      for (let i in req) {
+        req[i].items.filter(item => {
+          input.split(" ").filter((word) => {
+            if (item.name.toLowerCase().includes(word.toLowerCase())
+              || item.category.toLowerCase().includes(word.toLowerCase())
+              || item.brand.toLowerCase().includes(word.toLowerCase())) {
+              resultedData.push(item)
+            }
+          })
+        })
+      }
+      setResultedData(resultedData)
+      setSkeletonLoading(false)
+    }
+  }
+
   useEffect(() => {
     defineTab("/Shop")
+    return () => fetchData().then(products => setAllProducts(products))
   }, [])
 
   useEffect(() => {
-    if (selectedProduct) {
+    if (selectedCategory) {
       setSkeletonLoading(true)
       async function fetchProducts(product) {
         try {
           const getData = await fetch(product.endPoint)
           const data = await getData.json()
-
-          product.name == "All" ? setItemLists([...data]) : setItemLists({ category: product.name, items: [...data] })
-
+          setItemLists([...data])
         } catch (error) {
           console.log(error)
         } finally {
@@ -49,53 +87,92 @@ function Shop() {
         }
       }
 
-      fetchProducts(selectedProduct);
+      fetchProducts(selectedCategory);
     }
-  }, [selectedProduct])
+  }, [selectedCategory])
 
   useEffect(() => {
-    if (params) {
-      setProductLists(prev => prev.map((product) => {
+    if (params && searchDescription == null) {
+      setCategoryLists(prev => prev.map((product) => {
         if (product.name.toLowerCase() == params.toLowerCase()) {
-          const newProduct = product
-          newProduct.isSelected = true
-          setSelectedProduct(newProduct)
+          const newCategory = product
+          newCategory.isSelected = true
+          setSelectedCategory(newCategory)
           return { ...product, isSelected: true }
         }
 
         return { ...product, isSelected: false }
       }))
-    } else {
-      setProductLists(prev => prev.map((product) => {
+    } else if (searchDescription == null) {
+      setCategoryLists(prev => prev.map((product) => {
         if (product.name.toLowerCase() == "all") {
           const newProduct = product
           newProduct.isSelected = true
-          setSelectedProduct(newProduct)
+          setSelectedCategory(newProduct)
           return { ...product, isSelected: true }
         }
 
         return { ...product, isSelected: false }
       }))
     }
-  }, [params])
+  }, [params, searchDescription])
+
+  useEffect(() => {
+    if (resultedData) {
+      setItemLists([{ category: searchDescription, items: [...resultedData] }])
+    }
+  }, [resultedData])
+
+  useEffect(() => {
+    if (searchDescription) {
+      if (searchDescription != prevSearch) return
+
+      setPrevSearch(searchDescription)
+      handleSearch(null, searchDescription)
+    }
+  }, [searchDescription])
+
+  useEffect(() => {
+    if (productName && allProducts) {
+      allProducts?.map(category => {
+        category?.items.map((product) => {
+          if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
+            console.log(product.name.toLowerCase().split(" ").join("_"))
+            navigation(`/Shop/${product.category}s/${product.name.toLowerCase().split(" ").join("_")}`)
+            setSelectedItem(product)
+          }
+        })
+      })
+    } else {
+      setSelectedItem(null)
+    }
+  }, [productName, allProducts])
 
   const variable = {
     //boolean
     skeletonLoading, setSkeletonLoading,
     // strings
+    searchDescription, productName,
     // numbers
     // arrays & objects
-    productLists, setProductLists,
-    itemLists, setItemLists,
-    selectedProduct, setSelectedProduct,
+    selectedItem, setSelectedItem,
+    selectedCategory, setSelectedCategory,
+    categoryLists, setCategoryLists,
+    itemLists, setItemLists, //Lists of items per category or actual products
+    resultedData, setResultedData, //Fetched Data or filtered data
+    allProducts, setAllProducts, //All of the product inside all.json
     // functions
+    fetchData, handleSearch
   }
 
   return (
     <shopContext.Provider value={variable}>
       <div className={lightMode ? s.shop : `${s.shop} ${s.darkShop}`}>
-        <Banner />
-        <ProductsNav />
+        {searchDescription || selectedItem ? null : <Banner />}
+        <Breadcrumb />
+        <SearchBar />
+        {searchDescription || selectedItem ? null : <ProductsNav />}
+        {selectedItem != null && <ProductDetails />}
         <Products />
       </div>
     </shopContext.Provider>

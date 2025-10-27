@@ -1,6 +1,6 @@
 .skeletonLoader {
-    width: min(355px, 80%);
-    height: 355px;
+    width: 270px;
+    height: 250px;
     min-height: 200px;
     border-radius: 1rem;
     box-shadow: var(--l-box-shadow);
@@ -19,10 +19,11 @@
     animation: animation 1s linear infinite;
 }
 
-@keyframes animation{
+@keyframes animation {
     from {
         top: -100%;
     }
+
     to {
         top: 100%;
     }
@@ -31,9 +32,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    min-width: 200px;
-    height: fit-content;
+    width: 250px;
+    height: 320px;
     padding: var(--pad-x-m) var(--pad-x-m);
     box-shadow: var(--l-box-shadow);
     border-radius: 1rem;
@@ -43,30 +43,33 @@
 
 .card .top {
     width: 100%;
-    height: 200px;
+    height: 150px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.card .top > img {
+.card .top>img {
     width: 100%;
     height: auto;
 }
 
 .card .contents {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     font-family: var(--font-normal);
 }
 
-.card .contents > h2 {
+.card .contents>h2 {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.1;
     font-family: var(--font-title);
 }
 
-.card .contents > p {
+.card .contents>p {
     color: var(--l-text-unhighlight);
     font-weight: 600;
     font-size: var(--p-small);
@@ -74,10 +77,15 @@
 
 .card .bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
     font-weight: 600;
     font-family: var(--font-normal);
+}
+
+.card .bottom>p {
+    font-size: var(--p-larger);
 }
 
 .card .bottom .actions {
@@ -87,14 +95,14 @@
 }
 
 
-.card .bottom .actions > button {
+.card .bottom .actions>button {
     border: 0;
     border-radius: 5rem;
     font-size: var(--p-smaller);
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    background-color: white;
-    color: var(--l-bg-highlight);
+    background-color: var(--l-bg-highlight);
+    color: white;
     padding: var(--pad-y-s) var(--pad-x-s);
     display: flex;
     align-items: center;
@@ -103,7 +111,47 @@
     border: 3px solid var(--l-bg-highlight);
 }
 
-.card .bottom .actions > button:hover {
-    background-color: var(--l-bg-highlight);
+.card .bottom .actions>button:hover {
+    opacity: .8;
+}
+
+.card .bottom .actions .cart {
+    background-color: var(--l-text-unhighlight);
+    border-color: var(--l-text-unhighlight);
     color: white;
+}
+
+.card .bottom .actions .cart:hover {
+    background-color: white;
+    border-color: var(--l-text-unhighlight);
+    color: var(--l-text-unhighlight);
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        width: 125px;
+        height: 220px;
+    }
+
+    .card .top {
+        width: 100%;
+        height: 100px;
+    }
+
+    .card .bottom .actions .details {
+        display: none;
+    }
+
+    .card .bottom .actions .cart {
+        font-size: .65rem;
+        padding: 1px 8px;
+        font-weight: 1000;
+        background-color: var(--l-bg-highlight);
+        border-color: var(--l-bg-highlight);
+        color: white;
+    }
+
+    .card .bottom .actions .cart:hover {
+        opacity: .8;
+    }
 }

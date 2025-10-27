@@ -36,14 +36,14 @@
     gap: var(--gap-normal);
 }
 
-.hero .top .actions>button {
+.hero .top .actions .link {
     border: 0;
     border-radius: 5rem;
-    font-size: var(--p-medium);
+    font-size: var(--p-small);
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    background-color: white;
-    color: var(--l-bg-highlight);
+    background-color: var(--l-text-color1);
+    color: white;
     padding: var(--pad-y-s) var(--pad-x-l);
     display: flex;
     align-items: center;
@@ -52,14 +52,15 @@
     border: 3px solid var(--l-bg-highlight);
 }
 
-.hero .top .actions>button:hover {
+.hero .top .actions .link:hover {
     background-color: var(--l-bg-highlight);
     color: white;
+    opacity: .8;
 }
 
 .hero .top .actions .developer {
-    color: var(--l-text-unhighlight);
-    background-color: white;
+    color: white;
+    background-color: var(--l-text-unhighlight);
     border: 3px solid var(--l-text-unhighlight);
 }
 

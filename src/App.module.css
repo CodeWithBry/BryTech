@@ -26,11 +26,11 @@
     --p-smaller: clamp(.4rem, 2.5vw, .7rem);
     --p-small: clamp(.5rem, 2.5vw, .9rem);
     --p-medium: clamp(.8rem, 2.5vw, 1.25rem);
-    --p-large: clamp(1.25rem, 2.5vw, 1.75rem);
+    --p-large: clamp(.85rem, 2.5vw, 1.75rem);
 
-    --h1-smaller: clamp(1.8rem, 5vw, 2rem);
-    --h1-normal : clamp(2rem, 5vw, 3.75rem);
-    --h1-larger: clamp(2.4rem, 5vw, 4.75rem);
+    --h1-smaller: clamp(1.5rem, 2.5vw, 2rem);
+    --h1-normal : clamp(1.75rem, 2.5vw, 3.75rem);
+    --h1-larger: clamp(2rem, 2.5vw, 4.75rem);
 
     --gap-xs: .2rem;
     --gap-small: .5rem;
@@ -55,6 +55,10 @@
 body {
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+h1 {
+    line-height: 1;
 }
 
 button {

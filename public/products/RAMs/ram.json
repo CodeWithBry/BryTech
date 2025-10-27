@@ -1,182 +1,207 @@
 [
   {
-    "category": "RAM",
-    "brand": "Corsair",
-    "name": "Vengeance LPX 16GB (2×8) DDR4-3200",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, 1.35V, aluminum low-profile heatsink",
-    "price_php": "3, 200",
-    "image": "ram1.avif" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Corsair",
-    "name": "Dominator Platinum RGB DDR5 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "6000 MT/s, CL36, 1.25V, RGB aluminum heatspreader",
-    "price_php": "11, 800",
-    "image": "ram2.avif" 
-  },
-  {
-    "category": "RAM",
-    "brand": "G.SKILL",
-    "name": "Trident Z RGB 32GB (2×16)",
-    "type": "DDR4",
-    "specs": "3600 MT/s, CL18, 1.35V, RGB lightbar",
-    "price_php": "9, 500",
-    "image": "ram3.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "G.SKILL",
-    "name": "Trident Z5 RGB 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "6000 MT/s, CL32/36, XMP3.0, aluminum heatsink",
-    "price_php": "11, 500",
-    "image": "ram4.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Kingston",
-    "name": "FURY Beast DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, low-profile, lifetime warranty",
-    "price_php": "3, 100",
-    "image": "ram5.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Kingston",
-    "name": "FURY Renegade DDR5 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "6000 MT/s, CL32, RGB, XMP3.0 support",
-    "price_php": "10, 800",
-    "image": "ram6.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Crucial",
-    "name": "DDR5-5200 UDIMM (CT32G52C42U5)",
-    "type": "DDR5",
-    "specs": "5200 MT/s, CL42, 1.1V, non-RGB, stable performance",
-    "price_php": "9, 800",
-    "image": "ram7.png" 
-  },
-  {
-    "category": "RAM",
-    "brand": "TEAMGROUP",
-    "name": "T-FORCE Delta RGB DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, RGB lightbar, aluminum heatspreader",
-    "price_php": "3, 400",
-    "image": "ram8.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "TEAMGROUP",
-    "name": "T-FORCE XTREEM ARGB DDR4 32GB (2×16)",
-    "type": "DDR4",
-    "specs": "3600/4000 MT/s, CL14-18, ARGB, low latency",
-    "price_php": "9, 800",
-    "image": "ram9.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Samsung",
-    "name": "OEM DDR5 32GB Module",
-    "type": "DDR5",
-    "specs": "4800–5600 MT/s, 1.1V, JEDEC standard",
-    "price_php": "9, 400",
-    "image": "ram10.png" 
-  },
-  {
-    "category": "RAM",
-    "brand": "ADATA",
-    "name": "XPG SPECTRIX D60G DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16-18, RGB lightbar",
-    "price_php": "3, 300",
-    "image": "ram11.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "PNY",
-    "name": "XLR8 Gaming DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, gaming style design",
-    "price_php": "3, 100",
-    "image": "ram12.png" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Patriot",
-    "name": "Viper Steel DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, aluminum heatsink",
-    "price_php": "3, 200",
-    "image": "ram13.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Lexar",
-    "name": "Hades RGB DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL18, RGB design",
-    "price_php": "3, 000",
-    "image": "ram14.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Crucial",
-    "name": "DDR4-3200 (CT16G4DFD832A)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL22, non-RGB JEDEC standard",
-    "price_php": "2, 900",
-    "image": "ram15.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "GeIL",
-    "name": "EVO X II DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, RGB option",
-    "price_php": "3, 300",
-    "image": "ram16.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "HyperX",
-    "name": "FURY DDR4 16GB (2×8)",
-    "type": "DDR4",
-    "specs": "3200 MT/s, CL16, XMP support",
-    "price_php": "3, 200",
-    "image": "ram17.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Patriot",
-    "name": "Viper Venom DDR5 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "6000 MT/s, CL30, RGB/non-RGB, XMP3.0",
-    "price_php": "10, 900",
-    "image": "ram18.webp" 
-  },
-  {
-    "category": "RAM",
-    "brand": "XPG",
-    "name": "LANCER RGB DDR5 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "5200 MT/s, CL38, RGB lightbar",
-    "price_php": "10, 200",
-    "image": "ram19.jpg" 
-  },
-  {
-    "category": "RAM",
-    "brand": "Corsair",
-    "name": "Vengeance DDR5 32GB (2×16)",
-    "type": "DDR5",
-    "specs": "5600/6000 MT,/s, CL36-40, non-RGB",
-    "price_php":"10, 800",
-    "image": "ram20.avif"
-}
+    "category": "RAMs",
+    "items": [
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Vengeance LPX 16GB (2×8) DDR4-3200",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, 1.35V, aluminum low-profile heatsink",
+        "price_php": "3, 200",
+        "image": "ram1.avif",
+        "paragraph": "Built for high performance, the Vengeance LPX DDR4 delivers fast and stable speeds for gaming and multitasking. Its low-profile aluminum heatspreader ensures cool and reliable operation even under heavy loads."
+      },
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Dominator Platinum RGB DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL36, 1.25V, RGB aluminum heatspreader",
+        "price_php": "11, 800",
+        "image": "ram2.avif",
+        "paragraph": "This premium DDR5 memory combines cutting-edge performance with vibrant RGB lighting. It’s designed for enthusiasts who want both top-tier speed and a striking look inside their PC."
+      },
+      {
+        "category": "RAM",
+        "brand": "G.SKILL",
+        "name": "Trident Z RGB 32GB (2×16)",
+        "type": "DDR4",
+        "specs": "3600 MT/s, CL18, 1.35V, RGB lightbar",
+        "price_php": "9, 500",
+        "image": "ram3.webp",
+        "paragraph": "Known for its bold RGB design and high-speed performance, the Trident Z RGB DDR4 offers smooth multitasking and gaming. It’s ideal for users who want both beauty and power in one kit."
+      },
+      {
+        "category": "RAM",
+        "brand": "G.SKILL",
+        "name": "Trident Z5 RGB 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL32/36, XMP3.0, aluminum heatsink",
+        "price_php": "11, 500",
+        "image": "ram4.webp",
+        "paragraph": "Featuring lightning-fast DDR5 technology and sleek aesthetics, the Trident Z5 RGB ensures ultra-responsive performance. It’s built for next-gen systems that demand maximum speed and efficiency."
+      },
+      {
+        "category": "RAM",
+        "brand": "Kingston",
+        "name": "FURY Beast DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, low-profile, lifetime warranty",
+        "price_php": "3, 100",
+        "image": "ram5.jpg",
+        "paragraph": "The FURY Beast DDR4 offers a great balance of performance and price. With reliable speeds and easy plug-and-play setup, it’s perfect for gaming or everyday computing upgrades."
+      },
+      {
+        "category": "RAM",
+        "brand": "Kingston",
+        "name": "FURY Renegade DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL32, RGB, XMP3.0 support",
+        "price_php": "10, 800",
+        "image": "ram6.jpg",
+        "paragraph": "Designed for high-end gaming PCs, the FURY Renegade DDR5 delivers blazing-fast 6000 MT/s speeds. It also features dynamic RGB lighting and full XMP 3.0 support for optimal tuning."
+      },
+      {
+        "category": "RAM",
+        "brand": "Crucial",
+        "name": "DDR5-5200 UDIMM (CT32G52C42U5)",
+        "type": "DDR5",
+        "specs": "5200 MT/s, CL42, 1.1V, non-RGB, stable performance",
+        "price_php": "9, 800",
+        "image": "ram7.png",
+        "paragraph": "Crucial’s DDR5 memory offers improved bandwidth and efficiency for modern CPUs. It’s non-RGB, making it a reliable and straightforward choice for professional and workstation builds."
+      },
+      {
+        "category": "RAM",
+        "brand": "TEAMGROUP",
+        "name": "T-FORCE Delta RGB DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, RGB lightbar, aluminum heatspreader",
+        "price_php": "3, 400",
+        "image": "ram8.jpg",
+        "paragraph": "The T-FORCE Delta RGB stands out with its striking lightbar design and dependable DDR4 speed. Perfect for gamers who want style without compromising stability."
+      },
+      {
+        "category": "RAM",
+        "brand": "TEAMGROUP",
+        "name": "T-FORCE XTREEM ARGB DDR4 32GB (2×16)",
+        "type": "DDR4",
+        "specs": "3600/4000 MT/s, CL14-18, ARGB, low latency",
+        "price_php": "9, 800",
+        "image": "ram9.jpg",
+        "paragraph": "Built for serious performance, this memory kit provides low latency and bright ARGB effects. It’s a premium choice for overclockers and performance enthusiasts."
+      },
+      {
+        "category": "RAM",
+        "brand": "Samsung",
+        "name": "OEM DDR5 32GB Module",
+        "type": "DDR5",
+        "specs": "4800–5600 MT/s, 1.1V, JEDEC standard",
+        "price_php": "9, 400",
+        "image": "ram10.png",
+        "paragraph": "This OEM-grade DDR5 module delivers consistent and efficient performance. It’s ideal for system builders and professionals who need JEDEC-standard reliability."
+      },
+      {
+        "category": "RAM",
+        "brand": "ADATA",
+        "name": "XPG SPECTRIX D60G DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16-18, RGB lightbar",
+        "price_php": "3, 300",
+        "image": "ram11.webp",
+        "paragraph": "The SPECTRIX D60G offers unique RGB coverage and solid DDR4 speed for gaming PCs. It’s both stylish and reliable, designed for users who like bold aesthetics."
+      },
+      {
+        "category": "RAM",
+        "brand": "PNY",
+        "name": "XLR8 Gaming DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, gaming style design",
+        "price_php": "3, 100",
+        "image": "ram12.png",
+        "paragraph": "PNY’s XLR8 Gaming memory provides stable 3200 MT/s performance and a gamer-inspired design. It’s a cost-effective upgrade for gaming desktops."
+      },
+      {
+        "category": "RAM",
+        "brand": "Patriot",
+        "name": "Viper Steel DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, aluminum heatsink",
+        "price_php": "3, 200",
+        "image": "ram13.jpg",
+        "paragraph": "This kit offers high performance with durable aluminum heatspreaders. The Viper Steel is built for gamers who value strength, speed, and reliability."
+      },
+      {
+        "category": "RAM",
+        "brand": "Lexar",
+        "name": "Hades RGB DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL18, RGB design",
+        "price_php": "3, 000",
+        "image": "ram14.webp",
+        "paragraph": "With sleek RGB lighting and dependable speed, the Hades RGB is a great pick for style-conscious gamers. It balances aesthetics with consistent performance."
+      },
+      {
+        "category": "RAM",
+        "brand": "Crucial",
+        "name": "DDR4-3200 (CT16G4DFD832A)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL22, non-RGB JEDEC standard",
+        "price_php": "2, 900",
+        "image": "ram15.webp",
+        "paragraph": "A simple and stable DDR4 module that provides dependable speed for office or home PCs. Perfect for users who prefer non-RGB, plug-and-play upgrades."
+      },
+      {
+        "category": "RAM",
+        "brand": "GeIL",
+        "name": "EVO X II DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, RGB option",
+        "price_php": "3, 300",
+        "image": "ram16.webp",
+        "paragraph": "The EVO X II brings together RGB customization and solid 3200 MT/s performance. It’s a reliable choice for gamers seeking visual flair and speed."
+      },
+      {
+        "category": "RAM",
+        "brand": "HyperX",
+        "name": "FURY DDR4 16GB (2×8)",
+        "type": "DDR4",
+        "specs": "3200 MT/s, CL16, XMP support",
+        "price_php": "3, 200",
+        "image": "ram17.jpg",
+        "paragraph": "Offering excellent performance with XMP support, the HyperX FURY DDR4 is built for smooth gaming and multitasking. Its plug-and-play design makes upgrading effortless."
+      },
+      {
+        "category": "RAM",
+        "brand": "Patriot",
+        "name": "Viper Venom DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "6000 MT/s, CL30, RGB/non-RGB, XMP3.0",
+        "price_php": "10, 900",
+        "image": "ram18.webp",
+        "paragraph": "This DDR5 kit combines high speed and low latency with stunning RGB effects. It’s perfect for high-performance gaming and creative workflows."
+      },
+      {
+        "category": "RAM",
+        "brand": "XPG",
+        "name": "LANCER RGB DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "5200 MT/s, CL38, RGB lightbar",
+        "price_php": "10, 200",
+        "image": "ram19.jpg",
+        "paragraph": "The XPG LANCER RGB delivers exceptional speed and visual appeal. It’s optimized for DDR5 platforms, ensuring top performance in demanding tasks."
+      },
+      {
+        "category": "RAM",
+        "brand": "Corsair",
+        "name": "Vengeance DDR5 32GB (2×16)",
+        "type": "DDR5",
+        "specs": "5600/6000 MT,/s, CL36-40, non-RGB",
+        "price_php": "10, 800",
+        "image": "ram20.avif",
+        "paragraph": "The Corsair Vengeance DDR5 offers fast and stable performance with a clean, minimalist design. It’s a reliable choice for builders looking for power without the RGB."
+      }
+    ]
+  }
 ]

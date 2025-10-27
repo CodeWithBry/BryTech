@@ -58,14 +58,14 @@ function Products() {
 
             <div className={s.itemCon}>
                 {
-                    topProducts?.map((product, i) => {
+                    topProducts != null && topProducts[0].items?.map((product, i) => {
                         if(i <= 4) return <div className={s.item}>
                             <div className={s.left}>
                                 <img src={`./products/${pickedChoice.category}s/${product.image}`} className={s.left} />
                             </div>
                             <div className={s.right}>
                                 <h1>{product.name}</h1>
-                                <Link>Show Now <i className='fa fa-shopping-bag'></i></Link>
+                                <Link to={`/Shop/${product.category}s/${product.name.split(" ").join("_").toLowerCase()}`}>Show Now <i className='fa fa-shopping-bag'></i></Link>
                             </div>
                         </div>
                     })

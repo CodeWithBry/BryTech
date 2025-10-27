@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: min(300px, 150px);
+    height: 200px;
     width: 100vw;
     overflow: hidden;
     position: relative;

@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Footer(props) {
-    const { lightMode } = useContext
+    const { lightMode, scrollUp } = useContext
     const [infos] = useState([
         {
             head: "Developer Contacts",
@@ -46,10 +46,6 @@ function Footer(props) {
             ]
         }
     ])
-
-    function scrollUp() {
-        props.TopElement.current.scrollTo({ top: 0, behavior: "smooth" })
-    }
 
     return (
         <footer className={lightMode ? s.footer : `${s.footer} ${s.darkFooter}`}>
