@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 
 function Nav() {
-    const ctx = useContext(context), { tabs, setTabs, lightMode, setLightMode } = useContext(context)
+    const ctx = useContext(context), { tabs, scrollUp, lightMode, setLightMode } = useContext(context)
     const navigation = useNavigate()
     const [dropDown, setDropDown] = useState(false)
 
@@ -30,9 +30,11 @@ function Nav() {
                                     className={tab.isSelected ? `${s.tab} ${s.selected}` : s.tab}
                                     onClick={() => {
                                         navigation(tab.path)
+                                        scrollUp()
+                                        setDropDown(false)
                                     }}>
                                     <i className={tab.icon}></i>
-                                    <Link to={tab.path}>{tab.name}</Link>
+                                    <Link to={tab.path} >{tab.name}</Link>
                                     <hr />
                                 </li>
                             </>
