@@ -125,7 +125,6 @@ function Shop() {
 
   useEffect(() => {
     if (searchDescription) {
-      if (searchDescription != prevSearch) return
 
       setPrevSearch(searchDescription)
       handleSearch(null, searchDescription)
