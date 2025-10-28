@@ -146,7 +146,7 @@ function Shop() {
       setSelectedItem(null)
     }
 
-    if (path && productName && allProducts) {
+    if (path && allProducts) {
       if (!path.includes("Search")) {
         const splitPath = path.split("/")
         console.log(splitPath[splitPath.length - 1])
