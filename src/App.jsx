@@ -66,9 +66,10 @@ function App() {
         function getPath() {
             const url = window.location.href
             const pathURL = url.slice(url.lastIndexOf("/#/") + 2)
+            console.log(pathURL)
             setPath(pathURL)
         }
-        return () => getPath()
+        if(location) getPath()
     }, [location])
 
     const variables = {

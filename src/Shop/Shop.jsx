@@ -12,7 +12,7 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 export const shopContext = createContext()
 
 function Shop() {
-  const { defineTab, lightMode } = useContext(context);
+  const { defineTab, lightMode, path } = useContext(context);
   const { productCategory, searchDescription, productName } = useParams();
   const navigation = useNavigate()
   const params = productCategory;
@@ -124,7 +124,7 @@ function Shop() {
   }, [resultedData])
 
   useEffect(() => {
-    if (searchDescription ) {
+    if (searchDescription) {
 
       setPrevSearch(searchDescription)
       handleSearch(null, searchDescription)
@@ -145,7 +145,21 @@ function Shop() {
     } else {
       setSelectedItem(null)
     }
-  }, [params, productName])
+
+    if (path && productName) {
+      if (!path.includes("Search")) {
+        allProducts?.map(category => {
+          category?.items.map((product) => {
+            if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
+              navigation(`/Shop/${product.category}s/${product.name.toLowerCase().split(" ").join("_")}`)
+              setSelectedItem(product)
+            }
+          })
+        })
+      }
+    }
+  }, [params, productName, path])
+
 
   const variable = {
     //boolean
