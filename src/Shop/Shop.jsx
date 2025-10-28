@@ -146,8 +146,6 @@ function Shop() {
         })
       }, 500);
       setSkeletonLoading(false)
-    } else {
-      setSelectedItem(null)
     }
   }, [productName, allProducts])
 
