@@ -146,8 +146,8 @@ function Shop() {
       setSelectedItem(null)
     }
 
-    if (path && allProducts) {
-      if (!path.includes("Search")) {
+    if (path && allProducts && searchDescription == null && productName == null) {
+      if (!path.includes("Search") ) {
         const splitPath = path.split("/")
         console.log(splitPath[splitPath.length - 1])
         allProducts?.map(category => {
@@ -159,8 +159,8 @@ function Shop() {
           })
         })
       }
-    }
-  }, [params, productName, path, allProducts])
+    } 
+  }, [params, productName, path, allProducts, searchDescription])
 
 
   const variable = {

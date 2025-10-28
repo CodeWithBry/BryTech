@@ -41,6 +41,7 @@ function App() {
         { name: "Docs", element: Docs, path: `/Docs`, icon: "fa fa fa-code", isSelected: false },
     ])
     const [prevTabs, setPrevTabs] = useState([])
+    const [cartItems, setCartItems] = useState([])
 
     // FUNCTIONS
     function defineTab(path) {
@@ -61,16 +62,27 @@ function App() {
         wrapperRef.current.scrollTo({ top: 0, behavior: "smooth" })
     }
 
+    function addToCart(newItem) {
+        setCartItems(prev => [...prev, newItem])
+        console.log([...cartItems, newItem])
+    }
+
     // EFFECTS
     useEffect(() => {
         function getPath() {
             const url = window.location.href
             const pathURL = url.slice(url.lastIndexOf("/#/") + 2)
-            console.log(pathURL)
             setPath(pathURL)
         }
-        if(location) getPath()
+        if (location) getPath()
     }, [location])
+
+    useEffect(() => {
+        const cartItemsStorage = JSON.parse(localStorage.getItem("cartItems"))
+        if (cartItemsStorage != null) {
+            setCartItems([...cartItemsStorage])
+        }
+    }, [])
 
     const variables = {
         //boolean
@@ -84,7 +96,8 @@ function App() {
         prevTabs, setPrevTabs,
 
         // functions
-        defineTab, scrollUp
+        defineTab, scrollUp,
+        addToCart
     };
 
     return (
