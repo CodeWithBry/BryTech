@@ -132,12 +132,12 @@ function Shop() {
   }, [searchDescription])
 
   useEffect(() => {
-    if (productName && params) {
+    if (productName && allProducts) {
       allProducts?.map(category => {
         category?.items.map((product) => {
           if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
             console.log(product.name.toLowerCase().split(" ").join("_"))
-            navigation(`/Shop/${product.category}s/${product.name.toLowerCase().split(" ").join("_")}`)
+            navigation(`/Shop/Products/${product.name.toLowerCase().split(" ").join("_")}`)
             setSelectedItem(product)
           }
         })
@@ -145,25 +145,7 @@ function Shop() {
     } else {
       setSelectedItem(null)
     }
-
-    if(productName) console.log(productName)
-
-    if (path && allProducts && searchDescription == null && productName == null) {
-      console.log(productName)
-      if (!path.includes("Search") ) {
-        const splitPath = path.split("/")
-        console.log(splitPath[splitPath.length - 1])
-        allProducts?.map(category => {
-          category?.items.map((product) => {
-            if (product.name?.toLowerCase().split(" ").join("_") == splitPath[splitPath.length - 1].toLowerCase()) {
-              navigation(`/Shop/${product.category}s/${product.name.toLowerCase().split(" ").join("_")}`)
-              setSelectedItem(product)
-            }
-          })
-        })
-      }
-    } 
-  }, [params, productName, path, allProducts, searchDescription])
+  }, [productName, allProducts])
 
 
   const variable = {

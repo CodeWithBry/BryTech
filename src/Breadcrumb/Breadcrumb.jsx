@@ -23,7 +23,7 @@ function Breadcrumb() {
                         <Link
                             className={s.links}
                             to={index != pathParts.length - 1 
-                                ? path.slice(0, path.indexOf(`/${pathParts[index+1]}`)).includes("Search") 
+                                ? path.slice(0, path.indexOf(`/${pathParts[index+1]}`)).includes("Search") || path.slice(0, path.indexOf(`/${pathParts[index+1]}`)).includes("Products")
                                     ? "/Shop" : path.slice(0, path.indexOf(`/${pathParts[index+1]}`)) 
                                 : null}>
                             {str}

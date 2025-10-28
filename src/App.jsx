@@ -15,6 +15,7 @@ import Docs from "./Docs/Docs"
 // COMPONENTS
 import Nav from "./Nav/Nav"
 import Footer from './Footer/Footer';
+import CartNotification from './Components/CartNotification';
 
 export const context = createContext();
 
@@ -22,9 +23,11 @@ function App() {
     const location = useLocation()
     // REFS
     const wrapperRef = useRef(null)
+    const cartNotificationRef = useRef(null)
 
     // BOOLEAN
     const [lightMode, setLightMode] = useState(true);
+    const [showCartNotif, setShowCartNotif] = useState(true)
 
     // STRING
     const [path, setPath] = useState("")
@@ -63,8 +66,32 @@ function App() {
     }
 
     function addToCart(newItem) {
-        setCartItems(prev => [...prev, newItem])
-        console.log([...cartItems, newItem])
+        setCartItems(prev => {
+            const updatedCart = prev.map((item) => {
+                if (item.name == newItem.name) {
+                    return { ...item, count: item?.count != null ? item.count + 1 : 1 }
+                }
+
+                return { ...item }
+            })
+            const addedProduct = [{...newItem, count: newItem?.count != null ? item.count + 1 : 1 }, ...prev]
+            function checkCart() {
+                for (let i in prev) {
+                    if (newItem.name == cartItems[i].name) return "Same"
+                }
+            }
+
+            if (checkCart() == "Same") {
+                localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+                console.log(updatedCart)
+                return [...updatedCart]
+            } else {
+                localStorage.setItem("cartItems", JSON.stringify(addedProduct))
+                console.log(addedProduct)
+                return [...addedProduct]
+            }
+
+        })
     }
 
     // EFFECTS
@@ -87,6 +114,7 @@ function App() {
     const variables = {
         //boolean
         lightMode, setLightMode,
+        showCartNotif, setShowCartNotif,
         // strings
         path, setPath,
         location,
@@ -102,15 +130,16 @@ function App() {
 
     return (
         <context.Provider value={variables}>
-            <div className={s.wrapper} ref={wrapperRef}>
+            <div className={s.wrapper} ref={wrapperRef} onClick={()=>{setShowCartNotif(true)}}>
                 <Nav />
+                <CartNotification ref={cartNotificationRef}/>
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
                         return <Route path={tab.path} element={<><Component /> <Footer TopElement={wrapperRef} /></>} />
                     })}
                     <Route path='/Shop/:productCategory' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
-                    <Route path='/Shop/:productCategory/:productName' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/Products/:productName' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
                     <Route path='/Shop/Search/:searchDescription' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
                 </Routes>
             </div>
