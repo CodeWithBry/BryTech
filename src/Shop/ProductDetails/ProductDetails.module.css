@@ -24,14 +24,14 @@
 
 .productDetails .right {
     width: 400px;
-    height: min(400px, 300px);
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: var(--font-title);
 }
 
-.productDetails .right > h1 {
+.productDetails .right>h1 {
     font-family: var(--font-title);
     color: var(--l-text-color1);
     font-size: clamp(2rem, 2.5vw, 4.75rem);
@@ -53,11 +53,12 @@
     position: absolute;
     bottom: 0;
     left: 0;
-} 
+}
 
-.productDetails .right .details .minify .hide > span, .productDetails .right .details .showAll .show > span {
+.productDetails .right .details .minify .hide>span,
+.productDetails .right .details .showAll .show>span {
     width: fit-content;
-    padding: var(--pad-y-s) var(--pad-x-m) ;
+    padding: var(--pad-y-s) var(--pad-x-m);
     font-weight: 700;
     box-shadow: var(--l-box-shadow);
     background-color: white;
@@ -78,7 +79,7 @@
     font-family: var(--font-title);
     margin-left: auto;
     border: none;
-} 
+}
 
 .productDetails .right .details .columns {
     color: var(--l-text-unhighlight);
@@ -89,7 +90,7 @@
     width: 50%;
 }
 
-.productDetails .right .details .columns .col > p {
+.productDetails .right .details .columns .col>p {
     font-size: var(--p-small);
 }
 
@@ -109,7 +110,7 @@
     gap: var(--gap-small);
 }
 
-.productDetails .right .actions .buttons > button {
+.productDetails .right .actions .buttons>button {
     border: 0;
     border-radius: 1rem;
     font-size: var(--p-small);
@@ -126,7 +127,7 @@
     border: 3px var(--l-text-color1) solid;
 }
 
-.productDetails .right .actions .buttons > button:hover {
+.productDetails .right .actions .buttons>button:hover {
     opacity: .8;
 }
 
@@ -148,6 +149,7 @@
     }
 
     .productDetails .right {
-        width:  90vw;
+        width: 90vw;
+        height: fit-content;
     }
 }

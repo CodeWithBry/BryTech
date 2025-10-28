@@ -82,6 +82,7 @@
     align-items: end;
     font-weight: 600;
     font-family: var(--font-normal);
+    gap: var(--gap-normal);
 }
 
 .card .bottom>p {

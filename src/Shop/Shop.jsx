@@ -124,7 +124,7 @@ function Shop() {
   }, [resultedData])
 
   useEffect(() => {
-    if (searchDescription) {
+    if (searchDescription ) {
 
       setPrevSearch(searchDescription)
       handleSearch(null, searchDescription)
@@ -132,7 +132,7 @@ function Shop() {
   }, [searchDescription])
 
   useEffect(() => {
-    if (productName && allProducts) {
+    if (productName && params) {
       allProducts?.map(category => {
         category?.items.map((product) => {
           if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
@@ -145,7 +145,7 @@ function Shop() {
     } else {
       setSelectedItem(null)
     }
-  }, [productName, allProducts])
+  }, [params, productName])
 
   const variable = {
     //boolean

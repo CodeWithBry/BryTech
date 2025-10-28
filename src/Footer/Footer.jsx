@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Footer(props) {
-    const { lightMode, scrollUp } = useContext
+    const { lightMode, scrollUp } = useContext(context)
     const [infos] = useState([
         {
             head: "Developer Contacts",
