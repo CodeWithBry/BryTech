@@ -133,15 +133,19 @@ function Shop() {
 
   useEffect(() => {
     if (productName && allProducts) {
-      allProducts?.map(category => {
-        category?.items.map((product) => {
-          if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
-            console.log(product.name.toLowerCase().split(" ").join("_"))
-            navigation(`/Shop/Products/${product.name.toLowerCase().split(" ").join("_")}`)
-            setSelectedItem(product)
-          }
+      setSkeletonLoading(true)
+      setTimeout(() => {
+        allProducts?.map(category => {
+          category?.items.map((product) => {
+            if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
+              console.log(product.name.toLowerCase().split(" ").join("_"))
+              navigation(`/Shop/Products/${product.name.toLowerCase().split(" ").join("_")}`)
+              setSelectedItem(product)
+            }
+          })
         })
-      })
+      }, 500);
+      setSkeletonLoading(false)
     } else {
       setSelectedItem(null)
     }
