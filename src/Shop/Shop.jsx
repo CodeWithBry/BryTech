@@ -146,11 +146,13 @@ function Shop() {
       setSelectedItem(null)
     }
 
-    if (path && productName) {
+    if (path && productName && allProducts) {
       if (!path.includes("Search")) {
+        const splitPath = path.split("/")
+        console.log(splitPath[splitPath.length - 1])
         allProducts?.map(category => {
           category?.items.map((product) => {
-            if (product.name?.toLowerCase().split(" ").join("_") == productName.toLowerCase()) {
+            if (product.name?.toLowerCase().split(" ").join("_") == splitPath[splitPath.length - 1].toLowerCase()) {
               navigation(`/Shop/${product.category}s/${product.name.toLowerCase().split(" ").join("_")}`)
               setSelectedItem(product)
             }
@@ -158,7 +160,7 @@ function Shop() {
         })
       }
     }
-  }, [params, productName, path])
+  }, [params, productName, path, allProducts])
 
 
   const variable = {
