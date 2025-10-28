@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Cards({item, category}) {
     const {setSelectedItem} = useContext(shopContext)
-    const {scrollUp, addToCart, setShowCartNotification} = useContext(context)
+    const {scrollUp, addToCart, setShowCartNotif} = useContext(context)
     const navigation = useNavigate(null)
 
     return (
@@ -23,7 +23,7 @@ function Cards({item, category}) {
             <p>₱ {item.price_php}</p>
             <div className={s.actions}>
                 <button className={s.details} onClick={()=>{navigation(`/Shop/Products/${item.name.split(" ").join("_").toLowerCase()}`), scrollUp(), setSelectedItem(item)}}>Details <i className='fa fa-align-right'></i></button>
-                <button className={s.cart} onClick={()=>{addToCart(item), setShowCartNotification(true)}}>Cart <i className='fa fa-shopping-cart'></i></button>
+                <button className={s.cart} onClick={()=>{addToCart(item), setShowCartNotif(true)}}>Cart <i className='fa fa-shopping-cart'></i></button>
             </div>
         </div>
     </div>

@@ -27,7 +27,7 @@ function App() {
 
     // BOOLEAN
     const [lightMode, setLightMode] = useState(true);
-    const [showCartNotif, setShowCartNotif] = useState(true)
+    const [showCartNotif, setShowCartNotif] = useState(false)
 
     // STRING
     const [path, setPath] = useState("")
@@ -74,7 +74,7 @@ function App() {
 
                 return { ...item }
             })
-            const addedProduct = [{...newItem, count: newItem?.count != null ? item.count + 1 : 1 }, ...prev]
+            const addedProduct = [{...newItem, count: newItem?.count != null ? item.count + 1 : 1, isSeelcted: false }, ...prev]
             function checkCart() {
                 for (let i in prev) {
                     if (newItem.name == cartItems[i].name) return "Same"
@@ -83,11 +83,9 @@ function App() {
 
             if (checkCart() == "Same") {
                 localStorage.setItem("cartItems", JSON.stringify(updatedCart))
-                console.log(updatedCart)
                 return [...updatedCart]
             } else {
                 localStorage.setItem("cartItems", JSON.stringify(addedProduct))
-                console.log(addedProduct)
                 return [...addedProduct]
             }
 
@@ -122,6 +120,7 @@ function App() {
         // arrays & objects
         tabs, setTabs,
         prevTabs, setPrevTabs,
+        cartItems, setCartItems,
 
         // functions
         defineTab, scrollUp,
@@ -130,7 +129,7 @@ function App() {
 
     return (
         <context.Provider value={variables}>
-            <div className={s.wrapper} ref={wrapperRef} onClick={()=>{setShowCartNotif(true)}}>
+            <div className={s.wrapper} ref={wrapperRef}>
                 <Nav />
                 <CartNotification ref={cartNotificationRef}/>
                 <Routes>
