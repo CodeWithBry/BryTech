@@ -22,10 +22,12 @@ function ProductDetails() {
                         <div className={s.columns}>
                             <div className={`${s.col} ${s.col1}`}>
                                 <p>Specs: {selectedItem?.specs}</p>
-                                <p>Brand: {selectedItem?.brand}</p>
+                                <p>Brand: {selectedItem?.brand}
+                                </p>
                             </div>
                             <div className={`${s.col} ${s.col2}`}>
-                                <p>Generation: {selectedItem?.gen}</p>
+                                <p>{selectedItem?.gen ? `Gen: ${selectedItem.gen}` :
+                                        `Type: ${selectedItem?.type}` }</p>
                                 <p>Category: {selectedItem?.category}</p>
                             </div>
                         </div>

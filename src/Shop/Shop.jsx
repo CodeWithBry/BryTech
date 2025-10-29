@@ -151,18 +151,20 @@ function Shop() {
 
     useEffect(() => {
         setTimeout(() => {
-            if (nameParams && searchDescription == null) {
-                handleFindProduct(nameParams)
-            } else if (nameParams == null && searchDescription) {
-                setSelectedItem(null)
-                handleFindProduct(null)
-                handleSearch(null, searchDescription)
-            } else {
-                handleFindProduct(null)
-                handleSearch(null, null)
+            if (!params) {
+                if (nameParams && searchDescription == null) {
+                    handleFindProduct(nameParams)
+                } else if (nameParams == null && searchDescription) {
+                    setSelectedItem(null)
+                    handleFindProduct(null)
+                    handleSearch(null, searchDescription)
+                } else {
+                    handleFindProduct(null)
+                    handleSearch(null, null)
+                }
             }
         }, 500);
-    }, [nameParams, searchDescription])
+    }, [nameParams, searchDescription, params])
 
 
     const variable = {

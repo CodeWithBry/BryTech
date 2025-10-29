@@ -19,8 +19,8 @@ function Home() {
     <div className={lightMode ? s.home : `${s.home} ${s.darkHome}`}>
       <Breadcrumb />
       <HeroSection />
-      <ChatInfo />
       <Products />
+      <ChatInfo />
     </div>
   )
 }

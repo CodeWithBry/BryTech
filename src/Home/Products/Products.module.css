@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .products>button {
@@ -46,6 +46,7 @@
     padding: var(--pad-y-m) var(--pad-x-l);
     overflow: hidden;
     overflow-y: auto;
+    z-index: 1;
 }
 
 .products .dropDown>p {
@@ -90,7 +91,7 @@
 
 .products .itemCon .item {
     flex: 0 0 80vw;
-    height: calc(2*(260px+2rem));
+    scale: .8;
     margin: auto;
     border-radius: 1rem;
     gap: 2rem;
@@ -100,6 +101,11 @@
     transition: all 0.3s ease;
     box-shadow: var(--l-box-shadow);
     opacity: 1;
+    padding: 1rem;
+}
+
+.products .itemCon .active {
+    scale: 1;
 }
 
 .products .itemCon .item .left {
@@ -110,11 +116,11 @@
     width: auto;
     flex-shrink: 0;
     margin: auto;
-    padding: 2rem 0;
 }
 
 .products .itemCon .item .left>img {
     width: 80%;
+    margin: none;
 }
 
 .products .itemCon .item .right {
@@ -163,6 +169,31 @@
     color: var(--l-bg-color);
 }
 
+.products .indicators {
+    display: flex;
+    gap: .75rem;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.products .indicators .indicator {
+    background-color: var(--l-text-unhighlight);
+    width: 15px;
+    height: 15px;
+    scale: .8;
+    transition: .5s ease-in-out;
+    border-radius: 50%;
+}
+
+.products .indicators .activeIndicator {
+    background-color: var(--l-text-highlight);
+    width: 15px;
+    height: 15px;
+    scale: 1;
+    
+}
+
 
 .darkProducts>h1 {
     color: white;
@@ -186,6 +217,10 @@
 
 .darkProducts .itemCon .item .right>h1 {
     color: white;
+}
+
+.darkProducts .indicators .activeIndicator {
+    background-color: white;
 }
 
 

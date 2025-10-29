@@ -14,9 +14,16 @@ function Cart() {
   }
 
   function deleteItem() {
-    setCartItems(prev => prev.filter(item => !item.isSelected))
+    setCartItems(prev => {
+      const updatedItems = prev.filter(item => !item.isSelected)
+      saveToSessionStorage(updatedItems)
+      return updatedItems
+    })
   }
 
+  function saveToSessionStorage(items) {
+    localStorage.setItem("cartItems", JSON.stringify(items))
+  }
 
   useEffect(() => {
     if (defineTab) {

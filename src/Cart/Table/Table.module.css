@@ -1,9 +1,11 @@
 table {
     width: 100vw;
+    height: 80vh;
 }
 
 table>tbody {
     width: 100vw;
+    height: 500px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -11,6 +13,8 @@ table>tbody {
     overflow-x: hidden;
     gap: 1rem;
     margin: 1rem auto;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 table>tbody>tr {

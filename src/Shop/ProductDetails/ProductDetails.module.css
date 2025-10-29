@@ -142,6 +142,14 @@
     color: var(--l-text-unhighlight);
 }
 
+.darkProductDetails .right .details .minify, .darkProductDetails .right .details .showAll {
+    color: white;
+}
+
+.darkProductDetails .right .details .minify .hide {
+    background: transparent;
+}
+
 @media screen and (max-width: 400px) {
     .productDetails .left {
         width: 90vw;

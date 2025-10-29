@@ -112,7 +112,7 @@
     flex: 0 0 275px;
     height: 275px;
     opacity: 1;
-    box-shadow: var(--d-box-shadow);
+    box-shadow: var(--l-box-shadow);
 }
 
 .hero .photos .card a {
@@ -145,6 +145,30 @@
     filter: opacity(.5);
     user-select: none;
     cursor: grab;
+}
+
+.hero .indicators {
+    display: flex;
+    gap: .75rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 2rem auto;
+}
+
+.hero .indicators .indicator {
+    background-color: var(--l-text-unhighlight);
+    width: 15px;
+    height: 15px;
+    scale: .8;
+    transition: .5s ease-in-out;
+    border-radius: 50%;
+}
+
+.hero .indicators .activeIndicator {
+    background-color: var(--l-text-highlight);
+    width: 15px;
+    height: 15px;
+    scale: 1;
 }
 
 .darkHero {

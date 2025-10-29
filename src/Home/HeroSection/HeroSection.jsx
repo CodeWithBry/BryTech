@@ -9,29 +9,46 @@ function HeroSection() {
 
     useEffect(() => {
         const cards = containerRef.current.querySelectorAll(`.${s.card}`);
+        const indicators = document.querySelectorAll(`.${s.indicator}`);
 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    // Add active class if the card is at least 60% visible
+                    const index = Array.from(cards).indexOf(entry.target);
+                    if (index === -1) return;
+
                     if (entry.isIntersecting) {
-                        entry.target.classList.add(s.active);
+                        cards[index].classList.add(s.active);
+                        indicators[index]?.classList.add(s.activeIndicator);
                     } else {
-                        entry.target.classList.remove(s.active);
+                        cards[index].classList.remove(s.active);
+                        indicators[index]?.classList.remove(s.activeIndicator);
                     }
                 });
             },
             {
                 root: containerRef.current,
-                threshold: .7, // 60% visibility threshold
+                threshold: 0.6, // visible at 60%
             }
         );
 
         cards.forEach((card) => observer.observe(card));
 
-        return () => observer.disconnect();
+        // Clickable dots → scroll smoothly
+        indicators.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                cards[index]?.scrollIntoView({
+                    behavior: "smooth",
+                    inline: "center",
+                    block: "nearest",
+                });
+            });
+        });
 
-    }, [])
+        return () => observer.disconnect();
+    }, []);
+
+
 
     return (
         <div className={lightMode ? s.hero : `${s.hero} ${s.darkHero}`} ref={heroRef}>
@@ -58,6 +75,11 @@ function HeroSection() {
                     <img src="./Home/Mouse.png" alt="Mouse" />
                     <Link to={"/Shop"}>Shop Now</Link>
                 </div>
+            </div>
+            <div className={s.indicators}>
+                {Array.from({ length: 3 }).map((arr) => {
+                    return <div className={s.indicator} key={arr + "_indicator"}></div>
+                })}
             </div>
         </div>
     )

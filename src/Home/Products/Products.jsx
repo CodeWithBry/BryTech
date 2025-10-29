@@ -3,7 +3,7 @@ import { context } from "../../App"
 import { useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 function Products() {
-    const { lightMode } = useContext(context)
+    const { lightMode, scrollUp } = useContext(context)
     const itemContainer = useRef()
 
     const [dropDown, setDropDown] = useState(false)
@@ -39,29 +39,52 @@ function Products() {
     }, [pickedChoice])
 
     useEffect(() => {
-        const cards = itemContainer.current.querySelectorAll(`.${s.item}`);
+        if (!topProducts) return;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add(s.active);
-                    } else {
-                        entry.target.classList.remove(s.active);
-                    }
+        setTimeout(() => {
+            const cards = itemContainer.current.querySelectorAll(`.${s.item}`);
+            const indicators = document.querySelectorAll(`.${s.indicator}`);
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        const index = Array.from(cards).indexOf(entry.target);
+                        if (index === -1) return;
+
+                        if (entry.isIntersecting) {
+                            // remove active classes from all
+                            cards.forEach((card) => card.classList.remove(s.active));
+                            indicators.forEach((dot) => dot.classList.remove(s.activeIndicator));
+
+                            // activate current one only
+                            entry.target.classList.add(s.active);
+                            indicators[index]?.classList.add(s.activeIndicator);
+                        }
+                    });
+                },
+                {
+                    root: itemContainer.current,
+                    threshold: 0.7,
+                }
+            );
+
+            cards.forEach((card) => observer.observe(card));
+
+            indicators.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    cards[index]?.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "center",
+                        block: "nearest"
+                    });
                 });
-            },
-            {
-                root: itemContainer.current,
-                threshold: .2, // 60% visibility threshold
-            }
-        );
+            });
 
-        cards.forEach((card) => observer.observe(card));
+            return () => observer.disconnect();
+        }, 500);
+    }, [topProducts]);
 
-        return () => observer.disconnect();
 
-    }, [itemContainer, s])
 
     return (
         <div className={lightMode ? s.products : `${s.products} ${s.darkProducts}`}>
@@ -99,10 +122,11 @@ function Products() {
                                     <div className={s.right}>
                                         <h1>{product.name}</h1>
                                         <Link
-                                            to={`/Shop/${product.category}s/${product.name
+                                            to={`/Shop/Products/${product.name
                                                 .split(" ")
                                                 .join("_")
                                                 .toLowerCase()}`}
+                                            onClick={scrollUp}
                                         >
                                             Show Now <i className="fa fa-shopping-bag"></i>
                                         </Link>
@@ -110,6 +134,13 @@ function Products() {
                                 </div>
                             );
                     })}
+            </div>
+            <div className={s.indicators}>
+                {
+                    topProducts != null && topProducts[0].items?.map((product, i) => {
+                        if (i <= 4) return <div className={s.indicator} key={product?.paragraph}></div>
+                    })
+                }
             </div>
         </div>
     )
