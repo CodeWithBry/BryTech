@@ -10,7 +10,8 @@
         "specs": "20 cores / 28 threads, up to 5.6 GHz, LGA 1700 socket",
         "price_php": "18, 495",
         "image": "cpu1.jpg",
-        "paragraph": "The Intel Core i7-14700K delivers outstanding performance with its 20 cores and 28 threads, capable of speeds up to 5.6GHz. It’s ideal for gamers, streamers, and creators who demand fast multitasking and high-end computing power."
+        "paragraph": "The Intel Core i7-14700K delivers outstanding performance with its 20 cores and 28 threads, capable of speeds up to 5.6GHz. It’s ideal for gamers, streamers, and creators who demand fast multitasking and high-end computing power.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -20,7 +21,8 @@
         "specs": "8 cores / 16 threads, 5.0 GHz boost, AM5 socket",
         "price_php": "18, 895",
         "image": "cpu2.jpg",
-        "paragraph": "The Ryzen 7 7800X3D features advanced 3D V-Cache technology, providing exceptional gaming performance and efficiency. With 8 cores and 16 threads, it’s one of the best CPUs for smooth gameplay and creative workloads."
+        "paragraph": "The Ryzen 7 7800X3D features advanced 3D V-Cache technology, providing exceptional gaming performance and efficiency. With 8 cores and 16 threads, it’s one of the best CPUs for smooth gameplay and creative workloads.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -30,7 +32,8 @@
         "specs": "6 cores / 12 threads, 5.1 GHz boost, AM5 socket",
         "price_php": "11, 034",
         "image": "cpu3.jpg",
-        "paragraph": "Designed for solid all-around performance, the Ryzen 5 7600 delivers fast processing speeds with 6 cores and 12 threads. It’s perfect for gamers and content creators seeking a great balance between power and affordability."
+        "paragraph": "Designed for solid all-around performance, the Ryzen 5 7600 delivers fast processing speeds with 6 cores and 12 threads. It’s perfect for gamers and content creators seeking a great balance between power and affordability.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -40,7 +43,8 @@
         "specs": "14 cores / 20 threads, up to 5.3 GHz, LGA 1700 socket",
         "price_php": "14, 270",
         "image": "cpu4.jpg",
-        "paragraph": "This CPU combines strong multi-core performance and energy efficiency, running up to 5.3GHz. Great for gaming and productivity, it’s a dependable choice for performance-focused PC builds."
+        "paragraph": "This CPU combines strong multi-core performance and energy efficiency, running up to 5.3GHz. Great for gaming and productivity, it’s a dependable choice for performance-focused PC builds.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -50,7 +54,8 @@
         "specs": "24 cores / 48 threads, up to 4.8 GHz, LGA 4677 socket",
         "price_php": "318, 000",
         "image": "cpu5.jpg",
-        "paragraph": "The Xeon W7-2495X is a workstation-grade CPU with 24 cores and 48 threads built for rendering, AI, and data-heavy applications. It ensures reliability and performance for professional computing environments."
+        "paragraph": "The Xeon W7-2495X is a workstation-grade CPU with 24 cores and 48 threads built for rendering, AI, and data-heavy applications. It ensures reliability and performance for professional computing environments.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -60,7 +65,8 @@
         "specs": "128 cores / 256 threads, 3.1 GHz, SP5 socket",
         "price_php": "765, 000",
         "image": "cpu6.avif",
-        "paragraph": "With a massive 128 cores and 256 threads, the AMD EPYC 9754 is a powerhouse for servers and enterprise workloads. It’s engineered for high scalability, virtualization, and data center efficiency."
+        "paragraph": "With a massive 128 cores and 256 threads, the AMD EPYC 9754 is a powerhouse for servers and enterprise workloads. It’s engineered for high scalability, virtualization, and data center efficiency.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -70,7 +76,8 @@
         "specs": "2 cores / 2 threads, 3.5 GHz, LGA 1200 socket",
         "price_php": "2, 550",
         "image": "cpu7.jpg",
-        "paragraph": "The Celeron G5905 offers reliable performance for basic computing tasks. Its 2 cores and 3.5GHz speed make it great for office use, browsing, and lightweight applications."
+        "paragraph": "The Celeron G5905 offers reliable performance for basic computing tasks. Its 2 cores and 3.5GHz speed make it great for office use, browsing, and lightweight applications.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -80,7 +87,8 @@
         "specs": "2 cores / 4 threads, 3.5 GHz, AM4 socket",
         "price_php": "2, 300",
         "image": "cpu8.jpg",
-        "paragraph": "A budget-friendly dual-core processor that delivers solid everyday performance. With integrated Radeon graphics, it’s ideal for home and entry-level gaming PCs."
+        "paragraph": "A budget-friendly dual-core processor that delivers solid everyday performance. With integrated Radeon graphics, it’s ideal for home and entry-level gaming PCs.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -90,7 +98,8 @@
         "specs": "12 cores, up to 4.3 GHz, integrated Adreno GPU",
         "price_php": "42, 000",
         "image": "cpu9.jpg",
-        "paragraph": "Built for mobility and efficiency, the Snapdragon X Elite features 12 cores and an integrated Adreno GPU. It provides exceptional performance for AI-driven tasks, laptops, and lightweight devices."
+        "paragraph": "Built for mobility and efficiency, the Snapdragon X Elite features 12 cores and an integrated Adreno GPU. It provides exceptional performance for AI-driven tasks, laptops, and lightweight devices.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -100,7 +109,8 @@
         "specs": "16-core CPU, 40-core GPU, 3nm process",
         "price_php": "93, 000",
         "image": "cpu10.jpg",
-        "paragraph": "Apple’s M3 Max chip brings powerful performance with its 16-core CPU and 40-core GPU. Optimized for creative professionals, it offers blazing-fast speeds for design, video editing, and development."
+        "paragraph": "Apple’s M3 Max chip brings powerful performance with its 16-core CPU and 40-core GPU. Optimized for creative professionals, it offers blazing-fast speeds for design, video editing, and development.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -110,7 +120,8 @@
         "specs": "8 cores, 3.25 GHz max, TSMC 4nm process",
         "price_php": "18, 000",
         "image": "cpu11.jpg",
-        "paragraph": "The Dimensity 9300 combines performance and efficiency using TSMC’s 4nm process. It’s made for flagship smartphones, offering lightning-fast speeds and great battery management."
+        "paragraph": "The Dimensity 9300 combines performance and efficiency using TSMC’s 4nm process. It’s made for flagship smartphones, offering lightning-fast speeds and great battery management.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -120,7 +131,8 @@
         "specs": "10-core CPU, 3.2 GHz max, Xclipse 940 GPU",
         "price_php": "21, 000",
         "image": "cpu12.webp",
-        "paragraph": "Samsung’s Exynos 2400 features a 10-core CPU and advanced Xclipse GPU for next-gen mobile gaming and photography. It delivers smooth multitasking and impressive energy efficiency."
+        "paragraph": "Samsung’s Exynos 2400 features a 10-core CPU and advanced Xclipse GPU for next-gen mobile gaming and photography. It delivers smooth multitasking and impressive energy efficiency.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -130,7 +142,8 @@
         "specs": "2 cores / 4 threads, 3.7 GHz, LGA 1700 socket",
         "price_php": "4, 400",
         "image": "cpu13.jpg",
-        "paragraph": "A dependable dual-core processor with speeds up to 3.7GHz. The Pentium Gold G7400 is a solid choice for budget desktops and office setups."
+        "paragraph": "A dependable dual-core processor with speeds up to 3.7GHz. The Pentium Gold G7400 is a solid choice for budget desktops and office setups.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -140,7 +153,8 @@
         "specs": "8 cores / 8 threads, 4.2 GHz, AM3+ socket",
         "price_php": "5, 200",
         "image": "cpu14.jpg",
-        "paragraph": "The AMD FX-8350 remains a classic choice for budget builders, featuring 8 cores and high clock speeds. It’s well-suited for multitasking, older games, and productivity use."
+        "paragraph": "The AMD FX-8350 remains a classic choice for budget builders, featuring 8 cores and high clock speeds. It’s well-suited for multitasking, older games, and productivity use.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -150,7 +164,8 @@
         "specs": "15 cores / 30 threads, up to 4.0 GHz, enterprise socket",
         "price_php": "120, 000",
         "image": "cpu15.webp",
-        "paragraph": "The IBM Power10 is an enterprise-level CPU built for maximum reliability and scalability. It’s designed to handle complex workloads in data centers and cloud environments."
+        "paragraph": "The IBM Power10 is an enterprise-level CPU built for maximum reliability and scalability. It’s designed to handle complex workloads in data centers and cloud environments.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -160,7 +175,8 @@
         "specs": "2 cores, 1.6 GHz, 65nm process",
         "price_php": "2, 200",
         "image": "cpu16.jpg",
-        "paragraph": "Compact and energy-efficient, the VIA Nano X2 offers dual-core performance for embedded and small computing systems. It’s a practical option for low-power applications."
+        "paragraph": "Compact and energy-efficient, the VIA Nano X2 offers dual-core performance for embedded and small computing systems. It’s a practical option for low-power applications.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -170,7 +186,8 @@
         "specs": "64 cores, 3.1 GHz max, 7nm process",
         "price_php": "145, 000",
         "image": "cpu17.jpg",
-        "paragraph": "The ARM Neoverse N1 delivers cloud-grade performance with 64 cores and 7nm efficiency. It’s perfect for servers and edge computing solutions requiring low latency and scalability."
+        "paragraph": "The ARM Neoverse N1 delivers cloud-grade performance with 64 cores and 7nm efficiency. It’s perfect for servers and edge computing solutions requiring low latency and scalability.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -180,7 +197,8 @@
         "specs": "12 cores, 4.25 GHz, 16nm process",
         "price_php": "138, 000",
         "image": "cpu18.jpg",
-        "paragraph": "Engineered for mission-critical operations, the SPARC64 XII offers 12 high-speed cores with enterprise reliability. It’s tailored for demanding business and industrial applications."
+        "paragraph": "Engineered for mission-critical operations, the SPARC64 XII offers 12 high-speed cores with enterprise reliability. It’s tailored for demanding business and industrial applications.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -190,7 +208,8 @@
         "specs": "8 cores, 2.66 GHz, 32MB cache, enterprise socket",
         "price_php": "112, 000",
         "image": "cpu19.jpg",
-        "paragraph": "A high-end enterprise processor designed for stability and legacy systems. With 8 cores and 32MB cache, it excels in secure and data-intensive operations."
+        "paragraph": "A high-end enterprise processor designed for stability and legacy systems. With 8 cores and 32MB cache, it excels in secure and data-intensive operations.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "CPU",
@@ -200,7 +219,8 @@
         "specs": "1 core, 200 MHz, 64-bit architecture",
         "price_php": "8, 500",
         "image": "cpu20.jpg",
-        "paragraph": "A classic 64-bit CPU known for its efficiency and simplicity. The MIPS R4700 is often used in embedded devices, research projects, and educational environments."
+        "paragraph": "A classic 64-bit CPU known for its efficiency and simplicity. The MIPS R4700 is often used in embedded devices, research projects, and educational environments.",
+        "shipping_fee_php": "150"
       }
     ]
   }

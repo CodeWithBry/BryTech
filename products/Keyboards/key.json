@@ -5,12 +5,13 @@
       {
         "category": "Keyboard",
         "brand": "Logitech",
-        "name": "MX Keys",
+        "name": "MX Keys / MX Keys S",
         "type": "Wireless productivity keyboard",
         "specs": "Full-size or Mini layout, Bluetooth/Logi Bolt wireless, smart backlit, rechargeable Li-Po battery",
         "price_php": "7, 573",
         "image": "key1.webp",
-        "paragraph": "A premium wireless productivity keyboard designed for comfort and efficiency. Its smart backlighting, solid build, and multi-device connectivity make typing smooth and effortless for work or home setups."
+        "paragraph": "A premium wireless productivity keyboard designed for comfort and efficiency. Its smart backlighting, solid build, and multi-device connectivity make typing smooth and effortless for work or home setups.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -20,17 +21,19 @@
         "specs": "Tenkeyless layout, LIGHTSPEED wireless + Bluetooth, per-key RGB, aircraft-grade aluminium",
         "price_php": "12, 940",
         "image": "key2.webp",
-        "paragraph": "This low-profile wireless mechanical keyboard offers ultra-fast LIGHTSPEED connectivity and per-key RGB lighting. Built with aircraft-grade aluminum, it delivers both precision and durability for competitive gaming."
+        "paragraph": "This low-profile wireless mechanical keyboard offers ultra-fast LIGHTSPEED connectivity and per-key RGB lighting. Built with aircraft-grade aluminum, it delivers both precision and durability for competitive gaming.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
         "brand": "Logitech G",
-        "name": "Pro X ",
+        "name": "Pro X / PRO X TKL",
         "type": "Mechanical gaming keyboard (hot-swap switches)",
         "specs": "TKL/full layout, hot-swappable GX switches (clicky/linear/tactile), Esports-oriented",
         "price_php": "8, 700",
         "image": "key3.webp",
-        "paragraph": "Engineered for esports, the Pro X keyboard features hot-swappable GX switches for personalized feel and performance. Its compact design and durable build make it a favorite among pro gamers."
+        "paragraph": "Engineered for esports, the Pro X keyboard features hot-swappable GX switches for personalized feel and performance. Its compact design and durable build make it a favorite among pro gamers.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -40,7 +43,8 @@
         "specs": "Gen-2 Analog Optical switches, adjustable actuation, rapid trigger, wireless",
         "price_php": "14, 588",
         "image": "key4.jpg",
-        "paragraph": "The Huntsman V3 Pro offers next-generation analog optical switches for precise actuation and rapid response. Designed for serious gamers, it combines comfort, customization, and cutting-edge technology."
+        "paragraph": "The Huntsman V3 Pro offers next-generation analog optical switches for precise actuation and rapid response. Designed for serious gamers, it combines comfort, customization, and cutting-edge technology.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -50,7 +54,8 @@
         "specs": "Full/TKL layout options, Razer Mechanical switches (Green/Yellow/Orange), Chroma RGB, aluminium top plate",
         "price_php": "7, 570",
         "image": "key5.jpg",
-        "paragraph": "A classic mechanical keyboard with Razer’s signature Green and Yellow switches for tactile or linear typing. It offers bright RGB lighting and a durable aluminum frame perfect for everyday gaming."
+        "paragraph": "A classic mechanical keyboard with Razer’s signature Green and Yellow switches for tactile or linear typing. It offers bright RGB lighting and a durable aluminum frame perfect for everyday gaming.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -60,7 +65,8 @@
         "specs": "Full-size, Cherry MX (Speed/other) switches, aluminium frame, per-key RGB, dedicated macro/media keys",
         "price_php": "12, 840",
         "image": "key6.avif",
-        "paragraph": "This flagship mechanical keyboard features per-key RGB, dedicated macro keys, and premium Cherry MX switches. Its robust aluminum frame ensures lasting performance for gamers and professionals."
+        "paragraph": "This flagship mechanical keyboard features per-key RGB, dedicated macro keys, and premium Cherry MX switches. Its robust aluminum frame ensures lasting performance for gamers and professionals.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -70,7 +76,8 @@
         "specs": "Cherry MX (Red/Brown/Speed) switches, full-size, per-key RGB, braided cable, media controls",
         "price_php": "9, 920",
         "image": "key7.avif",
-        "paragraph": "The K70 MK.2 combines style and speed with its full RGB lighting and Cherry MX switches. It’s designed for competitive play with dedicated media keys and a detachable wrist rest for comfort."
+        "paragraph": "The K70 MK.2 combines style and speed with its full RGB lighting and Cherry MX switches. It’s designed for competitive play with dedicated media keys and a detachable wrist rest for comfort.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -80,7 +87,8 @@
         "specs": "OmniPoint adjustable actuation switches, advanced customization, OLED/Smart Display on some models",
         "price_php": "13, 990",
         "image": "key8.jpg",
-        "paragraph": "The Apex Pro stands out with OmniPoint adjustable magnetic switches, letting users customize actuation for each key. Its OLED smart display adds real-time information right at your fingertips."
+        "paragraph": "The Apex Pro stands out with OmniPoint adjustable magnetic switches, letting users customize actuation for each key. Its OLED smart display adds real-time information right at your fingertips.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -90,7 +98,8 @@
         "specs": "HyperX mechanical switches (Aqua/Red), full aluminium body, per-key RGB, N-key rollover",
         "price_php": "5, 800",
         "image": "key9.avif",
-        "paragraph": "Crafted from aircraft-grade aluminum, the Alloy Origins features HyperX mechanical switches for reliable performance. It’s compact, durable, and perfect for gamers who value quality and simplicity."
+        "paragraph": "Crafted from aircraft-grade aluminum, the Alloy Origins features HyperX mechanical switches for reliable performance. It’s compact, durable, and perfect for gamers who value quality and simplicity.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -100,7 +109,8 @@
         "specs": "75% compact layout, Bluetooth/Wired USB-C, Mac/Windows keycaps, hot-swappable options",
         "price_php": "4, 640",
         "image": "key10.webp",
-        "paragraph": "A versatile 75% wireless keyboard that blends functionality and portability. It supports both Mac and Windows layouts and offers a satisfying typing experience with mechanical switches."
+        "paragraph": "A versatile 75% wireless keyboard that blends functionality and portability. It supports both Mac and Windows layouts and offers a satisfying typing experience with mechanical switches.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -110,7 +120,8 @@
         "specs": "65% layout, Bluetooth 5.1 / Wired USB-C, hot-swappable variants, compact footprint",
         "price_php": "4, 050",
         "image": "key11.webp",
-        "paragraph": "Compact and stylish, the K6 is a 65% wireless mechanical keyboard perfect for minimal setups. It supports Bluetooth and wired modes, offering flexibility for work and play."
+        "paragraph": "Compact and stylish, the K6 is a 65% wireless mechanical keyboard perfect for minimal setups. It supports Bluetooth and wired modes, offering flexibility for work and play.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -120,7 +131,8 @@
         "specs": "60% layout, PBT double-shot keycaps, detachable USB-C cable, hardware macros",
         "price_php": "7, 545",
         "image": "key12.webp",
-        "paragraph": "This 60% mechanical keyboard is a favorite among enthusiasts for its build quality and PBT double-shot keycaps. Its small form factor and reliable switches make it ideal for compact desk spaces."
+        "paragraph": "This 60% mechanical keyboard is a favorite among enthusiasts for its build quality and PBT double-shot keycaps. Its small form factor and reliable switches make it ideal for compact desk spaces.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -130,7 +142,8 @@
         "specs": "60% layout, Bluetooth 5.0 / Wired USB-C, ~1900 mAh battery, PBT keycaps, NKRO",
         "price_php": "5, 800",
         "image": "key13.webp",
-        "paragraph": "The Anne Pro 2 offers wireless and wired modes with customizable RGB lighting. Its compact 60% layout and long battery life make it a go-to choice for gamers on the go."
+        "paragraph": "The Anne Pro 2 offers wireless and wired modes with customizable RGB lighting. Its compact 60% layout and long battery life make it a go-to choice for gamers on the go.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -140,7 +153,8 @@
         "specs": "87-key TKL layout, Cherry MX switch options, PBT keycaps, premium build, typist focus",
         "price_php": "9, 860",
         "image": "key14.webp",
-        "paragraph": "A premium TKL keyboard with high-quality PBT keycaps and Cherry MX switches. It’s built for typists who appreciate comfort, craftsmanship, and a refined typing feel."
+        "paragraph": "A premium TKL keyboard with high-quality PBT keycaps and Cherry MX switches. It’s built for typists who appreciate comfort, craftsmanship, and a refined typing feel.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -150,7 +164,8 @@
         "specs": "87-key TKL layout, Cherry MX options, PBT double-shot keycaps, sound-dampening pads, high-quality stabilizers",
         "price_php": "9, 280",
         "image": "key15.jpg",
-        "paragraph": "Renowned for its solid build and excellent sound dampening, the FC750R delivers a quiet and satisfying typing experience. Its PBT keycaps and high-quality stabilizers make it a favorite among professionals."
+        "paragraph": "Renowned for its solid build and excellent sound dampening, the FC750R delivers a quiet and satisfying typing experience. Its PBT keycaps and high-quality stabilizers make it a favorite among professionals.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -160,7 +175,8 @@
         "specs": "65%/68% layout, Bluetooth 5.0 / 2.4G / Wired options, hot-swappable variants, RGB or white LED, Akko switches",
         "price_php": "6, 670",
         "image": "key16.jpg",
-        "paragraph": "A wireless 65% mechanical keyboard offering multiple connection modes including Bluetooth and 2.4GHz. With stylish keycap designs and hot-swappable switches, it blends functionality and fun."
+        "paragraph": "A wireless 65% mechanical keyboard offering multiple connection modes including Bluetooth and 2.4GHz. With stylish keycap designs and hot-swappable switches, it blends functionality and fun.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -170,7 +186,8 @@
         "specs": "Full-size layout, Cherry MX variants (gold-plated contacts), oversized volume knob, USB hub, anodized aluminium top panel",
         "price_php": "11, 670",
         "image": "key17.jpg",
-        "paragraph": "A full-size keyboard built for serious productivity, featuring Cherry MX switches and a premium aluminum top. It includes a large volume knob and USB hub, perfect for professional workspaces."
+        "paragraph": "A full-size keyboard built for serious productivity, featuring Cherry MX switches and a premium aluminum top. It includes a large volume knob and USB hub, perfect for professional workspaces.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -180,7 +197,8 @@
         "specs": "87-key compact/ TKL layout, Outemu Blue switches (or variant), LED/RGB backlight, metal + ABS build, budget friendly",
         "price_php": "2, 030",
         "image": "key18.webp",
-        "paragraph": "A budget-friendly TKL mechanical keyboard with durable metal construction and vibrant LED or RGB lighting. It’s an excellent entry-level choice for gamers seeking quality on a budget."
+        "paragraph": "A budget-friendly TKL mechanical keyboard with durable metal construction and vibrant LED or RGB lighting. It’s an excellent entry-level choice for gamers seeking quality on a budget.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -190,7 +208,8 @@
         "specs": "Low-profile mechanical switches, compact form, RGB lighting, USB-C wired",
         "price_php": "9, 860",
         "image": "key19.webp",
-        "paragraph": "The SK650 offers a slim, low-profile design with responsive mechanical switches. Its RGB backlighting and USB-C connectivity make it a sleek addition to modern setups."
+        "paragraph": "The SK650 offers a slim, low-profile design with responsive mechanical switches. Its RGB backlighting and USB-C connectivity make it a sleek addition to modern setups.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "Keyboard",
@@ -200,7 +219,8 @@
         "specs": "Full-size layout, Titan mechanical switches (tactile), anodized aluminium top plate, per-key AIMO RGB, detachable palm rest",
         "price_php": "9, 860",
         "image": "key20.png",
-        "paragraph": "This mechanical keyboard features Titan switches for fast, tactile feedback and stunning AIMO RGB lighting. With a sturdy aluminum plate and detachable wrist rest, it’s built for comfort and endurance."
+        "paragraph": "This mechanical keyboard features Titan switches for fast, tactile feedback and stunning AIMO RGB lighting. With a sturdy aluminum plate and detachable wrist rest, it’s built for comfort and endurance.",
+        "shipping_fee_php": "150"
       }
     ]
   }
