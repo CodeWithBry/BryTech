@@ -10,7 +10,8 @@
         "specs": "3200 MT/s, CL16, 1.35V, aluminum low-profile heatsink",
         "price_php": "3, 200",
         "image": "ram1.avif",
-        "paragraph": "Built for high performance, the Vengeance LPX DDR4 delivers fast and stable speeds for gaming and multitasking. Its low-profile aluminum heatspreader ensures cool and reliable operation even under heavy loads."
+        "paragraph": "Built for high performance, the Vengeance LPX DDR4 delivers fast and stable speeds for gaming and multitasking. Its low-profile aluminum heatspreader ensures cool and reliable operation even under heavy loads.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -20,7 +21,8 @@
         "specs": "6000 MT/s, CL36, 1.25V, RGB aluminum heatspreader",
         "price_php": "11, 800",
         "image": "ram2.avif",
-        "paragraph": "This premium DDR5 memory combines cutting-edge performance with vibrant RGB lighting. It’s designed for enthusiasts who want both top-tier speed and a striking look inside their PC."
+        "paragraph": "This premium DDR5 memory combines cutting-edge performance with vibrant RGB lighting. It’s designed for enthusiasts who want both top-tier speed and a striking look inside their PC.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -30,7 +32,8 @@
         "specs": "3600 MT/s, CL18, 1.35V, RGB lightbar",
         "price_php": "9, 500",
         "image": "ram3.webp",
-        "paragraph": "Known for its bold RGB design and high-speed performance, the Trident Z RGB DDR4 offers smooth multitasking and gaming. It’s ideal for users who want both beauty and power in one kit."
+        "paragraph": "Known for its bold RGB design and high-speed performance, the Trident Z RGB DDR4 offers smooth multitasking and gaming. It’s ideal for users who want both beauty and power in one kit.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -40,7 +43,8 @@
         "specs": "6000 MT/s, CL32/36, XMP3.0, aluminum heatsink",
         "price_php": "11, 500",
         "image": "ram4.webp",
-        "paragraph": "Featuring lightning-fast DDR5 technology and sleek aesthetics, the Trident Z5 RGB ensures ultra-responsive performance. It’s built for next-gen systems that demand maximum speed and efficiency."
+        "paragraph": "Featuring lightning-fast DDR5 technology and sleek aesthetics, the Trident Z5 RGB ensures ultra-responsive performance. It’s built for next-gen systems that demand maximum speed and efficiency.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -50,7 +54,8 @@
         "specs": "3200 MT/s, CL16, low-profile, lifetime warranty",
         "price_php": "3, 100",
         "image": "ram5.jpg",
-        "paragraph": "The FURY Beast DDR4 offers a great balance of performance and price. With reliable speeds and easy plug-and-play setup, it’s perfect for gaming or everyday computing upgrades."
+        "paragraph": "The FURY Beast DDR4 offers a great balance of performance and price. With reliable speeds and easy plug-and-play setup, it’s perfect for gaming or everyday computing upgrades.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -60,7 +65,8 @@
         "specs": "6000 MT/s, CL32, RGB, XMP3.0 support",
         "price_php": "10, 800",
         "image": "ram6.jpg",
-        "paragraph": "Designed for high-end gaming PCs, the FURY Renegade DDR5 delivers blazing-fast 6000 MT/s speeds. It also features dynamic RGB lighting and full XMP 3.0 support for optimal tuning."
+        "paragraph": "Designed for high-end gaming PCs, the FURY Renegade DDR5 delivers blazing-fast 6000 MT/s speeds. It also features dynamic RGB lighting and full XMP 3.0 support for optimal tuning.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -70,7 +76,8 @@
         "specs": "5200 MT/s, CL42, 1.1V, non-RGB, stable performance",
         "price_php": "9, 800",
         "image": "ram7.png",
-        "paragraph": "Crucial’s DDR5 memory offers improved bandwidth and efficiency for modern CPUs. It’s non-RGB, making it a reliable and straightforward choice for professional and workstation builds."
+        "paragraph": "Crucial’s DDR5 memory offers improved bandwidth and efficiency for modern CPUs. It’s non-RGB, making it a reliable and straightforward choice for professional and workstation builds.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -80,7 +87,8 @@
         "specs": "3200 MT/s, CL16, RGB lightbar, aluminum heatspreader",
         "price_php": "3, 400",
         "image": "ram8.jpg",
-        "paragraph": "The T-FORCE Delta RGB stands out with its striking lightbar design and dependable DDR4 speed. Perfect for gamers who want style without compromising stability."
+        "paragraph": "The T-FORCE Delta RGB stands out with its striking lightbar design and dependable DDR4 speed. Perfect for gamers who want style without compromising stability.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -90,7 +98,8 @@
         "specs": "3600/4000 MT/s, CL14-18, ARGB, low latency",
         "price_php": "9, 800",
         "image": "ram9.jpg",
-        "paragraph": "Built for serious performance, this memory kit provides low latency and bright ARGB effects. It’s a premium choice for overclockers and performance enthusiasts."
+        "paragraph": "Built for serious performance, this memory kit provides low latency and bright ARGB effects. It’s a premium choice for overclockers and performance enthusiasts.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -100,7 +109,8 @@
         "specs": "4800–5600 MT/s, 1.1V, JEDEC standard",
         "price_php": "9, 400",
         "image": "ram10.png",
-        "paragraph": "This OEM-grade DDR5 module delivers consistent and efficient performance. It’s ideal for system builders and professionals who need JEDEC-standard reliability."
+        "paragraph": "This OEM-grade DDR5 module delivers consistent and efficient performance. It’s ideal for system builders and professionals who need JEDEC-standard reliability.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -110,7 +120,8 @@
         "specs": "3200 MT/s, CL16-18, RGB lightbar",
         "price_php": "3, 300",
         "image": "ram11.webp",
-        "paragraph": "The SPECTRIX D60G offers unique RGB coverage and solid DDR4 speed for gaming PCs. It’s both stylish and reliable, designed for users who like bold aesthetics."
+        "paragraph": "The SPECTRIX D60G offers unique RGB coverage and solid DDR4 speed for gaming PCs. It’s both stylish and reliable, designed for users who like bold aesthetics.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -120,7 +131,8 @@
         "specs": "3200 MT/s, CL16, gaming style design",
         "price_php": "3, 100",
         "image": "ram12.png",
-        "paragraph": "PNY’s XLR8 Gaming memory provides stable 3200 MT/s performance and a gamer-inspired design. It’s a cost-effective upgrade for gaming desktops."
+        "paragraph": "PNY’s XLR8 Gaming memory provides stable 3200 MT/s performance and a gamer-inspired design. It’s a cost-effective upgrade for gaming desktops.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -130,7 +142,8 @@
         "specs": "3200 MT/s, CL16, aluminum heatsink",
         "price_php": "3, 200",
         "image": "ram13.jpg",
-        "paragraph": "This kit offers high performance with durable aluminum heatspreaders. The Viper Steel is built for gamers who value strength, speed, and reliability."
+        "paragraph": "This kit offers high performance with durable aluminum heatspreaders. The Viper Steel is built for gamers who value strength, speed, and reliability.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -140,7 +153,8 @@
         "specs": "3200 MT/s, CL18, RGB design",
         "price_php": "3, 000",
         "image": "ram14.webp",
-        "paragraph": "With sleek RGB lighting and dependable speed, the Hades RGB is a great pick for style-conscious gamers. It balances aesthetics with consistent performance."
+        "paragraph": "With sleek RGB lighting and dependable speed, the Hades RGB is a great pick for style-conscious gamers. It balances aesthetics with consistent performance.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -150,7 +164,8 @@
         "specs": "3200 MT/s, CL22, non-RGB JEDEC standard",
         "price_php": "2, 900",
         "image": "ram15.webp",
-        "paragraph": "A simple and stable DDR4 module that provides dependable speed for office or home PCs. Perfect for users who prefer non-RGB, plug-and-play upgrades."
+        "paragraph": "A simple and stable DDR4 module that provides dependable speed for office or home PCs. Perfect for users who prefer non-RGB, plug-and-play upgrades.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -160,7 +175,8 @@
         "specs": "3200 MT/s, CL16, RGB option",
         "price_php": "3, 300",
         "image": "ram16.webp",
-        "paragraph": "The EVO X II brings together RGB customization and solid 3200 MT/s performance. It’s a reliable choice for gamers seeking visual flair and speed."
+        "paragraph": "The EVO X II brings together RGB customization and solid 3200 MT/s performance. It’s a reliable choice for gamers seeking visual flair and speed.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -170,7 +186,8 @@
         "specs": "3200 MT/s, CL16, XMP support",
         "price_php": "3, 200",
         "image": "ram17.jpg",
-        "paragraph": "Offering excellent performance with XMP support, the HyperX FURY DDR4 is built for smooth gaming and multitasking. Its plug-and-play design makes upgrading effortless."
+        "paragraph": "Offering excellent performance with XMP support, the HyperX FURY DDR4 is built for smooth gaming and multitasking. Its plug-and-play design makes upgrading effortless.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -180,7 +197,8 @@
         "specs": "6000 MT/s, CL30, RGB/non-RGB, XMP3.0",
         "price_php": "10, 900",
         "image": "ram18.webp",
-        "paragraph": "This DDR5 kit combines high speed and low latency with stunning RGB effects. It’s perfect for high-performance gaming and creative workflows."
+        "paragraph": "This DDR5 kit combines high speed and low latency with stunning RGB effects. It’s perfect for high-performance gaming and creative workflows.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -190,7 +208,8 @@
         "specs": "5200 MT/s, CL38, RGB lightbar",
         "price_php": "10, 200",
         "image": "ram19.jpg",
-        "paragraph": "The XPG LANCER RGB delivers exceptional speed and visual appeal. It’s optimized for DDR5 platforms, ensuring top performance in demanding tasks."
+        "paragraph": "The XPG LANCER RGB delivers exceptional speed and visual appeal. It’s optimized for DDR5 platforms, ensuring top performance in demanding tasks.",
+        "shipping_fee_php": "150"
       },
       {
         "category": "RAM",
@@ -200,7 +219,8 @@
         "specs": "5600/6000 MT,/s, CL36-40, non-RGB",
         "price_php": "10, 800",
         "image": "ram20.avif",
-        "paragraph": "The Corsair Vengeance DDR5 offers fast and stable performance with a clean, minimalist design. It’s a reliable choice for builders looking for power without the RGB."
+        "paragraph": "The Corsair Vengeance DDR5 offers fast and stable performance with a clean, minimalist design. It’s a reliable choice for builders looking for power without the RGB.",
+        "shipping_fee_php": "150"
       }
     ]
   }

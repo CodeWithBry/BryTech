@@ -1,119 +1,19 @@
 .cart {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100vw;
 }
 
-.cart table {
-    width: min(600px, 300px);
-    height: 500px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.cart table>tr {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--font-title);
-    background-color: white;
-    box-shadow: var(--l-box-shadow);
-    border-radius: 1rem;
-    margin: .5rem 0;
-    position: relative;
-}
-
-.cart table .selected {
-    opacity: .8;
-    background-color: #e1e1e1b6;
-    transition: .3s ease;
-}
-
-.cart table .notSelected {
-    background-color: #e1e1e1b6;
-    opacity: 1;
-}
-
-.cart table>tr>input {
-    width: 15px;
-    height: 15px;
+.cart .deleteButton {
+    font-size: var(--p-large);
+    padding: var(--pad-y-m) var(--pad-x-l);
+    color: white;
+    background-color: red;
     position: absolute;
-    top: 10%;
-    right: 5%;
-}
-
-.cart table>tr .imgWrapper {
-    width: 100px;
-    height: 100px;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 1rem;
-}
-
-.cart table>tr .right {
-    padding: 1rem;
-    width: 100%;
-}
-
-.cart table>tr .right>h1 {
-    font-size: var(--h1-smallest);
-    height: 100%;
-}
-
-.cart table>tr .right .actions {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cart table>tr .right .actions .editQuantity {
-    display: flex;
-    align-items: center;
-    font-size: var(--p-smaller);
-}
-
-.cart table>tr .right .actions .editQuantity>* {
-    width: fit-content;
-    padding: 0 .5rem;
-    border: 2px solid black;
-}
-
-.cart table>tr .right .actions .editQuantity>input::-webkit-inner-spin-button,
-.cart table>tr .right .actions .editQuantity>input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-}
-
-.cart table>tr .right .actions .editQuantity>input {
-    width: 25px;
-    height: 19px;
-    text-align: center;
-}
-
-.cart table>tr .right .actions .editQuantity button {
-    height: 23px;
-    font-size: var(--p-smaller);
-    height: fit-content;
-}
-
-.cart table>tr .right .actions .editQuantity .minus {
-    height: 23px;
-    border-right: none;
-}
-
-.cart table>tr .right .actions .editQuantity .plus {
-    height: 23px;
-    border-left: none;
-}
-
-@media screen and (max-width: 400px) {
-    
-.cart table>tr .imgWrapper {
-    width: 80px;
-    height: 80px;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 1rem 0;
-    margin-left: 1rem;
-}
+    bottom: 10%;
+    right: 7.5%;
+    border: none;
+    border-radius: 1rem;
 }

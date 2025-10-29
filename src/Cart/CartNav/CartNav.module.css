@@ -1,0 +1,59 @@
+.cartNav {
+    display: flex;
+    box-shadow: var(--l-box-shadow);
+    width: 100vw;
+    height: fit-content;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+.cartNav .left {
+    margin: .5rem 2rem;
+    font-family: var(--font-title);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.cartNav .right {
+    margin: .5rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.cartNav .right .contents {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: var(--font-title);
+}
+
+.cartNav .right .contents .totalCost {
+    font-size: var(--p-medium);
+    text-wrap: nowrap;
+}
+
+.cartNav .right .contents .shippingFee {
+    font-size: var(--p-small);
+    text-wrap: nowrap;
+}
+
+.cartNav .right .checkOut {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: white;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: var(--p-small);
+    width:fit-content;
+    padding: 0 var(--pad-x-s);
+    height: 70%;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: red 2px solid;
+    background-color: red;
+}
