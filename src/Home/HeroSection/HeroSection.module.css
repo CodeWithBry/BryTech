@@ -14,7 +14,7 @@
 }
 
 .hero .top h1 {
-    font-size: var(--h1-larger);
+    font-size: clamp(2rem, 5vw, 4.75rem);
     font-family: var(--font-title);
     text-align: center;
     margin: 0 2rem;
@@ -74,22 +74,45 @@
 
 .hero .photos {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: calc(3*(275px + 32px));
     align-items: center;
-    width: 100vw;
-    margin: auto;
-    gap: 1rem;
+    min-width: 275px;
+    height: 275px;
+    padding: 1rem;
+    gap: 2rem;
+    margin: 2rem auto;
+    overflow: auto;
+    overflow-y: hidden;
+    user-select: none;
+    scroll-snap-type: x mandatory;
+}
+
+
+
+.hero .photos::-webkit-scrollbar {
+    display: none;
 }
 
 .hero .photos .card {
-    width: 275px;
+    flex: 0 0 250px;
+    height: 250px;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: var(--l-box-shadow);
+    box-shadow: 0 0 10px -4px black;
     position: relative;
     margin-bottom: 1rem;
     transition: all .3s ease;
+    user-select: none;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    opacity: .5;
+}
+
+.hero .photos .active {
+    flex: 0 0 275px;
+    height: 275px;
+    opacity: 1;
+    box-shadow: var(--d-box-shadow);
 }
 
 .hero .photos .card a {
@@ -120,10 +143,12 @@
 
 .hero .photos .card:hover img {
     filter: opacity(.5);
+    user-select: none;
+    cursor: grab;
 }
 
 .darkHero {
-    background-color: var(--d-bg-color-light);
+    background-color: var(--d-bg-color);
 }
 
 .darkHero .top h1 {
@@ -140,4 +165,22 @@
 
 .darkHero .photos .card:hover {
     filter: brightness(1.5);
+}
+
+@media (max-width: 920px) {
+    .hero .photos {
+        width: calc(2*(275px + 1rem));
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .top {
+        margin: 3rem auto 1rem auto;
+    }
+
+    .hero .photos {
+        width: calc(1*(275px + .5rem));
+        margin: 1rem auto;
+    }
+
 }

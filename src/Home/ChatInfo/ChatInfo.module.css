@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     width: 100vw;
     height: fit-content;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     background-color: rgb(224, 224, 224);
 }
 
@@ -29,25 +29,27 @@
 
 .info .left .box h1 {
     font-family: var(--font-title);
-    font-size: var(--h1-larger);
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    margin-top: 3rem;
 }
 
 .info .left .box p {
     font-family: var(--font-normal);
     font-size: var(--p-medium);
     color: var(--l-text-unhighlight);
-    margin-left: .5rem;
     width: 90%;
 }
 
 .info .left .box a {
-    font-family: var(--font-normal);
+    font-family: var(--font-title);
     font-size: var(--p-medium);
     padding: var(--pad-y-m) var(--pad-x-l);
     border-radius: 5rem;
     color:var(--l-bg-highlight);
     border: 3px solid var(--l-bg-highlight);
     width: fit-content;
+    display: flex;
+    align-items: center;
     margin-top: 1.5rem;
     position: relative;
     display: flex;
@@ -71,4 +73,9 @@
 
 .info .right > img {
     width: 80%;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.darkInfo {
+    background-color: var(--d-bg-color-light);
 }

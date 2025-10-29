@@ -1,12 +1,40 @@
 import s from "./HeroSection.module.css"
 import { context } from "../../App"
-import { useContext, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 function HeroSection() {
     const { lightMode } = useContext(context)
     const heroRef = useRef(null)
+    const containerRef = useRef()
+
+    useEffect(() => {
+        const cards = containerRef.current.querySelectorAll(`.${s.card}`);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Add active class if the card is at least 60% visible
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(s.active);
+                    } else {
+                        entry.target.classList.remove(s.active);
+                    }
+                });
+            },
+            {
+                root: containerRef.current,
+                threshold: .7, // 60% visibility threshold
+            }
+        );
+
+        cards.forEach((card) => observer.observe(card));
+
+        return () => observer.disconnect();
+
+    }, [])
+
     return (
-        <div className={lightMode ?  s.hero : `${s.hero} ${s.darkHero}`} ref={heroRef}>
+        <div className={lightMode ? s.hero : `${s.hero} ${s.darkHero}`} ref={heroRef}>
             <div className={s.top}>
                 <h1>Build Smarter, <span>Upgrade Faster</span></h1>
                 <p>
@@ -17,7 +45,7 @@ function HeroSection() {
                     <Link className={`${s.link} ${s.toShop}`} to={"/Shop"}>Shop Now <i className="fa fa-shopping-cart"></i></Link>
                 </div>
             </div>
-            <div className={s.photos}>
+            <div className={s.photos} ref={containerRef}>
                 <div className={s.card}>
                     <img src="./Home/Keyboard.png" alt="Keyboard" />
                     <Link to={"/Shop/Keyboards"}>Shop Now</Link>

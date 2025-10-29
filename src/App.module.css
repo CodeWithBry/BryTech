@@ -26,7 +26,7 @@
     --p-smaller: clamp(.4rem, 2.5vw, .7rem);
     --p-small: clamp(.5rem, 2.5vw, .9rem);
     --p-medium: clamp(.8rem, 2.5vw, 1.25rem);
-    --p-large: clamp(.85rem, 2.5vw, 1.75rem);
+    --p-large: clamp(1.25rem, 2.5vw, 1.75rem);
 
     --h1-smallest: clamp(.9rem, 2.5vw, 1rem);
     --h1-smaller: clamp(1.5rem, 2.5vw, 2rem);

@@ -5,7 +5,7 @@
     margin-bottom: 2rem;
 }
 
-.products > button {
+.products>button {
     font-family: var(--font-title);
     font-size: clamp(1.5rem, 5vw, 3.75rem);
     width: fit-content;
@@ -17,11 +17,11 @@
     position: relative;
 }
 
-.products > button:hover > span {
+.products>button:hover>span {
     color: var(--l-text-unhighlight);
 }
 
-.products > button > span{
+.products>button>span {
     color: var(--l-text-color1);
     transition: .3s ease;
 }
@@ -48,7 +48,7 @@
     overflow-y: auto;
 }
 
-.products .dropDown > p {
+.products .dropDown>p {
     font-size: clamp(1.5rem, 5vw, 3.75rem);
 }
 
@@ -72,39 +72,48 @@
 
 .products .itemCon {
     display: flex;
-    flex-direction: column;
     gap: 10rem;
-    width: 90vw;
+    width: 80vw;
+    padding: 2rem;
     height: fit-content;
     margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    user-select: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.products .itemCon::-webkit-scrollbar {
+    display: none;
 }
 
 .products .itemCon .item {
-    display: flex;
-    width: 100%;
-    height: fit-content;
+    flex: 0 0 80vw;
+    height: calc(2*(260px+2rem));
     margin: auto;
     border-radius: 1rem;
     gap: 2rem;
+    display: flex;
     flex-wrap: wrap;
-}
-
-.products .itemCon .item:nth-child(even) {
-    flex-direction: row-reverse;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--l-box-shadow);
+    opacity: 1;
 }
 
 .products .itemCon .item .left {
-    width: 50%;
-    height: 100%;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: min(500px, 100vw);
+    width: auto;
     flex-shrink: 0;
     margin: auto;
+    padding: 2rem 0;
 }
 
-.products .itemCon .item .left > img {
+.products .itemCon .item .left>img {
     width: 80%;
 }
 
@@ -119,13 +128,14 @@
     margin: auto;
 }
 
-.products .itemCon .item .right > h1 {
+.products .itemCon .item .right>h1 {
     font-family: var(--font-title);
     font-size: var(--h1-larger);
-    width: min(750px, 300px);
+    width: min(350px, 700px);
+    margin: 1rem;
 }
 
-.products .itemCon .item .right > p {
+.products .itemCon .item .right>p {
     font-family: var(--font-normal);
     font-size: var(--p-medium);
     color: var(--l-text-unhighlight);
@@ -134,38 +144,57 @@
     width: 90%;
 }
 
-.products .itemCon .item .right > a {
+.products .itemCon .item .right>a {
     font-family: var(--font-normal);
     font-size: var(--p-medium);
     padding: var(--pad-y-m) var(--pad-x-l);
     border-radius: 5rem;
-    color:var(--l-bg-highlight);
+    color: var(--l-bg-highlight);
     border: 3px solid var(--l-bg-highlight);
     width: fit-content;
-    margin-top: 1.5rem;
+    margin: 1.5rem 1.5rem 1.5rem auto;
     position: relative;
     display: flex;
     gap: var(--gap-small);
 }
 
-.products .itemCon .item .right > a:hover {
+.products .itemCon .item .right>a:hover {
     background-color: var(--l-bg-highlight);
     color: var(--l-bg-color);
 }
 
 
-.darkProducts > h1 {
+.darkProducts>h1 {
     color: white;
 }
 
-.products .itemCon .item .left > img {
+.products .itemCon .item .left>img {
     border-radius: 3rem;
 }
 
-.darkProducts .itemCon .item .right > a {
+.darkProducts {
+    background-color: var(--d-bg-color);
+}
+
+.darkProducts .itemCon .item {
+    background-color: var(--d-bg-color-light);
+}
+
+.darkProducts .itemCon .item .right>a {
     background-color: var(--l-bg-color);
 }
 
-.darkProducts .itemCon .item .right > h1 {
+.darkProducts .itemCon .item .right>h1 {
     color: white;
+}
+
+
+@media (max-width: 600px) {
+    .products .itemCon .item .left {
+        width: min(300px, 500px);
+    }
+
+    .products .itemCon .item .right>h1 {
+        width: min(300px, 350px);
+    }
 }
