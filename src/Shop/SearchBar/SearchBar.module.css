@@ -71,3 +71,12 @@
     background-color: var(--l-text-unhighlight);
     border: 3px solid var(--l-text-unhighlight);
 }
+
+.darkSearchBar .searchWrapper .searchInput {
+    background-color: white;
+}
+
+.searchBar .searchWrapper > button {
+    background-color: var(--l-text-color1);
+    border-color: var(--l-text-color1);
+}

@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     width: 100vw;
     height: fit-content;
-    margin: 2rem 0;
+    padding: 2rem 0;
+    background-color: rgb(224, 224, 224);
 }
 
 .info .left {
@@ -36,7 +37,6 @@
     font-size: var(--p-medium);
     color: var(--l-text-unhighlight);
     margin-left: .5rem;
-    text-indent: 1rem;
     width: 90%;
 }
 

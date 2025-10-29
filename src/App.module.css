@@ -10,13 +10,13 @@
     --l-bg-highlight: #3A76E6;
     --l-box-shadow: 0 0 15px -5px black;
 
-    --d-bg-color: #2b2a2ffb; 
-    --d-bg-color-light: #212225e4;
+    --d-bg-color: #212225e4; 
+    --d-bg-color-light: #2b2a2ffb;
     --d-text-unhighlight: #9e9e9e;  
     --d-text-highlight: #f5f5f5;  
     --d-text-color1: #c7c7c7;  
     --d-bg-highlight: #3A76E6;  
-    --d-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.8); 
+    --d-box-shadow: 0 0 15px -10px rgba(255, 255, 255, 0.473); 
 
 
     --font-title: "Saira", sans-serif;

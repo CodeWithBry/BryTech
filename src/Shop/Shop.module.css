@@ -1,3 +1,7 @@
 .shop {
     margin-bottom: 3rem;
 }
+
+.darkShop {
+    background-color: var(--d-bg-color-light);
+}

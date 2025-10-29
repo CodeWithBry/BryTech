@@ -57,3 +57,17 @@
     border: red 2px solid;
     background-color: red;
 }
+
+.darkCartNav {
+    background-color: var(--d-bg-color);
+    color: white;
+}
+
+@media screen and (max-width: 400px) {
+    .cartNav .left {
+        margin: 1rem;
+    }
+    .cartNav .right {
+        margin: 0 1rem;
+    }
+}

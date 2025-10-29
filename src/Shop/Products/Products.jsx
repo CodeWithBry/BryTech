@@ -24,7 +24,7 @@ function Products() {
                         <h1>
                             {searchDescription ? <span>Searches: {searchDescription} <span className={s.hide}></span></span> : itemLists[0]?.category}
                             {productName && <Link className={s.back} onClick={() => { productsRef.current.scrollIntoView({ behavior: "smooth" }) }} to={`/Shop/${selectedCategory?.name}`}>Back</Link>}
-                            {itemLists[0].items.length == 0 && <Link className={s.back} onClick={() => { productsRef.current.scrollIntoView({ behavior: "smooth" }) }} to={`/Shop/All`}>Back</Link>}
+                            {<Link className={s.back} onClick={() => { productsRef.current.scrollIntoView({ behavior: "smooth" }) }} to={`/Shop/All`}>Back</Link>}
                         </h1>
                         <div className={s.wrapItems}>
                             <MapProducts items={itemLists[0]?.items} category={searchDescription ? null : selectedCategory?.name} />

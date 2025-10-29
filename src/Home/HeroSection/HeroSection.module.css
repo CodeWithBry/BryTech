@@ -17,6 +17,8 @@
     font-size: var(--h1-larger);
     font-family: var(--font-title);
     text-align: center;
+    margin: 0 2rem;
+    width: fit-content;
 }
 
 .hero .top h1>span {
@@ -39,8 +41,8 @@
 .hero .top .actions .link {
     border: 0;
     border-radius: 5rem;
-    font-size: var(--p-small);
-    font-family: "Inter", sans-serif;
+    font-size: var(--p-medium);
+    font-family: var(--font-title);
     font-weight: 600;
     background-color: var(--l-text-color1);
     color: white;

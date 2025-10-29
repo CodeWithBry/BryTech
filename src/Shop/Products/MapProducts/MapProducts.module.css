@@ -19,6 +19,15 @@
     animation: animation 1s linear infinite;
 }
 
+.darkSkeletonLoader {
+    box-shadow: var(--d-box-shadow);
+    background-color: var(--d-bg-color);
+}
+
+.darkSkeletonLoader .shadow {
+    background: linear-gradient(to bottom, var(--d-bg-color), #797979, #797979, var(--d-bg-color));
+}
+
 @keyframes animation {
     from {
         top: -100%;
@@ -49,6 +58,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .card .top>img {
@@ -128,8 +138,18 @@
     color: var(--l-text-unhighlight);
 }
 
+
+.darkCard {
+    background-color: var(--d-bg-color-light);
+    box-shadow: var(--d-box-shadow);
+}
+
+.darkCard .contents>h2, .darkCard .bottom {
+    color: white;
+}
+
 @media screen and (max-width: 450px) {
-    .card {
+    .card, .skeletonLoader {
         width: 125px;
         height: 220px;
     }

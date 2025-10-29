@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom'
 
 function Cards({item, category}) {
     const {setSelectedItem} = useContext(shopContext)
-    const {scrollUp, addToCart, setShowCartNotif} = useContext(context)
+    const {lightMode, scrollUp, addToCart, setShowCartNotif} = useContext(context)
     const navigation = useNavigate(null)
 
     return (
-     <div className={s.card} key={item.name}>
+     <div className={lightMode ? s.card : `${s.card} ${s.darkCard}`} key={item.name}>
         <div className={s.top} onClick={()=>{navigation(`/Shop/Products/${item.name.split(" ").join("_").toLowerCase()}`), scrollUp(), setSelectedItem(item)}}>
             <img src={category == "All" ? `./products/${category}/${item.image}` : `./products/${category}/${item.image}`} />
         </div>

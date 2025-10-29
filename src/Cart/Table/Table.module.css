@@ -3,14 +3,14 @@ table {
 }
 
 table>tbody {
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: auto;
     overflow-x: hidden;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1rem auto;
 }
 
 table>tbody>tr {
@@ -46,6 +46,7 @@ table>tbody>tr .imgWrapper {
     background-repeat: no-repeat;
     padding: 1rem;
     margin-left: 1rem;
+    border-radius: 1rem;
 }
 
 table>tbody>tr .right {
@@ -58,7 +59,7 @@ table>tbody>tr .right>h1 {
     height: 100%;
 }
 
-table>tbody>tr .right >input {
+table>tbody>tr .right>input {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -111,7 +112,29 @@ table>tbody>tr .right .actions .editQuantity .plus {
     border-left: none;
 }
 
+.darkTable {
+    background-color: var(--d-bg-color);
+}
+
+.darkTable > tbody > tr {
+    background-color: var(--d-bg-color-light);
+    color: white;
+    box-shadow: var(--d-box-shadow);
+}
+
 @media screen and (max-width: 400px) {
+    table>tbody>tr {
+        display: flex;
+        width: 270px;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--font-title);
+        background-color: white;
+        box-shadow: var(--l-box-shadow);
+        border-radius: 1rem;
+        position: relative;
+    }
+
 
     table>tbody>tr .imgWrapper {
         width: 80px;
@@ -121,5 +144,18 @@ table>tbody>tr .right .actions .editQuantity .plus {
         background-repeat: no-repeat;
         padding: 1rem 0;
         margin-left: 1rem;
+    }
+
+    table>tbody>tr .right .actions .editQuantity button {
+        height: fit-content;
+        font-size: .5rem;
+        height: fit-content;
+    }
+
+    table>tbody>tr .right .actions .editQuantity>input {
+        width: 15px;
+        height: 19px;
+        font-size: .5rem;
+        text-align: center;
     }
 }

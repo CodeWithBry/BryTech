@@ -1,7 +1,9 @@
+import { useContext } from 'react'
 import s from './Table.module.css'
+import {context} from "../../App"
 
-function Table({ cartItems, setCartItems }) {
-
+function Table({ cartItems, setCartItems, navigation }) {
+    const {lightMode} = useContext(context)
 
     function editQuantity(num, ind) {
         setCartItems(prev => prev.map((item, index) => { return index == ind ? { ...item, count: item?.count + num } : { ...item } }))
@@ -12,16 +14,19 @@ function Table({ cartItems, setCartItems }) {
     }
 
     return (
-        <table>
+        <table className={!lightMode && `${s.darkTable}`}>
             <tbody>
                 {
                     cartItems?.map((item, ind) => {
                         return <tr 
                             className={item?.isSelected ? s.selected : s.notSelected} 
                             key={item?.name}>
-                            <td className={s.imgWrapper} style={{ backgroundImage: `url(./products/${item?.category + "s/"}${item?.image})` }}></td>
+                            <td 
+                                className={s.imgWrapper} 
+                                style={{ backgroundImage: `url(./products/${item?.category + "s/"}${item?.image})` }}
+                                onClick={()=>{navigation(`/Shop/Products/${item.name.split(" ").join("_").toLowerCase()}`)}}></td>
                             <td className={s.right}>
-                                <h1>{item?.name}</h1>
+                                <h1 onClick={()=>navigation(`/Shop/Products/${item.name.split(" ").join("_").toLowerCase()}`)}>{item?.name}</h1>
                                 <input
                                     type="checkbox"
                                     checked={item?.isSelected}

@@ -5,9 +5,9 @@
 
 .products h1 {
     font-family: var(--font-title);
-    font-size: var(--h1-larger);
+    font-size: var(--h1-normal);
     color: var(--l-text-color1);
-    margin: 2rem 3rem 2rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,14 +20,13 @@
     text-wrap: nowrap;
 }
 .products h1 > span:after {
-    content: "...";
+    content: "";
     height: 100%;
-    width: 80px;
+    width: min(fit-content, 200px);
     text-align: end;
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(to left, white, rgba(255, 255, 255, 0.887), rgba(255, 255, 255, 0));
 }
 
 .products h1 > .back {

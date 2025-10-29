@@ -1,7 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import s from './CartNav.module.css'
+import { useNavigate } from 'react-router-dom'
+import { context } from '../../App'
 
 function CartNav({ selectAll, cartItems }) {
+    const {lightMode} = useContext(context)
+    const navigation = useNavigate()
+
     const [allItemCount, setAllItemCount] = useState(0)
     const [totalCost, setTotalCost] = useState(0)
     const [shippingCost, setShippingCost] = useState(0)
@@ -29,7 +34,7 @@ function CartNav({ selectAll, cartItems }) {
         }
     }, [cartItems])
     return (
-        <div className={s.cartNav}>
+        <div className={lightMode ? s.cartNav : `${s.cartNav} ${s.darkCartNav}`}>
             <div className={s.left}>
                 <input type="checkbox" onChange={(e) => { selectAll(e.target.checked) }} />
                 <p>All</p>

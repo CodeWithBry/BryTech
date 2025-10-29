@@ -11,3 +11,11 @@
     display: flex;
     gap: .5rem;
 }
+
+.darkBreadCrumb {
+    color: white;
+}
+
+.darkBreadCrumb .links {
+    color: inherit;
+}

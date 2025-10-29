@@ -13,7 +13,7 @@ function Nav() {
 
     return (
         <div className={lightMode ? s.nav : `${s.nav} ${s.darkNav}`}>
-            <div className={s.left}>
+            <div className={s.left} onClick={()=>navigation("/")}>
                 <img src="./icon/icon.png" alt="Bry Tech Logo" className={s.icon} />
                 <h2 className={s.title}>
                     <span>Bry</span>

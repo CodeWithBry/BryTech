@@ -3,8 +3,7 @@ import { context } from '../App'
 import { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 function Breadcrumb() {
-    const { path } = useContext(context)
-    const navigation = useNavigate()
+    const { lightMode, path } = useContext(context)
     const [pathParts, setPathParts] = useState()
 
 
@@ -14,8 +13,8 @@ function Breadcrumb() {
         }
     }, [path])
 
-    if(pathParts?.length != 1) return (
-        <div className={s.breadCrumb}>
+    if(pathParts?.length != 2) return (
+        <div className={lightMode ? s.breadCrumb : `${s.breadCrumb} ${s.darkBreadCrumb}`}>
             {
                 pathParts?.map((str, index) => {
                     if (str != "") return <span>
