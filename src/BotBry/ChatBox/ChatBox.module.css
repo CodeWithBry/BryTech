@@ -1,0 +1,214 @@
+.chatBox {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: white;
+    justify-content: space-between;
+    flex-shrink: 1;
+    z-index: 0;
+}
+
+.chatBox header {
+    width: 100%;
+    display: flex;
+    box-shadow: 0 2px 10px -7px;
+    color: #1c1b20;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.chatBox header h2 {
+    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    margin-right: auto;
+    font-family: var(--font-title);
+}
+
+.chatBox header>div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: .5rem;
+}
+
+.chatBox header>div button {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    color: rgb(71, 10, 213);
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 10px -5px rgb(109, 109, 109);
+    border-radius: .5rem;
+}
+
+.chatBox header>div button:hover {
+    background-color: #3c2dc3;
+    color: white;
+}
+
+.chatBox header>div:last-child {
+    margin-right: .5rem;
+}
+
+.chatBox header>div .command {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 0 10px -5px rgb(109, 109, 109);
+}
+
+.chatBox header>div .unshowCommand {
+    display: none;
+}
+
+.chatBox header>div .command button {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: fit-content;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.chatBox .chatBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chatBox .botDescription {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.chatBox .chatBody .botDescription .icon {
+    font-size: 5rem;
+    border-radius: 50%;
+    background-color: rgb(211, 207, 207);
+}
+
+.chatBox .chatBody .botDescription p {
+    width: 80%;
+    text-align: center;
+}
+
+.chatBox .chatBody .convoContainer {
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    margin-bottom: .5rem;
+    box-sizing: border-box;
+}
+
+.chatBox .chatBody .convoContainer .convo {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatBox .chatBody .convoContainer .convo li {
+    display: flex;
+    margin: .5rem;
+    align-items: end;
+}
+
+.chatBox .chatBody .convoContainer .convo .user {
+    flex-direction: row-reverse;
+}
+
+.chatBox .chatBody .convoContainer .convo .user>div,
+.chatBox .chatBody .convoContainer .convo .bryan>div {
+    padding: .5rem .75rem;
+    margin: 0 10px;
+    box-shadow: 0 0 5px -2px black;
+    width: fit-content;
+    max-width: 80%;
+    height: fit-content;
+    border-radius: .5rem;
+}
+
+.chatBox .chatBody .convoContainer .convo li>span {
+    border-radius: 50%;
+    background-color: rgb(191, 189, 189);
+}
+
+.chatBox .chatBody .convoContainer .convo .user>div {
+    align-self: end;
+}
+
+.chatBox .chatBody .convoContainer .convo .bryan>div {
+    background-color: #3094d3;
+    color: white;
+}
+
+.chatBox .chatBody .chatInput {
+    flex-shrink: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #3094d3;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.chatBox .chatBody .chatInput textarea,
+.chatBox .chatBody .chatInput input {
+    width: 100%;
+    height: 60%;
+    padding: .2rem .75rem;
+    border-radius: .5rem;
+    outline: none;
+    border: 2.5px gray solid;
+    margin: auto;
+    margin-left: .5rem;
+    font-size: .8rem;
+}
+
+.chatBox .chatBody .chatInput button {
+    margin: auto .5rem;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem .75rem;
+    font-family: var(--font-title);
+    background-color: rgb(36, 109, 235);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: .4rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.chatWrapper .chatBox button:hover {
+    background-color: #3c2dc3;
+}
+
+@media screen and (max-width: 500px) and (max-height: 900px) {
+    .chatWrapper .chatBox {
+        width: 100%;
+        height: 100%;
+    }
+}

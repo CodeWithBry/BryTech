@@ -9,9 +9,9 @@ const app = express();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 const supportedURLs = [
-    "localhost:3000",
-    "codewithbry.github.io",
-    "codewithbry.github.io/BryTech/"
+  "http://localhost:5173",
+  "https://codewithbry.github.io",
+  "https://codewithbry.github.io/BryTech/",
 ]
 
 const personaPrompt = `
@@ -21,36 +21,43 @@ const personaPrompt = `
     You should talk casually.
     You provide details and informations about the hardware parts that the user ask you to explain.
 `
-
 app.use(
-    cors({
-        origin: (origin, callback) => {
-            if (!origin || allowedOrigins.some((url) => origin.startsWith(url))) {
-                callback(null, true);
-            } else {
-                console.warn("❌ Blocked CORS request from:", origin);
-                callback(new Error("Not allowed by CORS"));
-            }
-        },
-    })
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (supportedURLs.some((url) => origin.startsWith(url))) {
+        callback(null, true);
+      } else {
+        console.warn("❌ Blocked CORS request from:", origin);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
 );
+
+// ✅ Handle preflight requests globally (Express 5-safe)
+app.options(/.*/, cors({ origin: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
     res.send("This is the backend!");
 });
 
-app.post("/api/chat", async (req, res) => {
+app.post("/chat", async (req, res) => {
     const { message, userId, history } = req.body;
+    console.log(message, userId, history)
     const chats = {
         userId,
-        chats: [...history, { role: "user", parts: [{ text: message }] }],
+        chats: [...history],
     }
-
+    chats.chats.push({ role: "user", parts: [{ text: message }] })
     try {
         const persona = { role: "model", parts: [{ text: personaPrompt }] };
-        const processChat = [persona, ...chats.chats];
-        const result = await model.generateContent({ contents: processChat });
+        const chat = [persona, ...chats.chats];
+
+        const result = await model.generateContent({ contents: chat });
 
         const reply =
             result?.response?.candidates?.[0]?.content?.parts?.[0]?.text ||

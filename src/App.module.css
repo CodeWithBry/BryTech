@@ -53,10 +53,18 @@
     padding: 0;
 }
 
+
 body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 h1 {
     line-height: 1;
@@ -64,6 +72,7 @@ h1 {
 
 button {
     outline: none;
+    border: none;
     cursor: pointer;
     transition: all .3s ease;
 }

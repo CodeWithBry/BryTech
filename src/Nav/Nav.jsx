@@ -9,8 +9,6 @@ function Nav() {
     const navigation = useNavigate()
     const [dropDown, setDropDown] = useState(false)
 
-    useEffect(() => { console.log(ctx, context) }, [])
-
     return (
         <div className={lightMode ? s.nav : `${s.nav} ${s.darkNav}`}>
             <div className={s.left} onClick={()=>navigation("/")}>
@@ -27,6 +25,7 @@ function Nav() {
                         tabs.map((tab) => (
                             <>
                                 <li
+                                    key={tab.path}
                                     className={tab.isSelected ? `${s.tab} ${s.selected}` : s.tab}
                                     onClick={() => {
                                         navigation(tab.path)

@@ -1,18 +1,33 @@
-import s from "./BotBry.module.css"
-import {context} from "../App"
-import { useContext, useEffect } from "react";
+import s from './BotBry.module.css';
+import { useContext, useEffect, useRef, useState, } from 'react';
+import { context } from '../App';
+import ChatBox from './ChatBox/ChatBox';
+import SideBar from './SideBar/SideBar';
+import { useParams } from 'react-router-dom';
+
 
 function BotBry() {
-  const { defineTab, lightMode } = useContext(context);
+  const {defineTab} = useContext(context)
+  const {convoId} = useParams()
+  const [sideBarCollapsed, setSideBarCollapsed] = useState(true) //minimize sidebar if true
 
-  useEffect(() => {
-    if (defineTab) {
-      defineTab("/BotBry")
-    }
-  }, [defineTab])
+  const [chatHistory, setChatHistory] = useState(JSON.parse(localStorage.getItem("User"))?.chats)
+
+
+  useEffect(()=>{
+    defineTab("/BotBry")
+  }, [])
+
+  
   return (
-    <div>BotBry</div>
-  )
+    <div className={s.chatWrapper}>
+      <SideBar 
+        chatHistory={chatHistory} 
+        sideBarCollapsed={sideBarCollapsed} setSideBarCollapsed={setSideBarCollapsed}/>
+      <ChatBox chatHistory={chatHistory} setChatHistory={setChatHistory} convoId={convoId}/>
+    </div>
+  );
+
 }
 
-export default BotBry
+export default BotBry;

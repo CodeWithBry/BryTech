@@ -1,0 +1,307 @@
+import s from './ChatBox.module.css'
+import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
+import { useContext, useEffect, useRef, useState, } from 'react';
+import { context } from '../../App';
+import { unstable_HistoryRouter, useNavigate } from 'react-router-dom';
+
+function ChatBox(props) {
+  const { lightMode } = useContext(context)
+  const convoEndRef = useRef(null)
+  const navigation = useNavigate()
+  const [currentConvoId, setCurrentConvoId] = useState(""); // Convo ID for each convo topics
+  const [messageInput, setMessageInput] = useState(""); //Message Input From the UI
+  const [chatMemory, setChatMemory] = useState({}); //
+  const [history, setHistory] = useState({});
+  const [thinking, setThinking] = useState(false)
+  const [showCommand, setShowCommand] = useState(false)
+
+  // 🌐 Automatically choose backend URL
+  const API_URL =
+    import.meta.env.MODE === "development"
+      ? "http://localhost:3000/chat" // Local backend
+      : "https://chat-2ret.onrender.com/chat"; // Render backend
+
+  async function clearMemory() {
+    const userId = localStorage.getItem("botBryanUserId");
+    if (userId) {
+      await fetch(API_URL.replace("/chat", "/clear-memory"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId }),
+      });
+    }
+    localStorage.clear();
+    setChatMemory([]);
+  }
+
+  function getHistory() {
+
+  }
+
+  function newChat() {
+    const newChat = {
+      cid: crypto.randomUUID(),
+      convo: [],
+      aiConvo: []
+    }
+
+    setHistory(prev => {
+      setChatMemory(newChat);
+      setCurrentConvoId(newChat.cid)
+      return { ...prev, chats: [...prev.chats, newChat] }
+    })
+  }
+
+  function sendMessage(newMessage) {
+    if (!messageInput.trim()) return;
+
+    if (chatMemory.convo == null && props.convoId == null) {
+      const newChatHistory = {
+        cid: crypto.randomUUID(),
+        convo: [],/* {role, message} */
+        aiConvo: []/* { cid: "cid", chats: [{ role: "user", parts: [{ text: message }] }] } */
+      }
+      let getFromHistory = { ...history }
+      let updateHistory = { ...getFromHistory, chats: [...history?.chats, newChatHistory] }
+      let updateChatsFromHistory = updateHistory.chats.filter((chat) =>
+        chat.cid == newChatHistory.cid ? { ...chat, convo: { role: "user", message: newMessage } }
+          : null
+      )
+      let chatObjectToDeliver = updateChatsFromHistory[0]
+
+      setCurrentConvoId(newChatHistory.cid)
+      navigation(`/BotBry/${newChatHistory.cid}`)
+
+      setHistory(prev => {
+        const setNewChat = { ...prev, chats: [...prev.chats, newChatHistory] }
+        const setFirstMessage = setNewChat.chats.map((chat) => {
+          if (chat?.cid == newChatHistory.cid) {
+            const chatWithCorrectCID = [...chat.convo, { role: "user", message: newMessage }]
+            setChatMemory((prev) => {
+              return { ...prev, ...chat, convo: chatWithCorrectCID }
+            });
+            chatObjectToDeliver = { ...chat, convo: chatWithCorrectCID }
+            return { ...chat, convo: chatWithCorrectCID }
+          }
+
+          return chat
+        })
+        const updatedHistory = { ...setNewChat, chats: [...setFirstMessage] }
+
+        localStorage.setItem("User", JSON.stringify(updatedHistory)) //Make a new chat history with a first user message
+        return updatedHistory
+      })
+
+
+      console.log(chatObjectToDeliver)
+      getResponse(messageInput, chatObjectToDeliver);
+    } else if (props.convoId) {
+      let getFromHistory = { ...history }
+      console.log(getFromHistory)
+      let updateChatsFromHistory = getFromHistory.chats.filter((chat) =>
+        chat.cid == props.convoId ? { ...chat, convo: { role: "user", message: newMessage } }
+          : null
+      )
+      console.log(updateChatsFromHistory)
+      let chatObjectToDeliver = updateChatsFromHistory[0]
+
+      setHistory(prev => {
+        const newUserInput = prev.chats.map((chat) => {
+          if (chat?.cid == props.convoId) {
+            const chatWithCorrectCID = [...chat.convo, { role: "user", message: newMessage }]
+            setChatMemory((prev) => {
+              return { ...prev, ...chat, convo: chatWithCorrectCID }
+            });
+
+            return { ...chat, convo: chatWithCorrectCID }
+          }
+
+          return chat
+        })
+        const updatedHistory = { ...prev, chats: [...prev.chats, ...newUserInput] }
+        localStorage.setItem("User", JSON.stringify(updatedHistory)) //Make a new chat history with a first user message
+
+        return updatedHistory
+      })
+
+
+      console.log(chatObjectToDeliver)
+      getResponse(messageInput, chatObjectToDeliver);
+    }
+
+    setMessageInput("");
+  }
+
+  async function getResponse(msg, chatObject) {
+    setThinking(true);
+    const newChat = [...chatObject.aiConvo]
+    const userId = history?.uid
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: msg, userId, history: newChat }),
+      });
+
+      const data = await response.json();
+      console.log(data)
+
+      setChatMemory((prev) => {
+        const newChat = [...prev.convo, { role: "bryan", message: data.reply }]
+        return { ...prev, convo: newChat, aiConvo: [...prev.aiConvo, ...data.chats] }
+      });
+
+      setHistory(prev => {
+        const updatedChats = prev.chats.map((convos) => {
+          if (convos?.cid == chatObject.cid) {
+            return {
+              ...convos,
+              aiConvo: [...convos.aiConvo, ...data.chats],
+              convo: [...convos.convo, { role: "bryan", message: data.reply }]
+            }
+          }
+
+          return convos
+        })
+
+        localStorage.setItem("User", JSON.stringify({ ...prev, chats: updatedChats }))
+        return { ...prev, chats: updatedChats }
+      })
+      setThinking(false);
+    } catch (err) {
+      console.error("❌ Error sending message:", err);
+      setChatMemory((prev) => [
+        ...prev,
+        { role: "bryan", message: "⚠️ Hindi ako makasagot ngayon. Try ulit mamaya!" },
+      ]);
+      setThinking(false);
+    }
+  }
+
+  useEffect(() => {
+    if (props.convoId) return
+    const locStor = JSON.parse(localStorage.getItem("User"));
+    console.log(locStor)
+
+    if (locStor?.id == null) {
+      const userObject = {
+        uid: crypto.randomUUID(),
+        chats: []
+      }
+      localStorage.setItem("User", JSON.stringify(userObject))
+      setHistory(userObject)
+    } else {
+      setHistory(locStor)
+    }
+  }, [props])
+
+  useEffect(() => {
+    if (props.convoId) {
+      const locStor = JSON.parse(localStorage.getItem("User"));
+      setHistory(locStor)
+      if (locStor != null)
+        locStor.chats.filter(chat => {
+          if (chat.cid == props.convoId) {
+            setChatMemory(chat)
+            setCurrentConvoId(chat.cid)
+          }
+        })
+    } else {
+      setChatMemory({})
+      setCurrentConvoId("")
+    }
+  }, [props])
+
+  useEffect(() => {
+    convoEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatMemory?.convo?.length]);
+
+
+  return (
+    <div className={lightMode ? s.chatBox : `${s.chatBox} ${s.darkChatBox}`}>
+      <header>
+        <div>
+          <button onClick={() => showCommand ? setShowCommand(false) : setShowCommand(true)}><i className='fa fa-bars'></i></button>
+          <div className={showCommand ? `${s.command}` : `${s.command} ${s.unshowCommand}`}>
+            <button onClick={() => newChat()}>New Chat</button>
+            <button onClick={clearMemory}>Clear Memory</button>
+            <button onClick={getHistory}>History</button>
+          </div>
+        </div>
+        <h2>BotBry 2.5 Flash</h2>
+      </header>
+
+      <div className={s.chatBody}>
+
+        {chatMemory.convo != null ? (
+          <div className={s.convoContainer} ref={convoEndRef}>
+            <ul className={s.convo}>
+              {chatMemory?.convo?.map((res, i) => (
+                <>
+                  <li className={res.role === "user" ? s.user : s.bryan}
+                    key={i}>
+                    <span>{res.role == "user" ? "🧑" : "🤖"}</span>
+                    <div>{res?.message?.split("\n").map((text) => (<>
+                      <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                        {text}
+                      </ReactMarkdown>
+                    </>))}</div>
+                  </li>
+                </>
+
+              ))}
+              {
+                thinking && <li className={s.bryan}>
+                  <span>{"🤖"}</span>
+                  <p>
+                    Thinking...
+                  </p>
+                </li>
+              }
+              <div ref={convoEndRef}></div>
+            </ul>
+          </div>
+        ) :
+          <div className={s.botDescription}>
+            <div className={s.icon}>🤖</div>
+            <h1>BotBry 2.5 Flash</h1>
+            <p>Hi! Ako si Bryan A. Pajarillaga — this chat bot is a digital version of me.</p>
+          </div>
+        }
+
+        <div className={s.chatInput}>
+          {
+            messageInput.includes("\n") ?
+              <textarea
+                type="text"
+                placeholder="Chat anything about Bryan..."
+                value={messageInput}
+                onChange={(e) => setMessageInput(e.target.value)}
+                autoFocus="true"
+              /> :
+              <input
+                type="text"
+                placeholder="Chat anything about Bryan..."
+                value={messageInput}
+                onChange={(e) => setMessageInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key == "Enter") setMessageInput(e.target.value + "\n")
+                }}
+              />
+          }
+          <button
+            onClick={() => sendMessage(messageInput)}
+            className={s.sendButton}
+          >
+            Send <i className='	fa fa-send'></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+export default ChatBox

@@ -52,11 +52,11 @@ function Footer(props) {
             <header><img src="./icon/icon_and_title.jpg" /> <button onClick={scrollUp}>Scroll to Top <i className='fa fa-arrow-up'></i></button></header>
             <div className={s.top}>
                 {infos.map((row) => {
-                    return <div className={s.info}>
+                    return <div className={s.info} key={Math.random() * 1}>
                         <h4>{row.head}</h4>
                         <ul key={row.head} className={s.lists}>
                             {row.links.map((link) => (
-                                <li>{
+                                <li key={Math.random() * 1}>{
                                     row.head == "Website's Features" ?
                                         <Link to={link.link} className={s.links}>
                                             {link?.icon && <i className={link.icon}></i>}{link.name}

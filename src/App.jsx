@@ -74,7 +74,7 @@ function App() {
 
                 return { ...item }
             })
-            const addedProduct = [{...newItem, count: newItem?.count != null ? item.count + 1 : 1, isSeelcted: false }, ...prev]
+            const addedProduct = [{ ...newItem, count: newItem?.count != null ? item.count + 1 : 1, isSeelcted: false }, ...prev]
             function checkCart() {
                 for (let i in prev) {
                     if (newItem.name == cartItems[i].name) return "Same"
@@ -131,16 +131,18 @@ function App() {
         <context.Provider value={variables}>
             <div className={s.wrapper} ref={wrapperRef}>
                 <Nav />
-                <CartNotification ref={cartNotificationRef}/>
+                <CartNotification ref={cartNotificationRef} />
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
-                        return <Route path={tab.path} element={<><Component /> <Footer TopElement={wrapperRef} /></>} />
+                        return <Route path={tab.path} element={<><Component />{tab.name != "/BryTech" && <Footer TopElement={wrapperRef} />}</>} />
                     })}
-                    <Route path='/Shop/:productCategory' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
-                    <Route path='/Shop/Products/:productName' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
-                    <Route path='/Shop/Search/:searchDescription' element={<><Shop /> <Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/:productCategory' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/Products/:productName' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/Shop/Search/:searchDescription' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
+                    <Route path='/BotBry/:convoId' element={<><BotBry /></>} />
                 </Routes>
+                
             </div>
         </context.Provider>
     )
