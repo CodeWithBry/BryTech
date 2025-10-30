@@ -10,7 +10,7 @@ function ClearHistory({deleteHistory, setShowClearHistory, showClearHistory}) {
                 <i className='fa fa-trash'></i>
                 <h2>Do you want to clear your memory?</h2>
                 <div className={s.buttons}>
-                    <button onClick={() => { deleteHistory(false) }}>No</button>
+                    <button onClick={() => { setShowClearHistory(false) }}>No</button>
                     <button onClick={() => { deleteHistory(true), setShowClearHistory(true) }}>Yes</button>
                 </div>
             </div>

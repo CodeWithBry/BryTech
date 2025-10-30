@@ -1,14 +1,14 @@
 import s from './ChatBox.module.css'
 import ReactMarkdown from "react-markdown";
-import rehypeHighlight from "rehype-highlight";
+import remarkGfm from "remark-gfm";
+import rehypeSanitize from "rehype-sanitize";
 import { useContext, useEffect, useRef, useState, } from 'react';
 import { context } from '../../App';
 import { useNavigate } from 'react-router-dom';
 
 function ChatBox(props) {
   const { setChatHistory,
-    convoId, sideBarCollapsed,
-    setSideBarCollapsed } = props
+    convoId, setSideBarCollapsed } = props
   const { lightMode } = useContext(context)
   const convoEndRef = useRef(null)
   const navigation = useNavigate()
@@ -115,7 +115,7 @@ function ChatBox(props) {
       })
 
 
-      console.log(chatObjectToDeliver)
+      convoEndRef.current.scrollTop = convoEndRef.current.scrollHeight;
       getResponse(messageInput, chatObjectToDeliver);
     }
 
@@ -159,6 +159,8 @@ function ChatBox(props) {
         setChatHistory(updatedChats)
         return { ...prev, chats: updatedChats }
       })
+
+      convoEndRef.current.scrollTop = convoEndRef.current.scrollHeight;
       setThinking(false);
     } catch (err) {
       console.error("❌ Error sending message:", err);
@@ -208,9 +210,15 @@ function ChatBox(props) {
     convoEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chatMemory?.convo?.length]);
 
-  useEffect(()=>{
-    if(history)setChatHistory(history?.chats)
+  useEffect(() => {
+    if (history) setChatHistory(history?.chats)
   }, [history])
+
+  useEffect(() => {
+    if (convoEndRef.current) {
+      convoEndRef.current.scrollTop = convoEndRef.current.scrollHeight;
+    }
+  }, [convoEndRef.current, chatMemory])
 
   return (
     <div className={lightMode ? s.chatBox : `${s.chatBox} ${s.darkChatBox}`}>
@@ -234,43 +242,76 @@ function ChatBox(props) {
             <ul className={s.convo}>
               {chatMemory?.convo?.map((res, i) => (
                 <>
-                  <li className={res.role === "user" ? s.user : s.bryan}
-                    key={i}>
-                    <span>{res.role == "user" ? "🧑" : "🤖"}</span>
-                    <div>{res?.message?.split("\n").map((text) => (<>
-                      <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-                        {text}
+                  <li
+                    key={i}
+                    className={res.role === "user" ? s.user : s.bryan}
+                  >
+
+                    {res.role === "user" ? <img src="./icon/icon.png" alt="bot icon" /> : <img src="./icon/botIcon.png" alt="bot icon" />}
+                    <span>{ }</span>
+                    <div className={s.messageBox}>
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeSanitize]}
+                        components={{
+                          code({ inline, children, ...props }) {
+                            return inline ? (
+                              <code className={s.inlineCode}>{children}</code>
+                            ) : (
+                              <pre className={s.codeBlock}>
+                                <code {...props}>{children}</code>
+                              </pre>
+                            );
+                          },
+                          a({ href, children }) {
+                            return (
+                              <a href={href} target="_blank" rel="noopener noreferrer" className={s.link}>
+                                {children}
+                              </a>
+                            );
+                          },
+                          strong({ children }) {
+                            return <strong className={s.bold}>{children}</strong>;
+                          },
+                          em({ children }) {
+                            return <em className={s.italic}>{children}</em>;
+                          },
+                        }}
+                      >
+                        {res.message}
                       </ReactMarkdown>
-                    </>))}</div>
+                    </div>
                   </li>
+
                 </>
 
               ))}
               {
-                thinking && <li className={s.bryan}>
-                  <span>{"🤖"}</span>
-                  <p>
-                    Thinking...
-                  </p>
+                thinking && <li className={s.thinking}>
+                  <img src="./icon/botIcon.png" alt="bot icon" />
+                  <div className={s.wrapper}>
+                    <div className={s.dot}></div>
+                    <div className={s.dot}></div>
+                    <div className={s.dot}></div>
+                  </div>
                 </li>
               }
-              <div ref={convoEndRef}></div>
             </ul>
           </div>
         ) :
           <div className={s.botDescription}>
-            <div className={s.icon}>🤖</div>
+            <div className={s.icon}><img src="./icon/botIcon.png" alt="bot icon" /></div>
             <h1>BotBry 2.5 Flash</h1>
             <p>Hi! Ako si Bryan A. Pajarillaga — this chat bot is a digital version of me.</p>
           </div>
         }
 
         <div className={s.chatInput}>
-          <textarea
+          <input
             type="text"
             placeholder="Chat anything about Bryan..."
             value={messageInput}
-            onChange={(e) => {setMessageInput(e.target.value)}}
+            onChange={(e) => { setMessageInput(e.target.value) }}
             autoFocus="true"
           />
           <button

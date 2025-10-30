@@ -1,6 +1,6 @@
 .chatBox {
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -51,7 +51,7 @@
     gap: .5rem;
 }
 
-.chatBox header>div button > .rotate {
+.chatBox header>div button>.rotate {
     transform: rotateZ(180deg);
 }
 
@@ -105,10 +105,12 @@
     box-sizing: border-box;
 }
 
-.chatBox .chatBody .botDescription .icon {
-    font-size: 5rem;
+.chatBox .chatBody .botDescription img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: rgb(211, 207, 207);
+    padding: .5rem;
+    background-color: rgba(30, 44, 63, 0.557);
 }
 
 .chatBox .chatBody .botDescription p {
@@ -157,14 +159,19 @@
     overflow: hidden;
     overflow-x: auto;
 
-    &::-webkit-scrollbar-corner{
+    &::-webkit-scrollbar-corner {
         display: none;
     }
 }
 
-.chatBox .chatBody .convoContainer .convo li>span {
+.chatBox .chatBody .convoContainer .convo li>img {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: rgb(191, 189, 189);
+    padding: .2rem;
+    border-radius: 50%;
+    background-color: rgba(237, 237, 237, 0.827);
+    box-shadow: 0 0 10px -2px rgb(101, 101, 101);
 }
 
 .chatBox .chatBody .convoContainer .convo .user>div {
@@ -176,23 +183,90 @@
     color: white;
 }
 
+.chatBox .chatBody .convoContainer .convo .thinking .wrapper {
+    padding: .5rem .75rem;
+    margin: 0 10px;
+    box-shadow: 0 0 5px -2px black;
+    width: fit-content;
+    max-width: 70vw;
+    height: fit-content;
+    border-radius: .5rem;
+    display: flex;
+    gap: .5rem;
+    background-color: #3094d3;
+    box-shadow: 0 0 10px -2px rgb(101, 101, 101);
+    animation: bumping 1s ease infinite;
+}
+
+.chatBox .chatBody .convoContainer .convo .thinking > img {
+    animation: rotating 1.5s ease-in-out infinite;
+}
+
+.chatBox .chatBody .convoContainer .convo .thinking .wrapper .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--l-text-unhighlight);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.chatBox .chatBody .convoContainer .convo .thinking .wrapper .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chatBox .chatBody .convoContainer .convo .thinking .wrapper .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes rotating {
+    0%{
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.3) rotateZ(180deg);
+    }
+    100% {
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+@keyframes bumping {
+    0%, 80%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse {
+    0%, 80%, 100% {
+        transform: scale(0.6);
+        background-color: rgb(255, 255, 255);
+    }
+    40% {
+        transform: scale(1.1);
+        background-color: #2b2b2b;
+    }
+}
+
 .chatBox .chatBody .chatInput {
     flex-shrink: 0;
     width: 100%;
     height: 55px;
-    background-color: #3094d3;
+    background-color: rgba(206, 206, 206, 0.834);
+    box-shadow: var(--l-box-shadow);
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
     box-sizing: border-box;
 }
 
-.chatBox .chatBody .chatInput textarea,
 .chatBox .chatBody .chatInput input {
     width: 100%;
-    height: 50%;
+    height: fit-content;
     padding: .5rem .75rem;
-    border-radius: .5rem;
+    border-radius: 2rem;
     outline: none;
     border: 2.5px gray solid;
     margin: auto;
@@ -211,7 +285,7 @@
     color: white;
     font-weight: 700;
     border: none;
-    border-radius: .4rem;
+    border-radius: 1rem;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -223,10 +297,12 @@
     background-color: #3c2dc3;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .chatWrapper {
         width: 100vw;
+        height: 100vh;
     }
+
     .chatBox {
         width: 100vw;
     }
