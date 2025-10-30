@@ -1,0 +1,73 @@
+.clearHistory {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #acacac82;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.clearHistory .box {
+    width: min(300px, 400px);
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    background-color: var(--l-text-color1);
+    box-shadow: var(--l-box-shadow);
+    border-radius: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.clearHistory .box > i {
+    color: white;
+    border-radius:50%;
+    background-color:red ;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.clearHistory .box h2 {
+    text-align: center;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.clearHistory .box .buttons {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    gap: .5rem;
+}
+
+.clearHistory .box .buttons>button {
+    border: 0;
+    border-radius: 5rem;
+    font-size: var(--p-medium);
+    font-family: var(--font-title);
+    font-weight: 600;
+    background-color: white;
+    color: var(--l-text-color1);
+    padding: var(--pad-y-s) var(--pad-x-l);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    box-shadow: var(--l-box-shadow);
+    border: 3px solid white;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.clearHistory .box .buttons>button:hover {
+    opacity: .7;
+}

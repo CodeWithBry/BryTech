@@ -110,3 +110,47 @@
 .sideBar .actions>button>i {
     padding: 0 15px;
 }
+
+.sideBar .chatHistory {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.sideBar .chatHistory .link {
+    width: 100%;
+    height: fit-content;
+    padding: .5rem 0;
+    color: black;
+    font-size: var(--p-medium);
+    display: flex;
+    align-items: center;
+    padding: .5rem 15px;
+    gap: .5rem;
+}
+
+.collapsed .chatHistory .link{
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.sideBar .chatHistory .link:hover {
+    color: var(--l-text-color1);
+}
+
+.sideBar .chatHistory .active {
+    background-color: rgba(203, 203, 203, 0.719);
+    color: var(--l-text-color1);
+}
+
+@media screen and (max-width: 600px) {
+
+    .sideBar {
+        display: block;
+    }
+
+    .collapsed {
+        display: none;
+    }
+}

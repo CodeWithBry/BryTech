@@ -135,7 +135,7 @@ function App() {
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
-                        return <Route path={tab.path} element={<><Component />{tab.name != "/BryTech" && <Footer TopElement={wrapperRef} />}</>} />
+                        return <Route path={tab.path} element={<><Component />{tab.name != "BotBry" && <Footer TopElement={wrapperRef} />}</>} />
                     })}
                     <Route path='/Shop/:productCategory' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
                     <Route path='/Shop/Products/:productName' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />

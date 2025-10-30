@@ -3,9 +3,12 @@ import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import { useContext, useEffect, useRef, useState, } from 'react';
 import { context } from '../../App';
-import { unstable_HistoryRouter, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ChatBox(props) {
+  const { setChatHistory,
+    convoId, sideBarCollapsed,
+    setSideBarCollapsed } = props
   const { lightMode } = useContext(context)
   const convoEndRef = useRef(null)
   const navigation = useNavigate()
@@ -20,7 +23,7 @@ function ChatBox(props) {
   const API_URL =
     import.meta.env.MODE === "development"
       ? "http://localhost:3000/chat" // Local backend
-      : "https://chat-2ret.onrender.com/chat"; // Render backend
+      : "https://brytech.onrender.com/chat"; // Render backend
 
   async function clearMemory() {
     const userId = localStorage.getItem("botBryanUserId");
@@ -39,24 +42,10 @@ function ChatBox(props) {
 
   }
 
-  function newChat() {
-    const newChat = {
-      cid: crypto.randomUUID(),
-      convo: [],
-      aiConvo: []
-    }
-
-    setHistory(prev => {
-      setChatMemory(newChat);
-      setCurrentConvoId(newChat.cid)
-      return { ...prev, chats: [...prev.chats, newChat] }
-    })
-  }
-
   function sendMessage(newMessage) {
     if (!messageInput.trim()) return;
-
-    if (chatMemory.convo == null && props.convoId == null) {
+    setSideBarCollapsed(true)
+    if (chatMemory.convo == null && convoId == null) {
       const newChatHistory = {
         cid: crypto.randomUUID(),
         convo: [],/* {role, message} */
@@ -96,11 +85,11 @@ function ChatBox(props) {
 
       console.log(chatObjectToDeliver)
       getResponse(messageInput, chatObjectToDeliver);
-    } else if (props.convoId) {
+    } else if (convoId) {
       let getFromHistory = { ...history }
       console.log(getFromHistory)
       let updateChatsFromHistory = getFromHistory.chats.filter((chat) =>
-        chat.cid == props.convoId ? { ...chat, convo: { role: "user", message: newMessage } }
+        chat.cid == convoId ? { ...chat, convo: { role: "user", message: newMessage } }
           : null
       )
       console.log(updateChatsFromHistory)
@@ -108,7 +97,7 @@ function ChatBox(props) {
 
       setHistory(prev => {
         const newUserInput = prev.chats.map((chat) => {
-          if (chat?.cid == props.convoId) {
+          if (chat?.cid == convoId) {
             const chatWithCorrectCID = [...chat.convo, { role: "user", message: newMessage }]
             setChatMemory((prev) => {
               return { ...prev, ...chat, convo: chatWithCorrectCID }
@@ -119,7 +108,7 @@ function ChatBox(props) {
 
           return chat
         })
-        const updatedHistory = { ...prev, chats: [...prev.chats, ...newUserInput] }
+        const updatedHistory = { ...prev, chats: [...newUserInput] }
         localStorage.setItem("User", JSON.stringify(updatedHistory)) //Make a new chat history with a first user message
 
         return updatedHistory
@@ -165,8 +154,9 @@ function ChatBox(props) {
 
           return convos
         })
-
+        console.log(updatedChats)
         localStorage.setItem("User", JSON.stringify({ ...prev, chats: updatedChats }))
+        setChatHistory(updatedChats)
         return { ...prev, chats: updatedChats }
       })
       setThinking(false);
@@ -181,11 +171,10 @@ function ChatBox(props) {
   }
 
   useEffect(() => {
-    if (props.convoId) return
+    if (convoId) return
     const locStor = JSON.parse(localStorage.getItem("User"));
-    console.log(locStor)
 
-    if (locStor?.id == null) {
+    if (locStor?.uid == null) {
       const userObject = {
         uid: crypto.randomUUID(),
         chats: []
@@ -194,16 +183,17 @@ function ChatBox(props) {
       setHistory(userObject)
     } else {
       setHistory(locStor)
+      setChatHistory(locStor.chats)
     }
-  }, [props])
+  }, [convoId])
 
   useEffect(() => {
-    if (props.convoId) {
+    if (convoId) {
       const locStor = JSON.parse(localStorage.getItem("User"));
       setHistory(locStor)
       if (locStor != null)
         locStor.chats.filter(chat => {
-          if (chat.cid == props.convoId) {
+          if (chat.cid == convoId) {
             setChatMemory(chat)
             setCurrentConvoId(chat.cid)
           }
@@ -212,25 +202,29 @@ function ChatBox(props) {
       setChatMemory({})
       setCurrentConvoId("")
     }
-  }, [props])
+  }, [convoId])
 
   useEffect(() => {
     convoEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chatMemory?.convo?.length]);
 
+  useEffect(()=>{
+    if(history)setChatHistory(history?.chats)
+  }, [history])
 
   return (
     <div className={lightMode ? s.chatBox : `${s.chatBox} ${s.darkChatBox}`}>
       <header>
         <div>
-          <button onClick={() => showCommand ? setShowCommand(false) : setShowCommand(true)}><i className='fa fa-bars'></i></button>
+          <button onClick={() => props?.sideBarCollapsed ? props?.setSideBarCollapsed(false) : props?.setSideBarCollapsed(true)}>
+            <i className={`fas fa-sign-out-alt ${!props?.sideBarCollapsed && s.rotate}`} ></i>
+            {props?.sideBarCollapsed ? "Show Menu" : "Hide Menu"}
+          </button>
           <div className={showCommand ? `${s.command}` : `${s.command} ${s.unshowCommand}`}>
-            <button onClick={() => newChat()}>New Chat</button>
-            <button onClick={clearMemory}>Clear Memory</button>
+            <button onClick={clearMemory}>Delete This Convo</button>
             <button onClick={getHistory}>History</button>
           </div>
         </div>
-        <h2>BotBry 2.5 Flash</h2>
       </header>
 
       <div className={s.chatBody}>
@@ -272,25 +266,13 @@ function ChatBox(props) {
         }
 
         <div className={s.chatInput}>
-          {
-            messageInput.includes("\n") ?
-              <textarea
-                type="text"
-                placeholder="Chat anything about Bryan..."
-                value={messageInput}
-                onChange={(e) => setMessageInput(e.target.value)}
-                autoFocus="true"
-              /> :
-              <input
-                type="text"
-                placeholder="Chat anything about Bryan..."
-                value={messageInput}
-                onChange={(e) => setMessageInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key == "Enter") setMessageInput(e.target.value + "\n")
-                }}
-              />
-          }
+          <textarea
+            type="text"
+            placeholder="Chat anything about Bryan..."
+            value={messageInput}
+            onChange={(e) => {setMessageInput(e.target.value)}}
+            autoFocus="true"
+          />
           <button
             onClick={() => sendMessage(messageInput)}
             className={s.sendButton}

@@ -1,11 +1,9 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import s from './SearchBar.module.css'
 import { shopContext } from "../Shop"
-import { useNavigate } from 'react-router-dom'
 
 function SearchBar() {
     const { lightMode, handleSearch, searchDescription } = useContext(shopContext)
-
     const [searchInput, setSearchInput] = useState(searchDescription || "")
 
     return (

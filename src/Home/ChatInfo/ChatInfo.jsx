@@ -4,7 +4,7 @@ import s from './ChatInfo.module.css'
 import { Link } from 'react-router-dom'
 
 function ChatInfo() {
-    const { lightMode } = useContext(context)
+    const { lightMode, scrollUp } = useContext(context)
 
     return (
         <div className={lightMode ? s.info : `${s.info} ${s.darkInfo}`}>
@@ -12,7 +12,7 @@ function ChatInfo() {
                 <div className={s.box}>
                     <h1>Need Assistance?</h1>
                     <p>Meet BotBry, your personal tech assistant! Ask anything about PC components, compatibility, or recommendations. BotBry is here to help you find the perfect parts for your build.</p>
-                    <Link>
+                    <Link to={`/BotBry`} onClick={scrollUp}>
                         Try BotBry 
                         <i className="fa fa-commenting"></i>
                     </Link>
