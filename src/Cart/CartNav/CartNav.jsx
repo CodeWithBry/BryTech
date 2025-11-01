@@ -1,11 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import s from './CartNav.module.css'
-import { useNavigate } from 'react-router-dom'
 import { context } from '../../App'
 
-function CartNav({ selectAll, cartItems }) {
-    const {lightMode} = useContext(context)
-    const navigation = useNavigate()
+function CartNav({ selectAll, cartItems, sortingMethod }) {
+    const { lightMode, setShowPurchase } = useContext(context)
 
     const [allItemCount, setAllItemCount] = useState(0)
     const [totalCost, setTotalCost] = useState(0)
@@ -15,13 +13,23 @@ function CartNav({ selectAll, cartItems }) {
         let total = 0
         let shippingTotal = 0
         let totalItems = 0
-        cartItems.map((item) => {
-            if (item.isSelected) {
-                totalItems += item.count
-                total += (Number(item.price_php.split(", ").join("")) * item.count)
-                shippingTotal += (Number(item.shipping_fee_php) * item.count)
-            }
-        })
+        if (sortingMethod == "Cart") {
+            cartItems.map((item) => {
+                if (item.isSelected && item.status == "Cart") {
+                    totalItems += item.count
+                    total += ((Number(item.price_php.split(", ").join("")) + Number(item.shipping_fee_php)) * item.count)
+                    shippingTotal += (Number(item.shipping_fee_php) * item.count)
+                }
+            })
+        } else {
+            cartItems.map((item) => {
+                if (item.status == "To Deliver") {
+                    totalItems += item.count
+                    total += ((Number(item.price_php.split(", ").join("")) + Number(item.shipping_fee_php)) * item.count)
+                    shippingTotal += (Number(item.shipping_fee_php) * item.count)
+                }
+            })
+        }
 
         setAllItemCount(totalItems)
         setTotalCost(total.toLocaleString())
@@ -32,7 +40,7 @@ function CartNav({ selectAll, cartItems }) {
         if (cartItems) {
             calculateAll()
         }
-    }, [cartItems])
+    }, [cartItems, sortingMethod])
     return (
         <div className={lightMode ? s.cartNav : `${s.cartNav} ${s.darkCartNav}`}>
             <div className={s.left}>
@@ -44,7 +52,7 @@ function CartNav({ selectAll, cartItems }) {
                     <p className={s.totalCost}>Total Cost: ₱ {totalCost}</p>
                     <p className={s.shippingFee}>Shipping Cost: ₱ {shippingCost}</p>
                 </div>
-                <button className={s.checkOut}>Check Out ({allItemCount})</button>
+                {sortingMethod == "Cart" ? (<button className={s.checkOut} onClick={() => setShowPurchase(true)}>Check Out ({allItemCount})</button>) : null}
             </div>
         </div>
     )

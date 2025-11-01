@@ -3,7 +3,7 @@ import { context } from "../../App"
 import { shopContext } from '../Shop'
 import { useContext, useEffect, useState } from 'react'
 function ProductDetails() {
-    const { lightMode, addToCart, setShowCartNotif } = useContext(context)
+    const { lightMode, addToCart, setShowCartNotif, setShowPurchase, setSelectedProduct } = useContext(context)
     const { selectedItem } = useContext(shopContext)
     const [showMore, setShowMore] = useState(false)
 
@@ -36,7 +36,7 @@ function ProductDetails() {
                         <p className={s.price}>₱ {selectedItem?.price_php}</p>
                         <div className={s.buttons}>
                             <button className={s.cart} onClick={()=>{addToCart(selectedItem), setShowCartNotif(true)}}>Cart <i className='fa fa-shopping-cart'></i></button>
-                            <button>Buy <i className='far fa-credit-card'></i></button>
+                            <button onClick={()=>{setShowPurchase(true), setSelectedProduct(selectedItem)}}>Buy <i className='far fa-credit-card'></i></button>
                         </div>
                     </div>
                 </div>

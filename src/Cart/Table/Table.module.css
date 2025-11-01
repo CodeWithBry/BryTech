@@ -1,25 +1,67 @@
+.noItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+.noItems .box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.noItems .box > h2{
+    text-align: center;
+    color: black;
+    font-family: var(--font-title);
+}   
+
+.noItems .box > button {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: white;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: var(--p-medium);
+    padding: var(--pad-y-m) var(--pad-x-m);
+    width:fit-content;
+    border-radius: .5rem;
+    cursor: pointer;
+    background: linear-gradient(to bottom, red, rgb(255, 0, 0));
+    border: 5px solid red;
+}
+
+.noItems .box > button:hover {
+    background: linear-gradient(to bottom, red, rgb(230, 68, 68));
+    transition: .5s ease; 
+}
+
 table {
     width: 100vw;
     height: 80vh;
 }
 
 table>tbody {
-    width: 100vw;
-    height: 500px;
+    width: 95vw;
+    height: fit-content;
+    max-height: 95%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: auto;
     overflow-x: hidden;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 1rem auto;
-    overflow: hidden;
-    overflow-y: auto;
 }
 
 table>tbody>tr {
     display: flex;
-    width: 400px;
+    width: 450px;
     height: fit-content;
     align-items: center;
     justify-content: space-between;
@@ -44,8 +86,8 @@ table>tbody .notSelected {
 
 
 table>tbody>tr .imgWrapper {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,6 +157,34 @@ table>tbody>tr .right .actions .editQuantity .minus {
 table>tbody>tr .right .actions .editQuantity .plus {
     height: 23px;
     border-left: none;
+}
+
+table>tbody>tr .right .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+table>tbody>tr .right .details > p {
+    font-size: var(--p-small);
+    color: var(--l-text-unhighlight);
+    font-family: .5rem;
+}
+
+table>tbody>tr .right .details .cancelOrder {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: white;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: var(--p-small);
+    padding: var(--pad-y-s) var(--pad-x-m);
+    width:fit-content;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: red;
 }
 
 .darkTable {

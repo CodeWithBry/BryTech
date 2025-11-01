@@ -1,10 +1,8 @@
 import s from './ChatBox.module.css'
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeSanitize from "rehype-sanitize";
 import { useContext, useEffect, useRef, useState, } from 'react';
 import { context } from '../../App';
 import { useNavigate } from 'react-router-dom';
+import ChatMessages from './ChatMessages';
 
 function ChatBox(props) {
   const { setChatHistory,
@@ -238,54 +236,8 @@ function ChatBox(props) {
       <div className={s.chatBody}>
 
         {chatMemory.convo != null ? (
-          <div className={s.convoContainer} ref={convoEndRef}>
-            <ul className={s.convo}>
-              {chatMemory?.convo?.map((res, i) => (
-                <>
-                  <li
-                    key={i}
-                    className={res.role === "user" ? s.user : s.bryan}
-                  >
-
-                    {res.role === "user" ? <img src="./icon/icon.png" alt="bot icon" /> : <img src="./icon/botIcon.png" alt="bot icon" />}
-                    <span>{ }</span>
-                    <div className={s.messageBox}>
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        rehypePlugins={[rehypeSanitize]}
-                        components={{
-                          code({ inline, children, ...props }) {
-                            return inline ? (
-                              <code className={s.inlineCode}>{children}</code>
-                            ) : (
-                              <pre className={s.codeBlock}>
-                                <code {...props}>{children}</code>
-                              </pre>
-                            );
-                          },
-                          a({ href, children }) {
-                            return (
-                              <a href={href} target="_blank" rel="noopener noreferrer" className={s.link}>
-                                {children}
-                              </a>
-                            );
-                          },
-                          strong({ children }) {
-                            return <strong className={s.bold}>{children}</strong>;
-                          },
-                          em({ children }) {
-                            return <em className={s.italic}>{children}</em>;
-                          },
-                        }}
-                      >
-                        {res.message}
-                      </ReactMarkdown>
-                    </div>
-                  </li>
-
-                </>
-
-              ))}
+          <div className={s.convoContainer} >
+            <ChatMessages chatMemory={chatMemory} ref={convoEndRef}/>
               {
                 thinking && <li className={s.thinking}>
                   <img src="./icon/botIcon.png" alt="bot icon" />
@@ -296,7 +248,6 @@ function ChatBox(props) {
                   </div>
                 </li>
               }
-            </ul>
           </div>
         ) :
           <div className={s.botDescription}>

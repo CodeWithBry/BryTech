@@ -48,7 +48,7 @@
 .sideBar .top h1:hover>i {
     display: grid;
     place-items: center;
-    font-size: var(--p-medium);
+    font-size: var(--p-small);
     width: 30px;
     height: 30px;
     padding: 0 10px;
@@ -88,7 +88,7 @@
     height: fit-content;
     padding: 1rem 0;
     align-items: center;
-    font-size: var(--p-medium);
+    font-size: .9rem;
     font-family: var(--font-title);
     font-weight: 700;
     display: flex;
@@ -123,10 +123,12 @@
     height: fit-content;
     padding: .5rem 0;
     color: black;
-    font-size: var(--p-medium);
+    font-size: .9rem;
     display: flex;
     align-items: center;
     padding: .5rem 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: .5rem;
 }
 

@@ -1,0 +1,69 @@
+.cartNotification {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    box-shadow: var(--l-box-shadow);
+    padding: 1rem 2rem;
+    color: green;
+    background-color: white;
+    font-family: var(--font-title);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.cartNotification > i {
+    font-size: 2rem;
+}
+
+.hideNoAnimation {
+    display: none;
+}
+
+.hide {
+    opacity: 1;
+    top: 5%;
+    animation: HideNotif .5s ease-out forwards;
+}
+
+.show {
+    display: flex;
+    opacity: 0;
+    top: -100px;
+    animation: showNotif .5s ease-out forwards;
+}
+
+@keyframes HideNotif {
+    to {
+        top: -100px;
+        opacity: 0;
+    }
+}
+
+@keyframes showNotif {
+    to {
+        opacity: 1;
+        top: 5%;
+    }
+}
+
+.cartNotification .timerBar {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+}
+
+.cartNotification .timerBar .timer {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: all .2s ease;
+}

@@ -137,51 +137,7 @@
     flex-direction: column;
 }
 
-.chatBox .chatBody .convoContainer .convo li {
-    display: flex;
-    margin: .5rem;
-    align-items: end;
-}
 
-.chatBox .chatBody .convoContainer .convo .user {
-    flex-direction: row-reverse;
-}
-
-.chatBox .chatBody .convoContainer .convo .user>div,
-.chatBox .chatBody .convoContainer .convo .bryan>div {
-    padding: .5rem .75rem;
-    margin: 0 10px;
-    box-shadow: 0 0 5px -2px black;
-    width: fit-content;
-    max-width: 70vw;
-    height: fit-content;
-    border-radius: .5rem;
-    overflow: hidden;
-    overflow-x: auto;
-
-    &::-webkit-scrollbar-corner {
-        display: none;
-    }
-}
-
-.chatBox .chatBody .convoContainer .convo li>img {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    padding: .2rem;
-    border-radius: 50%;
-    background-color: rgba(237, 237, 237, 0.827);
-    box-shadow: 0 0 10px -2px rgb(101, 101, 101);
-}
-
-.chatBox .chatBody .convoContainer .convo .user>div {
-    align-self: end;
-}
-
-.chatBox .chatBody .convoContainer .convo .bryan>div {
-    background-color: #3094d3;
-    color: white;
-}
 
 .chatBox .chatBody .convoContainer .convo .thinking .wrapper {
     padding: .5rem .75rem;
@@ -198,8 +154,16 @@
     animation: bumping 1s ease infinite;
 }
 
-.chatBox .chatBody .convoContainer .convo .thinking > img {
+.chatBox .chatBody .convoContainer .convo .thinking>img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: .2rem;
+    border-radius: 50%;
+    background-color: rgba(237, 237, 237, 0.827);
+    box-shadow: 0 0 10px -2px rgb(101, 101, 101);
     animation: rotating 1.5s ease-in-out infinite;
+    margin-left: .5rem;
 }
 
 .chatBox .chatBody .convoContainer .convo .thinking .wrapper .dot {
@@ -219,31 +183,41 @@
 }
 
 @keyframes rotating {
-    0%{
+    0% {
         transform: scale(1);
     }
+
     60% {
         transform: scale(1.3) rotateZ(180deg);
     }
+
     100% {
         transform: scale(1) rotateZ(360deg);
     }
 }
 
 @keyframes bumping {
-    0%, 80%, 100% {
+
+    0%,
+    80%,
+    100% {
         transform: scale(1);
     }
+
     40% {
         transform: scale(1.1);
     }
 }
 
 @keyframes pulse {
-    0%, 80%, 100% {
+
+    0%,
+    80%,
+    100% {
         transform: scale(0.6);
         background-color: rgb(255, 255, 255);
     }
+
     40% {
         transform: scale(1.1);
         background-color: #2b2b2b;

@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import s from './CartNotification.module.css'
 import { useRef } from 'react'
 import { useContext } from 'react'
-import { context } from '../App'
+import { context } from '../../App'
+import { useNavigate } from 'react-router-dom'
 
 function CartNotification({ ref }) {
-    const { setShowCartNotif, showCartNotif } = useContext(context) 
+    const { setShowCartNotif, showCartNotif, scrollUp } = useContext(context) 
     const timerRef = useRef(null)
+    const navigation = useNavigate()
 
     useEffect(() => {
         let timeCooldown = 3000
@@ -31,7 +33,10 @@ function CartNotification({ ref }) {
         if (showCartNotif && timerRef.current != null) RunCooldown()
     }, [showCartNotif, timerRef])
     return (
-        <div className={`${s.cartNotification} ${s.hideNoAnimation}`} id='cartNotification' ref={ref}>
+        <div 
+            className={`${s.cartNotification} ${s.hideNoAnimation}`} 
+            id='cartNotification' ref={ref}
+            onClick={()=>{navigation("/Cart"), scrollUp()}}>
             <i className='	far fa-check-circle'></i>
             <p>Added to Cart</p>
             <div className={s.timerBar}>

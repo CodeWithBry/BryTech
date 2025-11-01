@@ -1,23 +1,24 @@
-.cartNotification {
+.errorNotification {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
+    width: 200px;
     box-shadow: var(--l-box-shadow);
     padding: 1rem 2rem;
-    color: green;
+    color: red;
     background-color: white;
     font-family: var(--font-title);
     border-radius: 2rem;
     overflow: hidden;
+    font-size: var(--p-large);
 }
 
-.cartNotification > i {
+.errorNotification > i {
     font-size: 2rem;
+    margin-right: .5rem;
 }
 
 .hideNoAnimation {
@@ -51,7 +52,7 @@
     }
 }
 
-.cartNotification .timerBar {
+.errorNotification .timerBar {
     width: 100%;
     height: 3px;
     position: absolute;
@@ -61,7 +62,7 @@
     border-radius: 1rem;
 }
 
-.cartNotification .timerBar .timer {
+.errorNotification .timerBar .timer {
     width: 100%;
     height: 100%;
     background-color: green;

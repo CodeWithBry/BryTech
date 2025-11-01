@@ -1,0 +1,28 @@
+.sortBar {
+    display: flex;
+    gap: .5rem;
+    justify-content: end;
+    height: fit-content;
+    width: 90vw;
+    margin: .5rem auto;
+
+}
+
+.sortBar > button {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    color: white;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: var(--p-small);
+    padding: var(--pad-y-s) var(--pad-x-m);
+    width:fit-content;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: rgba(201, 201, 201, 0.841);
+}
+
+.sortBar .highlight {
+    background-color: var(--l-text-color1);
+}

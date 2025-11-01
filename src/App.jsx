@@ -15,7 +15,9 @@ import Docs from "./Docs/Docs"
 // COMPONENTS
 import Nav from "./Nav/Nav"
 import Footer from './Footer/Footer';
-import CartNotification from './Components/CartNotification';
+import CartNotification from './Components/CartNotification/CartNotification';
+import CheckOut from './Components/CheckOut/CheckOut';
+import ErrorNotification from './Components/ErrorNotification/ErrorNotification';
 
 export const context = createContext();
 
@@ -24,17 +26,21 @@ function App() {
     // REFS
     const wrapperRef = useRef(null)
     const cartNotificationRef = useRef(null)
+    const errorNotificationRef = useRef(null)
 
     // BOOLEAN
     const [lightMode, setLightMode] = useState(true);
     const [showCartNotif, setShowCartNotif] = useState(false)
+    const [showPurchase, setShowPurchase] = useState(false)
 
     // STRING
     const [path, setPath] = useState("")
+    const [errorNotif, setErrorNotif] = useState(null)
 
     // NUMBERS
 
     // ARRAY AND OBJECTS
+    const [selectedProduct, setSelectedProduct] = useState(null)
     const [tabs, setTabs] = useState([
         { name: "Home", element: Home, path: `/`, icon: "fa fa-home", isSelected: true },
         { name: "Shop", element: Shop, path: `/Shop`, icon: "fa fa-shopping-bag", isSelected: false },
@@ -74,7 +80,10 @@ function App() {
 
                 return { ...item }
             })
-            const addedProduct = [{ ...newItem, count: newItem?.count != null ? item.count + 1 : 1, isSeelcted: false }, ...prev]
+            const twoDaysFromNow = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
+            const formatted = twoDaysFromNow.toLocaleString("default", { month: "long", day: "numeric" });
+            const addedProduct = [{ ...newItem, count: newItem?.count != null ? item.count + 1 : 1, isSelected: false, status: "Cart", dateDeliver: formatted }, ...prev]
+
             function checkCart() {
                 for (let i in prev) {
                     if (newItem.name == cartItems[i].name) return "Same"
@@ -113,11 +122,14 @@ function App() {
         //boolean
         lightMode, setLightMode,
         showCartNotif, setShowCartNotif,
+        showPurchase, setShowPurchase,
         // strings
         path, setPath,
         location,
+        errorNotif, setErrorNotif,
         // numbers
         // arrays & objects
+        selectedProduct, setSelectedProduct,
         tabs, setTabs,
         prevTabs, setPrevTabs,
         cartItems, setCartItems,
@@ -132,6 +144,8 @@ function App() {
             <div className={s.wrapper} ref={wrapperRef}>
                 <Nav />
                 <CartNotification ref={cartNotificationRef} />
+                <ErrorNotification ref={errorNotificationRef} />
+                <CheckOut />
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
@@ -142,7 +156,7 @@ function App() {
                     <Route path='/Shop/Search/:searchDescription' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
                     <Route path='/BotBry/:convoId' element={<><BotBry /></>} />
                 </Routes>
-                
+
             </div>
         </context.Provider>
     )

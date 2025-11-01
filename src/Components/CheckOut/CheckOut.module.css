@@ -1,0 +1,355 @@
+.checkOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    font-family: var(--font-title);
+    color: rgb(28, 26, 26);
+    z-index: 1;
+}
+
+.checkOut .background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.57);
+    position: absolute;
+    z-index: -1;
+}
+
+.checkOut .checkOutBox {
+    width: fit-content;
+    height: 400px;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 1rem;
+}
+
+.checkOut .checkOutBox .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--l-text-color1);
+    margin-bottom: .5rem;
+}
+
+.checkOut .checkOutBox .top .unshowPayment {
+    width: fit-content;
+    height: fit-content;
+    font-size: var(--p-large);
+    background-color: transparent;
+    color: var(--l-text-color1);
+}
+
+.checkOut .checkOutBox .part {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    width: 300px;
+    height: fit-content;
+}
+
+.checkOut .checkOutBox .part>h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--p-medium);
+    margin-left: .5rem;
+}
+
+.checkOut .checkOutBox .part .card {
+    display: flex;
+    gap: .75rem;
+    box-shadow: var(--l-box-shadow);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: .5rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.checkOut .checkOutBox .part .card:hover {
+    scale: 1.1;
+}
+
+.checkOut .checkOutBox .part .card .left {
+    padding: .5rem .75rem;
+    font-size: var(--p-large);
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--l-text-color1);
+    border-radius: 1rem;
+    flex-shrink: 0;
+}
+
+.checkOut .checkOutBox .part .card .left>i {
+    line-height: 0;
+    color: var(--l-text-color1);
+}
+
+.checkOut .checkOutBox .part .card .right {
+    width: 100%;
+}
+
+.checkOut .checkOutBox .part .card .right .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.checkOut .checkOutBox .part .card .right>h2 {
+    font-size: var(--p-small);
+    flex-shrink: 0;
+}
+
+.checkOut .checkOutBox .part .paymentOptions {
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+    flex: 1 1 1;
+    margin-left: .5rem;
+}
+
+.checkOut .checkOutBox .part .paymentOptions>img {
+    width: 30px;
+    padding: .5rem;
+    height: auto;
+    border: 2px solid rgba(99, 99, 99, 0.57);
+    border-radius: 1rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.checkOut .checkOutBox .part .paymentOptions>img:hover {
+    scale: 1.05;
+}
+
+.checkOut .checkOutBox .part .paymentOptions .selected {
+    border-color: var(--l-text-color1);
+}
+
+.checkOut .checkOutBox .part .cashOnDeliver {
+    display: flex;
+    gap: .5rem;
+    margin-left: .5rem;
+}
+
+.checkOut .checkOutBox .confirm {
+    width: 100%;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    font-size: var(--p-large);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    background-color: var(--l-bg-highlight);
+    color: white;
+    padding: var(--pad-y-s) var(--pad-x-s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-small);
+    box-shadow: var(--l-box-shadow);
+    border: 3px solid var(--l-bg-highlight);
+}
+
+
+.checkOut .inputBoxWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(99, 99, 99, 0.57);
+    z-index: 1;
+}
+
+.inputBox {
+    width: 300px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    height: fit-content;
+    z-index: 1;
+    gap: .5rem;
+    box-shadow: var(--l-box-shadow);
+}
+
+.inputBox>h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--p-large);
+}
+
+.inputBox>input {
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: .35rem .5rem;
+    outline: 0;
+    border-radius: 1rem;
+    border: 2px solid rgba(99, 99, 99, 0.57);
+    color: rgba(99, 99, 99, 0.57);
+    font-family: var(--font-title);
+}
+
+.inputBox>button {
+    width: 100%;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    font-size: var(--p-medium);
+    font-family: var(--font-title);
+    font-weight: 700;
+    background-color: var(--l-bg-highlight);
+    color: white;
+    padding: var(--pad-y-s) var(--pad-x-s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-small);
+    box-shadow: var(--l-box-shadow);
+}
+
+.loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 4s;
+    /* after success, screen fades */
+}
+
+.loadingBox {
+    text-align: center;
+    color: white;
+    position: relative;
+    animation: popIn 0.5s ease-out;
+}
+
+.circleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.hideCircleBox {
+    animation: fadeOut .5s ease forwards;
+}
+
+.loadingCircle {
+    width: 80px;
+    height: 80px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #00ff99;
+    border-radius: 50%;
+    animation: spin .5s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.successfulPayment, .failedToPurchase {
+    opacity: 0;
+    transform: scale(0.8);
+    color: #00ff99;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.failedToPurchase {
+    color: red;
+    animation-delay: 0.3s;
+}
+
+.successfulPayment i, .failedToPurchase i {
+    font-size: 2rem;
+    animation: pop 0.6s ease;
+}
+
+/* ✨ Animations ✨ */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

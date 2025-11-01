@@ -1,0 +1,151 @@
+.convo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 0.7rem;
+    scroll-behavior: smooth;
+}
+
+.convo .scrollDown {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    margin: auto .5rem;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem .75rem;
+    font-family: var(--font-title);
+    background-color: rgb(36, 109, 235);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    z-index: 1;
+}
+
+.convo .user, .convo .bryan {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.7rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.user {
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.messageBox {
+    width: fit-content;
+    max-width: 65vw;
+    padding: 0.9rem 1.1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    word-break: break-word;
+    white-space: pre-wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* USER BUBBLE */
+.userBox {
+    background-color: #f4f5f7;
+    color: #111;
+    align-self: flex-end;
+}
+
+/* BOT BUBBLE */
+.bryanBox {
+    color: black;
+}
+
+.bryanBox li {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+/* Markdown content */
+.markdown p {
+    margin: 0.4rem 0;
+}
+
+.markdown strong {
+    font-weight: 600;
+}
+
+.markdown em {
+    font-style: italic;
+}
+
+.markdown ul,
+.markdown ol {
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.markdown a {
+    color: #3e3e3e;
+    text-decoration: underline;
+}
+
+.inlineCode {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+}
+
+/* Typing animation or fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .convo {
+        width: 100vw;
+    }
+    .messageBox {
+        width: 69vw;
+        font-size: 0.75rem;
+    }
+}
+
+.convo li>img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: .2rem;
+    margin: .5rem;
+    background-color: rgba(237, 237, 237, 0.827);
+    box-shadow: 0 0 10px -2px rgb(101, 101, 101);
+}
