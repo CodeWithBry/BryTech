@@ -41,20 +41,24 @@
     animation: fadeIn 0.3s ease;
 }
 
-.user {
+.convo .user {
     flex-direction: row-reverse;
 }
 
-.avatar {
+.convo .user > li {
+    background: var(--l-text-color1);
+}
+
+.convo .avatar {
     width: 35px;
     height: 35px;
     border-radius: 50%;
     object-fit: cover;
     background: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.messageBox {
+.convo .messageBox {
     width: fit-content;
     max-width: 65vw;
     padding: 0.9rem 1.1rem;
@@ -67,54 +71,69 @@
     transition: background 0.3s ease, transform 0.1s ease;
 }
 
+.convo .messageBox > p {
+    display: inherit;
+}
+
 /* USER BUBBLE */
-.userBox {
+.convo .userBox {
     background-color: #f4f5f7;
     color: #111;
     align-self: flex-end;
 }
 
-/* BOT BUBBLE */
-.bryanBox {
-    color: black;
-}
-
-.bryanBox li {
+.convo .bryanBox li {
     display: flex;
     flex-direction: column;
     align-items: baseline;
 }
 
 /* Markdown content */
-.markdown p {
+.convo .markdown p {
     margin: 0.4rem 0;
 }
 
-.markdown strong {
+.convo .markdown strong {
     font-weight: 600;
 }
 
-.markdown em {
+.convo .markdown em {
     font-style: italic;
 }
 
-.markdown ul,
-.markdown ol {
+.convo .markdown ul,
+.convo .markdown ol {
     margin: 0.5rem 0;
     padding-left: 1.2rem;
 }
 
-.markdown a {
+.convo .markdown a {
     color: #3e3e3e;
     text-decoration: underline;
 }
 
-.inlineCode {
+.convo .inlineCode {
     background: rgba(255, 255, 255, 0.15);
-    padding: 0.15rem 0.4rem;
     border-radius: 6px;
     font-family: "JetBrains Mono", monospace;
     font-size: 0.9rem;
+}
+
+.darkConvo {
+    background-color: transparent;
+    color: white;
+}
+
+.darkConvo .userBox {
+    color: black;
+}
+
+.darkConvo .bryanBox {
+    color: black;
+}
+
+.darkConvo .messageBox {
+    background-color: white;
 }
 
 /* Typing animation or fade */

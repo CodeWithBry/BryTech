@@ -5,7 +5,7 @@
     height: 100vh;
     background-color: #ffffff;
     position: absolute;
-    top: 4rem;
+    top: 0;
     left: 0;
     z-index: 2;
 }
@@ -131,4 +131,19 @@
 
 .search .searches .link:hover {
     background-color: #d1d1d1c0;
+}
+
+
+.darkSearch .searchBox .searchCon .searchInput > input {
+    color: white;
+}
+
+.darkSearch {
+    background-color: rgb(48, 47, 49);
+    color: white;
+}
+
+.darkSearch .searches .link {
+    background-color: white;
+    color: black;
 }

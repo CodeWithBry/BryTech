@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { motion } from "framer-motion";
 import s from "./ChatMessages.module.css";
+import { context } from "../../App";
 
 /** Optional: sanitize message if too many inline code ticks
  * If the LLM wrapped many single words with backticks it looks awful.
@@ -19,7 +20,7 @@ function maybeSanitizeBackticks(text, threshold = 10) {
 }
 
 export default function ChatMessages({ chatMemory, ref, thinking }) {
-  const convoRef = useRef()
+  const {lightMode} = useContext(context)
   const [showScrollDown, setShowScrollDown] = useState(false)
 
   function onScrollUp() {
@@ -39,7 +40,7 @@ export default function ChatMessages({ chatMemory, ref, thinking }) {
   }
 
   return (
-    <ul className={s.convo} ref={ref} onScroll={(e) => { e.currentTarget.scrollTop + 200 < e.currentTarget.scrollHeight ? setShowScrollDown(true) : setShowScrollDown(false) }}>
+    <ul className={lightMode ? s.convo : `${s.convo} ${s.darkConvo}`} ref={ref} onScroll={(e) => { e.currentTarget.scrollTop + 200 < e.currentTarget.scrollHeight ? setShowScrollDown(true) : setShowScrollDown(false) }}>
       <ScrollDown />
       {chatMemory?.convo?.map((res, i) => {
         const message = maybeSanitizeBackticks(res.message, 12); // tweak threshold if needed

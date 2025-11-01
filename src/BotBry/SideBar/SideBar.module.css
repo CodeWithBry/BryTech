@@ -146,6 +146,23 @@
     color: var(--l-text-color1);
 }
 
+.darkSideBar {
+    color: white;
+    background-color: rgb(48, 47, 49);
+}
+
+.darkSideBar .actions>button{
+    color: white;
+}
+
+.darkSideBar .chatHistory .link {
+    color: white;
+}
+
+.darkSideBar .top>button {
+    color: white;
+}
+
 @media screen and (max-width: 600px) {
 
     .sideBar {

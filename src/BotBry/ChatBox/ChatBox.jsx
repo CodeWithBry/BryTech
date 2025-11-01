@@ -240,10 +240,10 @@ function ChatBox(props) {
             <ChatMessages chatMemory={chatMemory} ref={convoEndRef} thinking={thinking}/>
           </div>
         ) :
-          <div className={s.botDescription}>
+          <div className={s.botDescription} onClick={()=>setSideBarCollapsed(true)}>
             <div className={s.icon}><img src="./icon/botIcon.png" alt="bot icon" /></div>
             <h1>BotBry 2.5 Flash</h1>
-            <p>Hi! Ako si Bryan A. Pajarillaga — this chat bot is a digital version of me.</p>
+            <p>Hi! Ako si Bryan A. Pajarillaga. How can I help you?</p>
           </div>
         }
 

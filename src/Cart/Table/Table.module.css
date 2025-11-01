@@ -41,6 +41,10 @@
     transition: .5s ease; 
 }
 
+.darkNoItems .box > h2{
+    color: white;
+}
+
 table {
     width: 100vw;
     height: 80vh;
@@ -187,9 +191,6 @@ table>tbody>tr .right .details .cancelOrder {
     background-color: red;
 }
 
-.darkTable {
-    background-color: var(--d-bg-color);
-}
 
 .darkTable > tbody > tr {
     background-color: var(--d-bg-color-light);
