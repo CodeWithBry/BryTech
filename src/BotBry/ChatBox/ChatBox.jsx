@@ -237,17 +237,7 @@ function ChatBox(props) {
 
         {chatMemory.convo != null ? (
           <div className={s.convoContainer} >
-            <ChatMessages chatMemory={chatMemory} ref={convoEndRef}/>
-              {
-                thinking && <li className={s.thinking}>
-                  <img src="./icon/botIcon.png" alt="bot icon" />
-                  <div className={s.wrapper}>
-                    <div className={s.dot}></div>
-                    <div className={s.dot}></div>
-                    <div className={s.dot}></div>
-                  </div>
-                </li>
-              }
+            <ChatMessages chatMemory={chatMemory} ref={convoEndRef} thinking={thinking}/>
           </div>
         ) :
           <div className={s.botDescription}>

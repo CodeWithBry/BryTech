@@ -18,12 +18,12 @@ function maybeSanitizeBackticks(text, threshold = 10) {
   return text;
 }
 
-export default function ChatMessages({ chatMemory }) {
+export default function ChatMessages({ chatMemory, ref, thinking }) {
   const convoRef = useRef()
   const [showScrollDown, setShowScrollDown] = useState(false)
 
   function onScrollUp() {
-    const e = convoRef.current
+    const e = ref.current
     // e.scrollTop = e.scrollHeight
     e.scrollTo({
       top: e.scrollHeight,
@@ -39,7 +39,7 @@ export default function ChatMessages({ chatMemory }) {
   }
 
   return (
-    <ul className={s.convo} ref={convoRef} onScroll={(e) => { e.currentTarget.scrollTop + 200 < e.currentTarget.scrollHeight ? setShowScrollDown(true) : setShowScrollDown(false) }}>
+    <ul className={s.convo} ref={ref} onScroll={(e) => { e.currentTarget.scrollTop + 200 < e.currentTarget.scrollHeight ? setShowScrollDown(true) : setShowScrollDown(false) }}>
       <ScrollDown />
       {chatMemory?.convo?.map((res, i) => {
         const message = maybeSanitizeBackticks(res.message, 12); // tweak threshold if needed
@@ -135,6 +135,14 @@ export default function ChatMessages({ chatMemory }) {
           </motion.li>
         );
       })}
+      {thinking && <li className={s.thinking}>
+        <img src="./icon/botIcon.png" alt="bot icon" />
+        <div className={s.wrapper}>
+          <div className={s.dot}></div>
+          <div className={s.dot}></div>
+          <div className={s.dot}></div>
+        </div>
+      </li>}
     </ul>
   );
 }
