@@ -1,0 +1,111 @@
+.heroSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw; 
+    height: 60%;
+}
+
+.heroSection .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+}
+
+.heroSection .left .contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 1rem;
+    font-family: var(--font-normal-2);
+    margin-top: -5rem;
+    margin-left: 5rem;
+}   
+
+.heroSection .left .contents .small{
+    font-size: .8rem;
+}
+
+.heroSection .left .contents > h1 {
+    font-size: clamp(1.75rem, 5vw, 2.3rem);
+}
+
+.heroSection .left .contents > h1 > strong {
+    color: var(--l-text-color1);
+}
+
+.heroSection .left .contents .paragraph {
+    font-size: var(--p-medium);
+}
+
+.heroSection .left .contents a {
+    width: fit-content;
+    border: 0;
+    font-size: var(--p-medium);
+    font-family: var(--font-title);
+    font-weight: 600;
+    background-color: white;
+    color: var(--l-text-color1);
+    padding: var(--pad-y-s) var(--pad-x-l);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    box-shadow: var(--d-box-shadow);
+    border: 3px solid var(--l-bg-highlight);
+}
+
+
+.heroSection .left .contents a:hover {
+    background-color: var(--l-text-color1);
+    color: white;
+}
+.heroSection .right {
+    width: 50vw;
+    min-width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroSection .right > img {
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.396));
+}
+
+
+@media (max-width: 1000px) {
+    .heroSection .left {
+        width: 100%;
+        height: fit-content;
+        min-width: none;
+    }
+
+    .heroSection .left .contents {
+        margin-top: 5rem;
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .heroSection .right {
+        width: 100%;
+        height: fit-content;
+        min-width: 0;
+        justify-content: center;
+    }
+}
+
+

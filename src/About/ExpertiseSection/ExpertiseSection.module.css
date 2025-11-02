@@ -1,0 +1,150 @@
+.expertise {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    background-color: white;
+    margin-top: -.5rem;
+    font-family: var(--font-normal-2);
+}
+
+.expertise .top {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.expertise .top > i {
+    font-size: 3rem;
+}
+
+.expertise .top .title>p {
+    font-size: .8rem;
+}
+
+.expertise .top .title>h1 {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    color: var(--l-text-color1);
+}
+
+.expertise .bottom {
+    width: 100vw;
+    max-width: 1050px;
+    height: fit-content;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.expertise .bottom .card {
+    width: 275px;
+    min-width: 240px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--l-box-shadow);
+    border-radius: 2rem;
+    transition: .3s ease-out;
+    color: var(--l-text-color1);
+    margin: 1rem;
+}
+
+.expertise .bottom .card:hover {
+    scale: 1.05;
+}
+
+.expertise .bottom .card .title {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.expertise .bottom .card .title>i {
+    font-size: 2rem;
+    border-radius: .5rem;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    box-shadow: var(--l-box-shadow);
+    flex-shrink: 0;
+}
+
+.expertise .bottom .card .title>i {
+    background-color: #e85512;
+    color: white;
+}
+
+.expertise .bottom .card .title>h2 {
+    font-size: 1.5rem;
+}
+
+.expertise .bottom .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.expertise .bottom .card .content > p {
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+
+.expertise .bottom .card .content .link {
+    width: fit-content;
+    border-radius: 1rem;
+    font-size: var(--p-medium);
+    font-family: var(--font-title);
+    font-weight: 600;
+    background-color: white;
+    color: var(--l-text-color1);
+    padding: var(--pad-y-s) var(--pad-x-l);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    box-shadow: var(--d-box-shadow);
+    border: 3px solid var(--l-bg-highlight);
+    margin-left: auto;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+
+.expertise .bottom .card .content .link:hover {
+    background-color: var(--l-text-color1);
+    color: white;
+}
+
+.expertise .bottom .card:hover {
+    box-shadow: 0 0 10px 5px var(--l-text-color1);
+}
+
+.darkExpertise{
+    background-color: transparent;
+}
+
+.darkExpertise .bottom .card {
+    background-color: rgb(115, 115, 115);
+    box-shadow: var(--d-box-shadow);
+}
+
+.darkExpertise .bottom .card .title > i {
+    box-shadow: var(--d-box-shadow);
+}
+
+.darkExpertise .bottom .card .title > h2 {
+    color: white;
+}
+
+.darkExpertise .bottom .card .content > p {
+    color: white;
+}

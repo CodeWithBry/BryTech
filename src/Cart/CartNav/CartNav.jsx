@@ -3,7 +3,8 @@ import s from './CartNav.module.css'
 import { context } from '../../App'
 
 function CartNav({ selectAll, cartItems, sortingMethod }) {
-    const { lightMode, setShowPurchase } = useContext(context)
+    const { lightMode, setShowPurchase, setErrorNotif } = useContext(context)
+    const [items, setItems] = useState()
 
     const [allItemCount, setAllItemCount] = useState(0)
     const [totalCost, setTotalCost] = useState(0)
@@ -39,6 +40,7 @@ function CartNav({ selectAll, cartItems, sortingMethod }) {
     useEffect(() => {
         if (cartItems) {
             calculateAll()
+            setItems(cartItems.filter(item => item.isSelected))
         }
     }, [cartItems, sortingMethod])
     return (
@@ -52,7 +54,7 @@ function CartNav({ selectAll, cartItems, sortingMethod }) {
                     <p className={s.totalCost}>Total Cost: ₱ {totalCost}</p>
                     <p className={s.shippingFee}>Shipping Cost: ₱ {shippingCost}</p>
                 </div>
-                {sortingMethod == "Cart" ? (<button className={s.checkOut} onClick={() => setShowPurchase(true)}>Check Out ({allItemCount})</button>) : null}
+                {sortingMethod == "Cart" ? (<button className={s.checkOut} onClick={() => items?.length != 0 ? setShowPurchase(true) : setErrorNotif("No Items!")}>Check Out ({allItemCount})</button>) : null}
             </div>
         </div>
     )

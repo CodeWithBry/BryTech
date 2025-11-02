@@ -27,42 +27,8 @@ function CheckOut() {
         setProcessing(true)
         setLoading(true)
         setFailedToPurchase(false)
-        setCartItems(prev => {
-            if (!selectedProduct) {
-                const updatedItems = prev.map((item) => {
-                    return item.isSelected ? { ...item, isSelected: false, status: "To Deliver" } : { ...item }
-                })
-
-                localStorage.setItem("cartItems", JSON.stringify(updatedItems))
-
-                return updatedItems
-            } else {
-                const twoDaysFromNow = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
-                const formatted = twoDaysFromNow.toLocaleString("default", { month: "long", day: "numeric" });
-
-                const updatedCart = prev.map((item) => {
-                    if (item.name == selectedProduct.name) return { ...item, count: item?.count != null ? item.count : 1, isSelected: false, dateDeliver: formatted, status: "To Deliver" }
-                    return { ...item }
-                })
-                const addedProduct = [...prev, { ...selectedProduct, count: 1, isSelected: false, dateDeliver: formatted, status: "To Deliver" }]
-
-                function checkCart() {
-                    for (let i in prev) {
-                        if (selectedProduct.name == cartItems[i].name) return "Same"
-                    }
-                }
-
-                if (checkCart() == "Same") {
-                    localStorage.setItem("cartItems", JSON.stringify(updatedCart))
-                    return [...updatedCart]
-                } else {
-                    localStorage.setItem("cartItems", JSON.stringify(addedProduct))
-                    return [...addedProduct]
-                }
-            }
-        })
         setTimeout(() => {
-            if (selectedOption == null && !cashOnDelivery && (address == null || email == null || mobile == null)) {
+            if (selectedOption == null && !cashOnDelivery || (address == null || email == null || mobile == null)) {
                 if (address == null || email == null || mobile == null) {
                     setErrorNotif("Please Put The Necessary Details!")
                 } else {
@@ -78,6 +44,40 @@ function CheckOut() {
             setTimeout(() => {
                 setProcessing(false)
                 setShowPurchase(false)
+                setCartItems(prev => {
+                    if (!selectedProduct) {
+                        const updatedItems = prev.map((item) => {
+                            return item.isSelected ? { ...item, isSelected: false, status: "To Deliver" } : { ...item }
+                        })
+
+                        localStorage.setItem("cartItems", JSON.stringify(updatedItems))
+
+                        return updatedItems
+                    } else {
+                        const twoDaysFromNow = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
+                        const formatted = twoDaysFromNow.toLocaleString("default", { month: "long", day: "numeric" });
+
+                        const updatedCart = prev.map((item) => {
+                            if (item.name == selectedProduct.name) return { ...item, count: item?.count != null ? item.count : 1, isSelected: false, dateDeliver: formatted, status: "To Deliver" }
+                            return { ...item }
+                        })
+                        const addedProduct = [...prev, { ...selectedProduct, count: 1, isSelected: false, dateDeliver: formatted, status: "To Deliver" }]
+
+                        function checkCart() {
+                            for (let i in prev) {
+                                if (selectedProduct.name == cartItems[i].name) return "Same"
+                            }
+                        }
+
+                        if (checkCart() == "Same") {
+                            localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+                            return [...updatedCart]
+                        } else {
+                            localStorage.setItem("cartItems", JSON.stringify(addedProduct))
+                            return [...addedProduct]
+                        }
+                    }
+                })
             }, 3000);
         }, 3000);
     }

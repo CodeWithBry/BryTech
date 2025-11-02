@@ -9,7 +9,7 @@ function Footer(props) {
         {
             head: "Developer Contacts",
             links: [
-                { name: "Bryan A. Pajarillaga", link: "", icon: "fa fa-facebook-square" },
+                { name: "Bryan A. Pajarillaga", link: "https://www.facebook.com/bryan.agustin.521023/", icon: "fab fa-facebook-square" },
                 { name: "bryanagustinpajarillaga@gmail.com", link: "", icon: "fa fa-envelope-square" },
                 { name: "09150562345", link: "", icon: "fa fa-phone-square" }
             ]
@@ -20,7 +20,7 @@ function Footer(props) {
                 { name: "Home", link: "/", icon: "fa fa-home" },
                 { name: "Shop", link: "/Shop", icon: "fa fa-shopping-bag" },
                 { name: "Cart", link: "/Cart", icon: "fa fa-shopping-cart" },
-                { name: "BotBry", link: "/BotBry", icon: "fa fa-commenting" },
+                { name: "BotBry", link: "/BotBry", icon: "fas fa-robot" },
                 { name: "About", link: "/About", icon: "fa fa-info" },
                 { name: "Docs", link: "/Docs", icon: "fa fa-code" },
             ]
@@ -58,7 +58,7 @@ function Footer(props) {
                             {row.links.map((link) => (
                                 <li key={Math.random() * 1}>{
                                     row.head == "Website's Features" ?
-                                        <Link to={link.link} className={s.links}>
+                                        <Link to={link.link} className={s.links} onClick={scrollUp}>
                                             {link?.icon && <i className={link.icon}></i>}{link.name}
                                         </Link> :
                                         <a href={"https://"+link.link} className={s.links}>
