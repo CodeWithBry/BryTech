@@ -93,9 +93,9 @@ function Table({ cartItems, setCartItems, navigation, sortingMethod }) {
                                             <button
                                                 className={s.cancelOrder}
                                                 onClick={() => {
-                                                    setCartItems(prev => prev.map((item) => {
-                                                        if (item?.status.toLowerCase() == sortingMethod.toLowerCase()) return { ...item, status: "Cart", isSelected: false }
-                                                        return { ...item }
+                                                    setCartItems(prev => prev.map((cartItem) => {
+                                                        if (cartItem?.name == item?.name) return { ...cartItem, status: "Cart", isSelected: false }
+                                                        return { ...cartItem }
                                                     }))
                                                 }}
                                             >Cancel Order</button>
