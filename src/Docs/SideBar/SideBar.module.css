@@ -1,0 +1,121 @@
+.sideBar, .hideSideBar {
+    width: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    position: relative;
+    animation: showSideBar .5s ease forwards;
+}
+
+@keyframes showSideBar {
+    to {
+        width: 300px;
+    }
+}
+
+
+.hideSideBar {
+    width: 300px;
+    animation: hideSideBar .5s ease forwards;
+}
+
+@keyframes hideSideBar {
+    to {
+        width: 0px;
+    }
+}
+
+.sideBar .collapseSideBar,
+.hideSideBar .collapseSideBar {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    background-color: #efefef;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.collapseSideBar>i,
+.hideSideBar .collapseSideBar>i {
+    padding-right: .25rem;
+}
+
+.mainLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.637);
+    border-left: none;
+    border-right: none;
+}
+
+.mainLink>h3 {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 1rem 0;
+    text-wrap: nowrap;
+}
+
+.mainLink>h3>p {
+    margin-left: 1rem;
+}
+
+.mainLink>h3>i {
+    margin-right: 2rem;
+}
+
+.mainLink .selected {
+    color: var(--l-text-color1);
+}
+
+.mainLink .dropDown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #dcdcdc;
+    color: var(--l-text-unhighlight);
+}
+
+.mainLink .hideDropDown {
+    display: none;
+}
+
+.mainLink .dropDown a {
+    color: inherit;
+    padding: .5rem;
+    text-wrap: nowrap;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+.darkSideBar, .darkHideSideBar {
+    background-color: var(--d-bg-color);
+}
+
+.darkSideBar .mainLink .dropDown, .darkHideSideBar .mainLink .dropDown {
+    background-color: #4b4b4b;
+    color: white;
+}
+
+.darkSideBar .mainLink .dropDown a, .darkHideSideBar .mainLink .dropDown a {
+    color: inherit;
+}
+
+
+/* @media (max-width: 600px) {
+    .sideBar .collapseSideBar {}
+} */

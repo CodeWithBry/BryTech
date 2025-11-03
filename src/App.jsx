@@ -155,6 +155,7 @@ function App() {
                     <Route path='/Shop/Products/:productName' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
                     <Route path='/Shop/Search/:searchDescription' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
                     <Route path='/BotBry/:convoId' element={<><BotBry /></>} />
+                    <Route path='/Docs/:subLink' element={<><Docs /></>} />
                 </Routes>
 
             </div>

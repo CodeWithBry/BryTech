@@ -1,7 +1,7 @@
 import s from './ProductDetails.module.css'
 import { context } from "../../App"
 import { shopContext } from '../Shop'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 function ProductDetails() {
     const { lightMode, addToCart, setShowCartNotif, setShowPurchase, setSelectedProduct } = useContext(context)
     const { selectedItem } = useContext(shopContext)
