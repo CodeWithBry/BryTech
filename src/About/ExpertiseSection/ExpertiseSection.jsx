@@ -3,7 +3,7 @@ import s from './ExpertiseSection.module.css'
 import {context} from "../../App"
 
 
-function ExpertiseSection() {
+function ExpertiseSection({ref}) {
     const {lightMode} = useContext(context)
     const [cards] = useState([
         {
@@ -39,7 +39,7 @@ function ExpertiseSection() {
     ]);
 
     return (
-        <div className={lightMode ? s.expertise : `${s.expertise} ${s.darkExpertise}`}>
+        <div className={lightMode ? s.expertise : `${s.expertise} ${s.darkExpertise}`} ref={ref}>
             <div className={s.top}>
                 <i className='fas fa-diagnoses'></i>
                 <div className={s.title}>

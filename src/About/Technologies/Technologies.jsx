@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import s from './Technologies.module.css'
 import {context} from "../../App"
 
-function Technologies() {
+function Technologies({ref}) {
     const {lightMode} = useContext(context)
     const [techStack] = useState([
         {
@@ -39,7 +39,7 @@ function Technologies() {
 
 
     return (
-        <div className={lightMode ? s.technologies : `${s.technologies} ${s.darkTechnologies}`}>
+        <div className={lightMode ? `${s.technologies}` : `${s.technologies} ${s.darkTechnologies}`} ref={ref}>
             <div className={s.top}>
                 <i className='fas fa-cogs'></i>
                 <div className={s.title}>

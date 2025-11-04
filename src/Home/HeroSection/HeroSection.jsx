@@ -1,4 +1,5 @@
 import s from "./HeroSection.module.css"
+import a from "../Home.module.css"
 import { context } from "../../App"
 import { useContext, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
@@ -51,8 +52,8 @@ function HeroSection() {
 
 
     return (
-        <div className={lightMode ? s.hero : `${s.hero} ${s.darkHero}`} ref={heroRef}>
-            <div className={s.top}>
+        <div className={lightMode ? `${s.hero} ${a.section} ${a.fade_section}` : `${s.hero} ${a.section} ${a.fade_section} ${s.darkHero}`} ref={heroRef}>
+            <div className={`${s.top} ${a.top}`}>
                 <h1>Build Smarter, <span>Upgrade Faster</span></h1>
                 <p>
                     Welcome to BryTech, your one-stop shop for the latest PC hardware. Whether you’re upgrading your setup or building from scratch, discover quality components, trusted brands, and unbeatable performance — all in one place.
@@ -62,7 +63,7 @@ function HeroSection() {
                     <Link className={`${s.link} ${s.toShop}`} to={"/Shop"}>Shop Now <i className="fa fa-shopping-cart"></i></Link>
                 </div>
             </div>
-            <div className={s.photos} ref={containerRef}>
+            <div className={`${s.photos} ${a.photos}`} ref={containerRef}>
                 <div className={s.card}>
                     <img src="./Home/Keyboard.png" alt="Keyboard" />
                     <Link to={"/Shop/Keyboards"}>Shop Now</Link>

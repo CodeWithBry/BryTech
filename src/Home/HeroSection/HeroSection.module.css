@@ -52,6 +52,7 @@
     gap: var(--gap-small);
     box-shadow: var(--l-box-shadow);
     border: 3px solid var(--l-bg-highlight);
+    transition: all .5s ease;
 }
 
 .hero .top .actions .link:hover {
@@ -130,9 +131,11 @@
     padding: var(--pad-y-s) var(--pad-x-s);
     opacity: 0;
     text-wrap: nowrap;
+    transition: all .5s ease;
 }
 
 .hero .photos .card:hover a {
+    opacity: .7;
     opacity: 1;
 }
 

@@ -67,10 +67,6 @@
     color: var(--l-text-highlight);
 }
 
-/* <div className={s.item}>
-        
-    </div> */
-
 .products .itemCon {
     display: flex;
     gap: 10rem;

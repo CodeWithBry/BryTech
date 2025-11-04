@@ -1,8 +1,8 @@
 import s from './HeroSection.module.css'
 
-function HeroSection() {
+function HeroSection({ref}) {
 
-    return <div className={s.heroSection}>
+    return <div className={`${s.heroSection}`} ref={ref}>
         <div className={s.left}>
             <div className={s.contents}>
                 <p className={s.small}>Hey, I am Bryan</p>

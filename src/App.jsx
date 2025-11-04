@@ -42,12 +42,12 @@ function App() {
     // ARRAY AND OBJECTS
     const [selectedProduct, setSelectedProduct] = useState(null)
     const [tabs, setTabs] = useState([
-        { name: "Home", element: Home, path: `/`, icon: "fa fa-home", isSelected: true },
-        { name: "Shop", element: Shop, path: `/Shop`, icon: "fa fa-shopping-bag", isSelected: false },
-        { name: "Cart", element: Cart, path: `/Cart`, icon: "fa fa-shopping-cart", isSelected: false },
-        { name: "BotBry", element: BotBry, path: `/BotBry`, icon: "fas fa-robot", isSelected: false },
-        { name: "About", element: About, path: `/About`, icon: "fa fa-info", isSelected: false },
-        { name: "Docs", element: Docs, path: `/Docs`, icon: "fa fa fa-code", isSelected: false },
+        { name: "Home", element: Home, path: `/`, icon: "fa fa-home", hideComponents: true, isSelected: true },
+        { name: "Shop", element: Shop, path: `/Shop`, icon: "fa fa-shopping-bag", hideComponents: true, isSelected: false },
+        { name: "Cart", element: Cart, path: `/Cart`, icon: "fa fa-shopping-cart", hideComponents: true, isSelected: false },
+        { name: "BotBry", element: BotBry, path: `/BotBry`, icon: "fas fa-robot", hideComponents: true, isSelected: false },
+        { name: "About", element: About, path: `/About`, icon: "fa fa-info", hideComponents: true, isSelected: false },
+        { name: "Docs", element: Docs, path: `/Docs`, icon: "fa fa fa-code", hideComponents: true, isSelected: false },
     ])
     const [prevTabs, setPrevTabs] = useState([])
     const [cartItems, setCartItems] = useState([])
@@ -136,7 +136,10 @@ function App() {
 
         // functions
         defineTab, scrollUp,
-        addToCart
+        addToCart,
+
+        // refs
+        wrapperRef
     };
 
     return (
@@ -149,7 +152,8 @@ function App() {
                 <Routes>
                     {tabs?.map((tab) => {
                         const Component = tab.element
-                        return <Route path={tab.path} element={<><Component />{tab.name != "BotBry" && <Footer TopElement={wrapperRef} />}</>} />
+                        const hideComponents = tab.hideComponents
+                        return <Route path={tab.path} element={<><Component hideComponents={hideComponents} />{tab.name != "BotBry" && <Footer TopElement={wrapperRef} />}</>} />
                     })}
                     <Route path='/Shop/:productCategory' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />
                     <Route path='/Shop/Products/:productName' element={<><Shop /><Footer TopElement={wrapperRef} /></>} />

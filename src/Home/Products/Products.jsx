@@ -1,4 +1,5 @@
 import s from './Products.module.css'
+import a from "../Home.module.css"
 import { context } from "../../App"
 import { useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -87,7 +88,7 @@ function Products() {
 
 
     return (
-        <div className={lightMode ? s.products : `${s.products} ${s.darkProducts}`}>
+        <div className={lightMode ? `${s.products} ${a.section} ${a.products}` : `${s.products} ${a.section} ${a.products} ${s.darkProducts}`}>
             <button onClick={() => dropDown ? setDropDown(false) : setDropDown(true)}>
                 <span>Top Selling</span>
                 <span className={s.choice}>

@@ -3,5 +3,47 @@
 }
 
 .darkHome {
-    background-color: var(--d-bg-color);
+    background-color: var(--d-bg-color);  
+}
+
+.section {
+  opacity: 1;
+}
+
+.products {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.section {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.fade_section {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all .5s ease;
+}
+
+.section .top {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: toTop .75s ease-out forwards;
+}
+
+.section .photos {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: toTop .75s .5s ease-out forwards;
+}
+
+
+@keyframes toTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

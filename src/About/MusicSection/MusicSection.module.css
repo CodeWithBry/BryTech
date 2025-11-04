@@ -1,0 +1,179 @@
+.musicSection {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    background-color: transparent;
+    margin-top: -.5rem;
+    font-family: var(--font-normal-2);
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+
+.musicSection .top {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.musicSection .top > i {
+    font-size: 3rem;
+}
+
+.musicSection .top .title>p {
+    font-size: .8rem;
+}
+
+.musicSection .top .title>h1 {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    color: var(--l-text-color1);
+}
+
+.musicSection .wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.musicSection .wrapper .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 100%;
+}
+
+.musicSection .wrapper .left>img {
+    width: 35vw;
+    border-radius: 1rem;
+}
+
+.musicSection .wrapper .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 100%;
+}
+
+
+.musicSection .wrapper .right .contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 1rem;
+    font-family: var(--font-normal-2);
+    margin-right: 5rem;
+}
+
+.musicSection .wrapper .right .contents .small {
+    font-size: .8rem;
+}
+
+.musicSection .wrapper .right .contents>h1 {
+    font-size: clamp(1.75rem, 5vw, 4.3rem);
+    color: var(--l-text-color1);
+}
+
+.musicSection .wrapper .right .contents .shortDesc {
+    font-size: var(--p-medium);
+}
+
+.musicSection .wrapper .right .contents audio {
+  width: 95%;
+  appearance: none;
+  background-color: transparent; /* Spotify dark background */
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Control panel background */
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-panel {
+  background-color: transparent;
+  border-radius: 30px;
+}
+
+/* Play button */
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-play-button {
+  background-color: #1db954;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-play-button:hover {
+  background-color: #1ed760;
+  transform: scale(1.1);
+}
+
+
+/* Progress (the filled part of the timeline) */
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-progress-bar {
+  background-color: #1db954; /* Spotify green progress */
+}
+
+/* Volume and time display colors */
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-volume-slider,
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-current-time-display,
+.musicSection .wrapper .right .contents audio::-webkit-media-controls-time-remaining-display {
+  color: #111111;
+}
+
+.show {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.show .wrapper .left {
+    transform: translateY(200px);
+    opacity: 0;
+    animation: toTop 1s ease-in forwards;
+}
+
+.show .wrapper .right {
+    transform: translateY(200px);
+    opacity: 0;
+    animation: toTop .75s .75s ease-in forwards;
+}
+
+@keyframes toTop {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1000px) {
+    .musicSection {
+        height: fit-content;
+    }
+
+    .musicSection .wrapper {
+        height: fit-content;
+    }
+
+    .musicSection .wrapper .right {
+        width: 100%;
+        height: fit-content;
+        min-width: none;
+        margin: 2rem 0;
+    }
+
+    .musicSection .wrapper .right .contents {
+        margin-top: 5rem;
+        margin-right: 0;
+        margin: auto;
+        width: 80%;
+    }
+
+    .musicSection .wrapper .left {
+        width: 100%;
+        height: fit-content;
+        min-width: 0;
+        justify-content: center;
+    }
+}
