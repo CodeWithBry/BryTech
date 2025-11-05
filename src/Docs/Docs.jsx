@@ -1,6 +1,6 @@
 import s from "./Docs.module.css"
 import { context } from "../App"
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SideBar from "./SideBar/SideBar";
 import Contents from "./Contents/Contents";
 import { useNavigate, useParams } from "react-router-dom";
@@ -147,7 +147,7 @@ function Docs() {
             {
               h3: "Polishing and Final Touch",
               p: "In October 27, I have successfully developed my cart tab and make it functional so that the data can be displayed already and tested in the UI or in the client side server.",
-              img: ["./Documentations/Cart/CART_1.png", "./Documentations/Cart/CART_2.png", "./Documentations/Shop/CART_3.png"]
+              img: ["./Documentations/Cart/CART_1.png", "./Documentations/Cart/CART_2.png", "./Documentations/Cart/CART_3.png"]
             }
           ]
         },
@@ -162,11 +162,10 @@ function Docs() {
             {
               h3: "Gemini API Setup and Setting Server Up",
               p: "After learning how to connect and integrate Google'e Gemini API to HTML and JS, all I need is just to copy paste my previous project and put it in my E-commerce website, but that is where the countless bugs and problems comes.",
-              img: ["./Documentations/Shop/REFERENCE_1.png", "./Documentations/Shop/REFERENCE_2.png"]
             },
             {
               p: "I made a simple database using the 'Local Storage' that the client side provides. 'localStorage' is a built-in web storage object in browsers that allows you to store key–value pairs of data on the client side (in the user's browser). Unlike cookies, this data is not sent to the server automatically with every request.",
-              img: ["./Documentations/Shop/SHOP_CODE_1.png", "./Documentations/Shop/SHOP_CODE_2.png"]
+              img: ["./Documentations/BotBry/SETUP_1.png", "./Documentations/BotBry/SETUP_2.png"]
             }
           ]
         },
@@ -224,16 +223,6 @@ function Docs() {
       navigation("/Docs/Oct_20_-_Oct_22")
     }
   }, [subLink])
-
-  // function DocsLoading() {
-  //   return <div className={docsLoading ? s.docsLoading : `${s.docsLoading} ${s.hideLoading}`}>
-
-  //     <div className={s.wrapper}>
-  //       <div className={s.loadingBar}></div>
-  //       <p>Loading Modules, Please Wait...</p>
-  //     </div>
-  //   </div>
-  // }
 
   return (
     <>

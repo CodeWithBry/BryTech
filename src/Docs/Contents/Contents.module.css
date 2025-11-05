@@ -51,7 +51,7 @@
 }
 
 .contents .wrapper .section .imageWrapper {
-    width: 90%;
+    width: 100%;
     margin: auto;
     height: fit-content;
     display: flex;

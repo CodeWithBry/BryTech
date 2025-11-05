@@ -15,17 +15,11 @@ function SideBar(props) {
 
     function handleScrollToView(section) {
         const el = document.querySelector(`.${s.contentsWrapper}`)
-        console.log(section)
         el.scrollTo({
             top: section.offsetTop,
             behavior: "smooth"
         })
     }
-
-    useEffect(() => {
-        if (props?.sections) console.log(props?.sections)
-    }, [props.sections])
-
     return (
         <div className={props?.showSideBar
             ? (lightMode ? s.sideBar : `${s.sideBar} ${s.darkSideBar}`)
@@ -42,6 +36,7 @@ function SideBar(props) {
                         {
                             mainLink.subLinks.map((link, linkIndex) => {
                                 return <a
+                                    key={Math.random() * 1}
                                     onClick={() => {
                                         props?.sections.map((section, index) => {
                                             if (index == linkIndex) handleScrollToView(section)
