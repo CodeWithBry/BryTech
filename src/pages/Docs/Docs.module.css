@@ -1,0 +1,84 @@
+.docs {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-family: var(--font-title);
+  flex-shrink: 0;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.darkDocs {
+  background-color: var(--d-bg-color);
+  color: white;
+}
+/* 
+.docsLoading {
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: fadeIn 2s ease forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hideLoading {
+  opacity: 1;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+    transform: scale(1);
+  }
+}
+
+.docsLoading .wrapper {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+
+.docsLoading .wrapper .loadingBar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00ff99;
+  border-radius: 50%;
+  animation: spin .5s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,0 +1,41 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-10);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.crumb {
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.crumb:hover {
+  color: var(--accent);
+}
+
+.segment {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.segment i {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.current {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: var(--space-3) var(--space-4);
+  }
+}

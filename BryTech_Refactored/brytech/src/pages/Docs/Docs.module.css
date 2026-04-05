@@ -1,0 +1,7 @@
+.docs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: calc(100vh - var(--nav-height));
+  overflow: hidden;
+  background: var(--bg);
+}

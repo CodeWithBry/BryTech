@@ -1,0 +1,52 @@
+************* HOW TO OPEN THIS PROJECT *************
+
+  FIRST PART:
+
+    1. Download VS Code
+        Link - 
+    2. Download Node JS 
+        Link - 
+
+ SECOND PART:
+
+    1. Open your VS Code, then open this folder in your VS Code.
+    2. After opening this folder, click ctrl + ` to open the terminal.
+    3. Type "npm run dev" to your terminal
+    4. The terminal will say the followings:
+        VITE v7.1.11  ready in 4489 ms
+
+        ➜  Local:   http://localhost:5173/BryTech/
+        ➜  Network: use --host to expose
+        ➜  press h + enter to show help
+    5. Copy "http://localhost:5173/BryTech/" and paste it in your browser's search engine.
+
+    6. Open another terminal by ctrl + shift + `
+    7. In your new terminal, type "npm run server"
+    8. The terminal will say the followings:
+        > brytech@0.0.0 server    
+        > cd server && npm run dev
+
+
+        > server@1.0.0 dev 
+        > nodemon server.js
+
+        [nodemon] 3.1.10
+        [nodemon] to restart at any time, enter `rs`  
+        [nodemon] watching path(s): *.*
+        [nodemon] watching extensions: js,mjs,cjs,json
+        [nodemon] starting `node server.js`
+        [dotenv@17.2.3] injecting env (4) from .env -- tip: ⚙️  override existing env vars with { override: true }
+        🚀 BryTech server is running on port 3000
+        🌐 Allowed URLs: [
+        'http://localhost:5173',        
+        'https://codewithbry.github.io',
+        'https://codewithbry.github.io/BryTech/'
+        ]
+    
+ Note:
+
+    "localhost:5173" will open the Front-end's local server,
+    While "localhost:3000" will open the Back-End's local server.
+
+    The "localhost" will be the server that is running in your local machine
+    While ":3000" or ":5173" is your PORT Number. This is like an adress of your computer that tells the internet where you open your project.

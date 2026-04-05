@@ -1,0 +1,231 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.products>button {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
+    width: fit-content;
+    text-wrap: nowrap;
+    text-align: center;
+    margin: var(--gap-large) auto;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.products>button:hover>span {
+    color: var(--l-text-unhighlight);
+}
+
+.products>button>span {
+    color: var(--l-text-color1);
+    transition: .3s ease;
+}
+
+.products .hide {
+    display: none;
+}
+
+.products .dropDown {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    max-height: 300px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--l-box-shadow);
+    border-radius: 1rem;
+    background-color: white;
+    padding: var(--pad-y-m) var(--pad-x-l);
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.products .dropDown>p {
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
+}
+
+.products .dropDown .highlight {
+    color: var(--l-text-color1);
+    transition: .3s ease;
+}
+
+.products .dropDown .unhighlight {
+    color: var(--l-text-unhighlight);
+    transition: .3s ease;
+}
+
+.products .dropDown .unhighlight:hover {
+    color: var(--l-text-highlight);
+}
+
+.products .itemCon {
+    display: flex;
+    gap: 10rem;
+    width: 80vw;
+    padding: 2rem;
+    height: fit-content;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    user-select: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.products .itemCon::-webkit-scrollbar {
+    display: none;
+}
+
+.products .itemCon .item {
+    flex: 0 0 80vw;
+    scale: .8;
+    margin: auto;
+    border-radius: 1rem;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--l-box-shadow);
+    opacity: 1;
+    padding: 1rem;
+}
+
+.products .itemCon .active {
+    scale: 1;
+}
+
+.products .itemCon .item .left {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.products .itemCon .item .left>img {
+    width: 80%;
+    margin: none;
+}
+
+.products .itemCon .item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: fit-content;
+    flex-shrink: 0;
+    height: 100%;
+    margin: auto;
+}
+
+.products .itemCon .item .right>h1 {
+    font-family: var(--font-title);
+    font-size: var(--h1-larger);
+    width: min(350px, 700px);
+    margin: 1rem;
+}
+
+.products .itemCon .item .right>p {
+    font-family: var(--font-normal);
+    font-size: var(--p-medium);
+    color: var(--l-text-unhighlight);
+    margin-left: .5rem;
+    text-indent: 1rem;
+    width: 90%;
+}
+
+.products .itemCon .item .right>a {
+    font-family: var(--font-normal);
+    font-size: var(--p-medium);
+    padding: var(--pad-y-m) var(--pad-x-l);
+    border-radius: 5rem;
+    color: var(--l-bg-highlight);
+    border: 3px solid var(--l-bg-highlight);
+    width: fit-content;
+    margin: 1.5rem 1.5rem 1.5rem auto;
+    position: relative;
+    display: flex;
+    gap: var(--gap-small);
+}
+
+.products .itemCon .item .right>a:hover {
+    background-color: var(--l-bg-highlight);
+    color: var(--l-bg-color);
+}
+
+.products .indicators {
+    display: flex;
+    gap: .75rem;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.products .indicators .indicator {
+    background-color: var(--l-text-unhighlight);
+    width: 15px;
+    height: 15px;
+    scale: .8;
+    transition: .5s ease-in-out;
+    border-radius: 50%;
+}
+
+.products .indicators .activeIndicator {
+    background-color: var(--l-text-highlight);
+    width: 15px;
+    height: 15px;
+    scale: 1;
+    
+}
+
+
+.darkProducts>h1 {
+    color: white;
+}
+
+.products .itemCon .item .left>img {
+    border-radius: 3rem;
+}
+
+.darkProducts {
+    background-color: var(--d-bg-color);
+}
+
+.darkProducts .itemCon .item {
+    background-color: var(--d-bg-color-light);
+}
+
+.darkProducts .itemCon .item .right>a {
+    background-color: var(--l-bg-color);
+}
+
+.darkProducts .itemCon .item .right>h1 {
+    color: white;
+}
+
+.darkProducts .indicators .activeIndicator {
+    background-color: white;
+}
+
+
+@media (max-width: 600px) {
+    .products .itemCon .item .left {
+        width: min(300px, 500px);
+    }
+
+    .products .itemCon .item .right>h1 {
+        width: min(300px, 350px);
+    }
+}

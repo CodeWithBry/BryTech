@@ -1,0 +1,219 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 24px 100px 1fr auto;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--bg-elevated);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.row.selected {
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+}
+
+.checkbox {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.image {
+    width: 100px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.name {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.15s;
+}
+
+.name:hover {
+    color: var(--accent);
+}
+
+.brand {
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.delivery {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-xs);
+    color: var(--success);
+    font-weight: 600;
+    margin-top: var(--space-1);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-3);
+}
+
+.price {
+    font-size: var(--fs-md);
+    font-weight: 800;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.qty button {
+    width: 30px;
+    height: 30px;
+    background: var(--bg-muted);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xs);
+    transition: background 0.1s, color 0.1s;
+}
+
+.qty button:hover:not(:disabled) {
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+.qty button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.qty input {
+    width: 44px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-left: 1.5px solid var(--border);
+    border-right: 1.5px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.qty input::-webkit-outer-spin-button,
+.qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cancelBtn {
+    padding: var(--space-1) var(--space-3);
+    background: none;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    transition: background 0.15s, color 0.15s;
+}
+
+.cancelBtn:hover {
+    background: var(--danger);
+    color: #fff;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-16) var(--space-8);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.empty i {
+    font-size: 2.5rem;
+}
+
+.empty p {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.shopBtn {
+    padding: var(--space-3) var(--space-6);
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.shopBtn:hover {
+    background: var(--accent-hover);
+}
+
+@media (max-width: 640px) {
+    .row {
+        grid-template-columns: 20px 72px 1fr;
+        grid-template-rows: auto auto;
+    }
+    .image {
+        width: 72px;
+        height: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--bg-subtle);
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .right {
+        grid-column: 2 / -1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

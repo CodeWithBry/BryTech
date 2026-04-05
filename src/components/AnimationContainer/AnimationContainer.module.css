@@ -1,0 +1,24 @@
+.container {
+    opacity: 0;
+    transition: all .3s ease;
+    width: fit-content;
+}
+
+.showAnimationContainer {
+    animation: showUp .5s ease-out forwards;
+}
+
+.hideAnimationContainer {
+    opacity: 0;
+}
+
+@keyframes showUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

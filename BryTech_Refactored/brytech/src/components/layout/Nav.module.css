@@ -1,0 +1,155 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+  padding: 0 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.brandName em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.tab i {
+  font-size: 0.8rem;
+}
+
+.tab a {
+  color: inherit;
+}
+
+.tab:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.tab.active:hover {
+  background: var(--accent-hover);
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.themeToggle:hover {
+  background: var(--surface-raised);
+}
+
+.themeToggle img {
+  width: 1.35rem;
+  height: 1.35rem;
+  object-fit: contain;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 860px) {
+  .nav {
+    padding: 0 1.25rem;
+  }
+
+  .tabs {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 0;
+    box-shadow: var(--shadow-md);
+    z-index: 99;
+    gap: 0;
+  }
+
+  .tabs.open {
+    display: flex;
+  }
+
+  .tab {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0;
+    font-size: 0.95rem;
+  }
+
+  .themeToggle {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
